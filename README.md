@@ -2,6 +2,10 @@
 
 MCP server exposing 3100+ cloud technology icons (AWS, Azure, GCP, Microsoft) as searchable tools. Features 3-tier search (exact → keyword → fuzzy → semantic), multiple output formats, and integrations with ppt-master and architecture diagram generators.
 
+![](./docs/images/screenshot-azure.png)
+
+![](./docs/images/screenshot-cpmpare.png)
+
 | Vendor | Icons | Source |
 |--------|-------|--------|
 | AWS | 765 | Architecture-Service, Category, Resource, Group Icons (48px) |
