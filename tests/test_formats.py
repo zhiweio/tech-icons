@@ -134,7 +134,7 @@ class TestPptMasterPlaceholder:
     def test_ppt_master_correct_xml(self):
         result = ppt_master_placeholder("aws/compute/lambda")
         assert 'data-icon="tech-icons/aws/compute/lambda"' in result
-        assert 'xlink:href="icons/aws/compute/lambda.svg"' in result
+        assert "xlink:href" not in result
         assert result.startswith("<use")
         assert result.endswith("/>")
 
@@ -150,7 +150,7 @@ class TestPptMasterPlaceholder:
     def test_ppt_master_all_vendors(self, icon_id: str):
         result = ppt_master_placeholder(icon_id)
         assert f"tech-icons/{icon_id}" in result
-        assert f"icons/{icon_id}.svg" in result
+        assert "xlink:href" not in result
 
 
 # ---------------------------------------------------------------------------
@@ -218,6 +218,7 @@ class TestFormatIconDispatcher:
         path = tmp_icons_dir / "aws" / "compute" / "lambda.svg"
         result = format_icon(path, "aws/compute/lambda", fmt="ppt_master")
         assert "tech-icons/aws/compute/lambda" in result
+        assert "xlink:href" not in result
 
     def test_dispatcher_default_is_raw(self, tmp_icons_dir: Path, sample_svg_content: str):
         """Default format is 'raw'."""

@@ -54,8 +54,15 @@ def data_uri(path: str | Path) -> str:
 
 
 def ppt_master_placeholder(icon_id: str) -> str:
-    """Return ppt-master compatible placeholder element."""
-    return f'<use data-icon="tech-icons/{icon_id}" xlink:href="icons/{icon_id}.svg"/>'
+    """Return ppt-master compatible placeholder element.
+
+    ppt-master's embed_icons.py resolves data-icon by splitting on the first '/':
+      lib=tech-icons, name=aws/compute/lambda
+      -> {icons_dir}/tech-icons/aws/compute/lambda.svg
+
+    The canonical icon ID with 'tech-icons/' prefix is the complete reference.
+    """
+    return f'<use data-icon="tech-icons/{icon_id}"/>'
 
 
 def inline_group(path: str | Path) -> str:

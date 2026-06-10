@@ -27,7 +27,7 @@ logger = logging.getLogger(__name__)
 
 STATIC_DIR = Path(__file__).resolve().parent / "static"
 
-VALID_FORMATS = {"raw", "path", "base64", "data_uri", "ppt_master", "inline_group"}
+VALID_FORMATS = {"raw", "path", "base64", "data_uri", "ppt_master", "inline_group", "download"}
 
 engine = SearchEngine()
 
@@ -107,6 +107,7 @@ def list_icons(
 def get_icon_svg(
     icon_id: str,
     format: str = Query(default="raw"),  # noqa: A002 - HTTP query name
+    download: bool = Query(default=False),
 ) -> Response:
     if format not in VALID_FORMATS:
         raise HTTPException(
@@ -119,11 +120,19 @@ def get_icon_svg(
 
     path = icon_path(entry["path"])
     try:
-        content = format_icon(path, icon_id, fmt=format)
+        # Map "download" format to raw SVG content served as attachment
+        output_fmt = "raw" if format == "download" else format
+        content = format_icon(path, icon_id, fmt=output_fmt)
     except IconNotFoundError as e:
         raise HTTPException(status_code=404, detail=str(e)) from e
 
-    media_type = "image/svg+xml" if format == "raw" else "text/plain"
+    media_type = "image/svg+xml" if format in ("raw", "download") else "text/plain"
+
+    if download or format == "download":
+        filename = entry.get("filename") or f"{icon_id.rsplit('/', 1)[-1]}.svg"
+        headers = {"Content-Disposition": f'attachment; filename="{filename}"'}
+        return Response(content=content, media_type=media_type, headers=headers)
+
     return Response(content=content, media_type=media_type)
 
 

@@ -1,13 +1,23 @@
 """ppt-master integration bridge.
 
 Copies or symlinks selected tech-icons into a target directory compatible
-with ppt-master's icon resolution convention:
-  <use data-icon="tech/{vendor}/{name}" xlink:href="..."/>
+with ppt-master's icon resolution convention.
 
-Usage:
-    python3 -m tech_icons.bridges.ppt_master --icons aws/compute/lambda,azure/compute/function-apps \
-        --target ./templates/icons/tech/
-    python3 -m tech_icons.bridges.ppt_master --vendor aws --target ./templates/icons/tech/
+ppt-master's embed_icons.py resolves placeholders by splitting data-icon
+on the first '/' — ``lib=tech-icons``, ``name=aws/compute/lambda`` —
+and resolves to ``{icons_dir}/tech-icons/aws/compute/lambda.svg``.
+
+Target layout: ``{target_dir}/tech-icons/{vendor}/{category}/{name}.svg``
+
+Usage (standalone):
+    python3 -m tech_icons.bridges.ppt_master --icons aws/compute/lambda,azure/compute/function-apps \\
+        --target ./templates/icons/
+    python3 -m tech_icons.bridges.ppt_master --vendor aws --target ./templates/icons/
+
+Usage (via main CLI, preferred):
+    tech-icons --ppt-master aws/compute/lambda,azure/compute/function-apps
+    tech-icons --ppt-master aws
+    tech-icons --ppt-master
 """
 
 from __future__ import annotations
@@ -32,11 +42,15 @@ def export_icons(
 ) -> list[Path]:
     """Copy or symlink icons into ppt-master target directory.
 
-    Target layout: {target_dir}/{vendor}/{name}.svg
+    Target layout: ``{target_dir}/tech-icons/{vendor}/{category}/{name}.svg``
+
+    ppt-master's embed_icons.py resolves ``data-icon="tech-icons/aws/compute/lambda"``
+    by splitting on the first '/' — ``lib=tech-icons``, ``name=aws/compute/lambda`` —
+    and resolves to ``{icons_dir}/tech-icons/aws/compute/lambda.svg``.
 
     Args:
         icon_ids: List of canonical icon IDs to export.
-        target_dir: Destination directory for icons.
+        target_dir: Destination directory (e.g. ``./templates/icons/``).
         symlink: Use symlinks instead of copies.
         engine: SearchEngine instance (created if not provided).
 
@@ -61,10 +75,13 @@ def export_icons(
             logger.warning(f"SVG file missing: {source}, skipping")
             continue
 
-        # ppt-master convention: tech/{vendor}/{name}.svg
+        # ppt-master convention: tech-icons/{vendor}/{category}/{name}.svg
+        # embed_icons.py splits data-icon on first '/':
+        #   lib=tech-icons, name=aws/compute/lambda -> {icons_dir}/tech-icons/aws/compute/lambda.svg
         vendor = entry["vendor"]
+        category = entry["category"]
         name = entry["filename"]
-        dest = target_dir / vendor / name
+        dest = target_dir / "tech-icons" / vendor / category / name
         dest.parent.mkdir(parents=True, exist_ok=True)
 
         if dest.exists():
@@ -84,33 +101,36 @@ def export_icons(
 
 
 def get_ppt_master_reference(icon_id: str) -> str:
-    """Get ppt-master compatible reference for an icon ID.
+    """DEPRECATED: Get ppt-master compatible reference for an icon ID.
 
-    Maps tech-icons ID to ppt-master's data-icon attribute format:
-      aws/compute/lambda -> tech/aws/lambda
+    The canonical icon ID with 'tech-icons/' prefix IS the reference now.
+    For example, ``aws/compute/lambda`` is referenced as
+    ``<use data-icon="tech-icons/aws/compute/lambda"/>``.
+
+    This function exists only for backward compatibility and will be
+    removed in a future version.
     """
-    parts = icon_id.split("/")
-    if len(parts) >= 3:
-        vendor = parts[0]
-        name = parts[-1]
-    elif len(parts) == 2:
-        vendor = parts[0]
-        name = parts[1]
-    else:
-        vendor = "unknown"
-        name = parts[0]
+    import warnings
 
-    return f"tech/{vendor}/{name}"
+    warnings.warn(
+        "get_ppt_master_reference() is deprecated. Use the canonical icon ID "
+        "with 'tech-icons/' prefix directly in data-icon attributes.",
+        DeprecationWarning,
+        stacklevel=2,
+    )
+    return f"tech-icons/{icon_id}"
 
 
 def export_vendor(
     vendor: str,
     target_dir: Path,
     symlink: bool = False,
+    engine: SearchEngine | None = None,
 ) -> list[Path]:
     """Export all icons for a vendor in batch mode."""
-    engine = SearchEngine()
-    engine.load()
+    if engine is None:
+        engine = SearchEngine()
+        engine.load()
 
     icon_ids = [entry["id"] for entry in engine.catalog if entry["vendor"] == vendor]
 
@@ -123,7 +143,14 @@ def export_vendor(
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Export tech-icons to ppt-master compatible directory")
+    parser = argparse.ArgumentParser(
+        description="Export tech-icons to ppt-master compatible directory",
+        epilog=(
+            "Tip: use 'tech-icons --ppt-master [ICONS]' to run via the main CLI.\n"
+            "Target layout: {target}/tech-icons/{vendor}/{category}/{name}.svg\n"
+            "Recommended target: ./templates/icons/"
+        ),
+    )
     parser.add_argument(
         "--icons",
         type=str,
@@ -138,8 +165,8 @@ def main() -> None:
     parser.add_argument(
         "--target",
         type=str,
-        required=True,
-        help="Target directory for exported icons",
+        default="./templates/icons/",
+        help="Target directory for exported icons (default: ./templates/icons/)",
     )
     parser.add_argument(
         "--symlink",

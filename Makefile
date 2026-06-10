@@ -32,13 +32,13 @@ test-cov: ## Run tests with coverage
 
 all: format lint typecheck test ## Format, lint, typecheck, and test
 
-clean-icons: ## Clean icons
-	uv run python scripts/normalize_icons.py
-
-build-catalog: ## Build the icon catalog
+build-icon: ## Build the icon catalog
 	uv run python scripts/build_catalog.py
 
-build-catalog-no-embed: ## Build catalog without embeddings
+rebuild-icon: ## Build the icon catalog and force re-build of icons
+	uv run python scripts/build_catalog.py --force
+
+build-icon-no-embed: ## Build catalog without embeddings
 	uv run python scripts/build_catalog.py --skip-embeddings
 
 serve: ## Start the MCP server

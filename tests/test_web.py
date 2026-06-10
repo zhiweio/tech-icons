@@ -142,6 +142,24 @@ def test_get_icon_svg_invalid_format(web_client: TestClient) -> None:
     assert r.status_code == 400
 
 
+def test_get_icon_svg_download_format(web_client: TestClient) -> None:
+    """format=download returns raw SVG with Content-Disposition attachment header."""
+    r = web_client.get("/api/svg/aws/compute/lambda?format=download")
+    assert r.status_code == 200
+    assert r.headers["content-type"].startswith("image/svg+xml")
+    assert r.headers["content-disposition"] == 'attachment; filename="lambda.svg"'
+    assert r.text.startswith("<svg")
+
+
+def test_get_icon_svg_download_query_param(web_client: TestClient) -> None:
+    """?download=1 (with default format=raw) sets Content-Disposition header."""
+    r = web_client.get("/api/svg/aws/compute/lambda?download=1")
+    assert r.status_code == 200
+    assert r.headers["content-type"].startswith("image/svg+xml")
+    assert r.headers["content-disposition"] == 'attachment; filename="lambda.svg"'
+    assert r.text.startswith("<svg")
+
+
 def test_list_concepts(web_client: TestClient) -> None:
     r = web_client.get("/api/concepts")
     assert r.status_code == 200
