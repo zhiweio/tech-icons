@@ -1,0 +1,53 @@
+/* Minimal overrides — Tailwind + daisyUI handle 95% of styling */
+
+#detail-preview svg,
+#detail-preview img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.icon-card-preview {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.icon-card-preview img,
+.icon-card-preview svg {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Concept compare view: small inline previews */
+#concept-result img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Smooth tab transitions */
+#browse-view,
+#compare-view {
+  transition: opacity 150ms ease-in-out;
+}
+
+/* Wrap long inline code in metadata table */
+.table td code {
+  word-break: break-all;
+}
+
+/* Sticky filter bar adjustment for short viewport */
+@media (max-height: 600px) {
+  .sticky {
+    position: relative;
+  }
+}

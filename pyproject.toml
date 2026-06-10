@@ -1,0 +1,80 @@
+[project]
+name = "tech-icons"
+version = "0.1.0"
+description = "MCP server exposing 2200+ cloud tech icons as searchable tools"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+    "numpy>=2.2.6",
+    "pyyaml>=6.0",
+    "rapidfuzz>=3.0",
+    "sentence-transformers>=5.5.1",
+]
+
+[project.optional-dependencies]
+embeddings = [
+    "sentence-transformers>=2.0",
+    "numpy>=1.24",
+]
+web = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+]
+
+[project.scripts]
+tech-icons-server = "src.server:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+    "pytest-asyncio>=1.4.0",
+    "ruff>=0.11.0",
+    "mypy>=1.15.0",
+    "pre-commit>=4.2.0",
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "httpx>=0.27",
+]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "E",     # pycodestyle errors
+    "W",     # pycodestyle warnings
+    "F",     # pyflakes
+    "I",     # isort
+    "N",     # pep8-naming
+    "UP",    # pyupgrade
+    "B",     # flake8-bugbear
+    "A",     # flake8-builtins
+    "S",     # flake8-bandit (security)
+    "T20",   # flake8-print
+    "RUF",   # ruff-specific
+]
+ignore = [
+    "S101",  # assert usage OK in tests
+    "T201",  # print OK in scripts
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = ["S101", "S105", "S106"]
+"scripts/**/*.py" = ["T201"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.mypy]
+python_version = "3.10"
+strict = false
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"

@@ -1,0 +1,8 @@
+# Core dependencies (prefer using `uv sync` with pyproject.toml)
+mcp>=1.0.0
+rapidfuzz>=3.0
+pyyaml>=6.0
+
+# Optional: semantic search (embeddings)
+# sentence-transformers>=2.0
+# numpy>=1.24
