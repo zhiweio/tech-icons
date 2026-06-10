@@ -8,7 +8,7 @@ from unittest.mock import patch
 
 import pytest
 
-from src.search import SearchEngine
+from tech_icons.search import SearchEngine
 
 # ---------------------------------------------------------------------------
 # Fixtures
@@ -40,9 +40,9 @@ class TestHandleSearch:
     """Test _handle_search function."""
 
     def test_search_returns_results(self, mock_engine: SearchEngine):
-        from src.server import _handle_search
+        from tech_icons.server import _handle_search
 
-        with patch("src.server.engine", mock_engine):
+        with patch("tech_icons.server.engine", mock_engine):
             results = _handle_search({"query": "lambda"})
             assert len(results) == 1
             data = json.loads(results[0].text)
@@ -51,35 +51,35 @@ class TestHandleSearch:
             assert data[0]["id"] == "aws/compute/lambda"
 
     def test_search_with_vendor_filter(self, mock_engine: SearchEngine):
-        from src.server import _handle_search
+        from tech_icons.server import _handle_search
 
-        with patch("src.server.engine", mock_engine):
+        with patch("tech_icons.server.engine", mock_engine):
             results = _handle_search({"query": "compute", "vendor": "aws"})
             data = json.loads(results[0].text)
             for item in data:
                 assert item["icon_entry"]["vendor"] == "aws"
 
     def test_search_with_category_filter(self, mock_engine: SearchEngine):
-        from src.server import _handle_search
+        from tech_icons.server import _handle_search
 
-        with patch("src.server.engine", mock_engine):
+        with patch("tech_icons.server.engine", mock_engine):
             results = _handle_search({"query": "aws", "category": "compute"})
             data = json.loads(results[0].text)
             for item in data:
                 assert item["icon_entry"]["category"] == "compute"
 
     def test_search_with_limit(self, mock_engine: SearchEngine):
-        from src.server import _handle_search
+        from tech_icons.server import _handle_search
 
-        with patch("src.server.engine", mock_engine):
+        with patch("tech_icons.server.engine", mock_engine):
             results = _handle_search({"query": "aws", "limit": 2})
             data = json.loads(results[0].text)
             assert len(data) <= 2
 
     def test_search_empty_query(self, mock_engine: SearchEngine):
-        from src.server import _handle_search
+        from tech_icons.server import _handle_search
 
-        with patch("src.server.engine", mock_engine):
+        with patch("tech_icons.server.engine", mock_engine):
             results = _handle_search({"query": ""})
             data = json.loads(results[0].text)
             assert data == []
@@ -94,9 +94,9 @@ class TestHandleGetIcon:
     """Test _handle_get_icon function."""
 
     def test_get_icon_valid(self, mock_engine: SearchEngine):
-        from src.server import _handle_get_icon
+        from tech_icons.server import _handle_get_icon
 
-        with patch("src.server.engine", mock_engine):
+        with patch("tech_icons.server.engine", mock_engine):
             results = _handle_get_icon({"id": "aws/compute/lambda"})
             data = json.loads(results[0].text)
             assert data["id"] == "aws/compute/lambda"
@@ -104,17 +104,17 @@ class TestHandleGetIcon:
             assert data["name"] == "AWS Lambda"
 
     def test_get_icon_invalid_id(self, mock_engine: SearchEngine):
-        from src.server import _handle_get_icon
+        from tech_icons.server import _handle_get_icon
 
-        with patch("src.server.engine", mock_engine):
+        with patch("tech_icons.server.engine", mock_engine):
             results = _handle_get_icon({"id": "nonexistent/foo/bar"})
             data = json.loads(results[0].text)
             assert "error" in data
 
     def test_get_icon_full_metadata(self, mock_engine: SearchEngine):
-        from src.server import _handle_get_icon
+        from tech_icons.server import _handle_get_icon
 
-        with patch("src.server.engine", mock_engine):
+        with patch("tech_icons.server.engine", mock_engine):
             results = _handle_get_icon({"id": "aws/databases/dynamodb"})
             data = json.loads(results[0].text)
             assert "aliases" in data
@@ -131,9 +131,9 @@ class TestHandleListCategories:
     """Test _handle_list_categories function."""
 
     def test_list_categories_all(self, mock_engine: SearchEngine):
-        from src.server import _handle_list_categories
+        from tech_icons.server import _handle_list_categories
 
-        with patch("src.server.engine", mock_engine):
+        with patch("tech_icons.server.engine", mock_engine):
             results = _handle_list_categories({})
             data = json.loads(results[0].text)
             assert isinstance(data, list)
@@ -142,9 +142,9 @@ class TestHandleListCategories:
             assert "databases" in data
 
     def test_list_categories_vendor_filter(self, mock_engine: SearchEngine):
-        from src.server import _handle_list_categories
+        from tech_icons.server import _handle_list_categories
 
-        with patch("src.server.engine", mock_engine):
+        with patch("tech_icons.server.engine", mock_engine):
             results = _handle_list_categories({"vendor": "microsoft"})
             data = json.loads(results[0].text)
             assert "dynamics-365" in data
@@ -153,9 +153,9 @@ class TestHandleListCategories:
             assert "databases" not in data
 
     def test_list_categories_sorted(self, mock_engine: SearchEngine):
-        from src.server import _handle_list_categories
+        from tech_icons.server import _handle_list_categories
 
-        with patch("src.server.engine", mock_engine):
+        with patch("tech_icons.server.engine", mock_engine):
             results = _handle_list_categories({})
             data = json.loads(results[0].text)
             assert data == sorted(data)
@@ -170,9 +170,9 @@ class TestHandleListVendors:
     """Test _handle_list_vendors function."""
 
     def test_list_vendors_all(self, mock_engine: SearchEngine):
-        from src.server import _handle_list_vendors
+        from tech_icons.server import _handle_list_vendors
 
-        with patch("src.server.engine", mock_engine):
+        with patch("tech_icons.server.engine", mock_engine):
             results = _handle_list_vendors()
             data = json.loads(results[0].text)
             assert "aws" in data
@@ -181,9 +181,9 @@ class TestHandleListVendors:
             assert "microsoft" in data
 
     def test_list_vendors_with_counts(self, mock_engine: SearchEngine):
-        from src.server import _handle_list_vendors
+        from tech_icons.server import _handle_list_vendors
 
-        with patch("src.server.engine", mock_engine):
+        with patch("tech_icons.server.engine", mock_engine):
             results = _handle_list_vendors()
             data = json.loads(results[0].text)
             # Sample catalog: 4 aws, 3 azure, 3 gcp, 5 microsoft
@@ -202,25 +202,25 @@ class TestHandleGetIconSvg:
     """Test _handle_get_icon_svg function."""
 
     def test_get_svg_raw(self, mock_engine: SearchEngine, icon_file: Path):
-        from src.server import _handle_get_icon_svg
+        from tech_icons.server import _handle_get_icon_svg
 
-        with patch("src.server.engine", mock_engine), patch("src.server.PROJECT_ROOT", icon_file):
+        with patch("tech_icons.server.engine", mock_engine), patch("tech_icons._paths.package_root", lambda: icon_file):
             results = _handle_get_icon_svg({"id": "aws/compute/lambda", "format": "raw"})
             text = results[0].text
             assert "<svg" in text
 
     def test_get_svg_ppt_master(self, mock_engine: SearchEngine, icon_file: Path):
-        from src.server import _handle_get_icon_svg
+        from tech_icons.server import _handle_get_icon_svg
 
-        with patch("src.server.engine", mock_engine), patch("src.server.PROJECT_ROOT", icon_file):
+        with patch("tech_icons.server.engine", mock_engine), patch("tech_icons._paths.package_root", lambda: icon_file):
             results = _handle_get_icon_svg({"id": "aws/compute/lambda", "format": "ppt_master"})
             text = results[0].text
             assert "tech-icons/aws/compute/lambda" in text
 
     def test_get_svg_base64(self, mock_engine: SearchEngine, icon_file: Path):
-        from src.server import _handle_get_icon_svg
+        from tech_icons.server import _handle_get_icon_svg
 
-        with patch("src.server.engine", mock_engine), patch("src.server.PROJECT_ROOT", icon_file):
+        with patch("tech_icons.server.engine", mock_engine), patch("tech_icons._paths.package_root", lambda: icon_file):
             results = _handle_get_icon_svg({"id": "aws/compute/lambda", "format": "base64"})
             import base64
 
@@ -228,24 +228,24 @@ class TestHandleGetIconSvg:
             assert b"<svg" in decoded
 
     def test_get_svg_data_uri(self, mock_engine: SearchEngine, icon_file: Path):
-        from src.server import _handle_get_icon_svg
+        from tech_icons.server import _handle_get_icon_svg
 
-        with patch("src.server.engine", mock_engine), patch("src.server.PROJECT_ROOT", icon_file):
+        with patch("tech_icons.server.engine", mock_engine), patch("tech_icons._paths.package_root", lambda: icon_file):
             results = _handle_get_icon_svg({"id": "aws/compute/lambda", "format": "data_uri"})
             assert results[0].text.startswith("data:image/svg+xml;base64,")
 
     def test_get_svg_invalid_id(self, mock_engine: SearchEngine):
-        from src.server import _handle_get_icon_svg
+        from tech_icons.server import _handle_get_icon_svg
 
-        with patch("src.server.engine", mock_engine):
+        with patch("tech_icons.server.engine", mock_engine):
             results = _handle_get_icon_svg({"id": "nonexistent/icon"})
             data = json.loads(results[0].text)
             assert "error" in data
 
     def test_get_svg_default_format_is_raw(self, mock_engine: SearchEngine, icon_file: Path):
-        from src.server import _handle_get_icon_svg
+        from tech_icons.server import _handle_get_icon_svg
 
-        with patch("src.server.engine", mock_engine), patch("src.server.PROJECT_ROOT", icon_file):
+        with patch("tech_icons.server.engine", mock_engine), patch("tech_icons._paths.package_root", lambda: icon_file):
             results = _handle_get_icon_svg({"id": "aws/compute/lambda"})
             assert "<svg" in results[0].text
 
@@ -260,9 +260,9 @@ class TestCallTool:
 
     @pytest.mark.asyncio
     async def test_call_tool_search(self, mock_engine: SearchEngine):
-        from src.server import call_tool
+        from tech_icons.server import call_tool
 
-        with patch("src.server.engine", mock_engine):
+        with patch("tech_icons.server.engine", mock_engine):
             results = await call_tool("search_icons", {"query": "lambda"})
             assert len(results) == 1
             data = json.loads(results[0].text)
@@ -270,26 +270,26 @@ class TestCallTool:
 
     @pytest.mark.asyncio
     async def test_call_tool_unknown(self, mock_engine: SearchEngine):
-        from src.server import call_tool
+        from tech_icons.server import call_tool
 
-        with patch("src.server.engine", mock_engine):
+        with patch("tech_icons.server.engine", mock_engine):
             results = await call_tool("nonexistent_tool", {})
             assert "Unknown tool" in results[0].text
 
     @pytest.mark.asyncio
     async def test_call_tool_get_icon(self, mock_engine: SearchEngine):
-        from src.server import call_tool
+        from tech_icons.server import call_tool
 
-        with patch("src.server.engine", mock_engine):
+        with patch("tech_icons.server.engine", mock_engine):
             results = await call_tool("get_icon", {"id": "aws/compute/ec2"})
             data = json.loads(results[0].text)
             assert data["id"] == "aws/compute/ec2"
 
     @pytest.mark.asyncio
     async def test_call_tool_list_vendors(self, mock_engine: SearchEngine):
-        from src.server import call_tool
+        from tech_icons.server import call_tool
 
-        with patch("src.server.engine", mock_engine):
+        with patch("tech_icons.server.engine", mock_engine):
             results = await call_tool("list_vendors", {})
             data = json.loads(results[0].text)
             assert isinstance(data, dict)
@@ -297,9 +297,9 @@ class TestCallTool:
 
     @pytest.mark.asyncio
     async def test_call_tool_list_categories(self, mock_engine: SearchEngine):
-        from src.server import call_tool
+        from tech_icons.server import call_tool
 
-        with patch("src.server.engine", mock_engine):
+        with patch("tech_icons.server.engine", mock_engine):
             results = await call_tool("list_categories", {})
             data = json.loads(results[0].text)
             assert isinstance(data, list)
@@ -315,7 +315,7 @@ class TestListTools:
 
     @pytest.mark.asyncio
     async def test_list_tools_returns_all(self):
-        from src.server import list_tools
+        from tech_icons.server import list_tools
 
         tools = await list_tools()
         names = {t.name for t in tools}
@@ -331,7 +331,7 @@ class TestListTools:
 
     @pytest.mark.asyncio
     async def test_search_icons_schema(self):
-        from src.server import list_tools
+        from tech_icons.server import list_tools
 
         tools = await list_tools()
         search_tool = next(t for t in tools if t.name == "search_icons")

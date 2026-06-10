@@ -18,13 +18,13 @@ import sys
 from pathlib import Path
 
 # Add project root to path
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-
-from src.normalize import (
+from tech_icons.normalize import (
     ASSETS_DIR,
     IconEntry,
     collect_aws_icons,
     collect_azure_icons,
+    collect_cncf_icons,
+    collect_devicon_icons,
     collect_gcp_icons,
     collect_microsoft_icons,
     deduplicate_entries,
@@ -75,6 +75,8 @@ def normalize_vendor(
         "azure": collect_azure_icons,
         "gcp": collect_gcp_icons,
         "microsoft": collect_microsoft_icons,
+        "cncf": collect_cncf_icons,
+        "devicon": collect_devicon_icons,
     }
 
     collector = collector_map.get(vendor)
@@ -108,12 +110,12 @@ def main() -> None:
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("."),
+        default=Path("tech_icons"),
         help="Output root directory (icons/ will be created under this, default: .)",
     )
     parser.add_argument(
         "--vendor",
-        choices=["aws", "azure", "gcp", "microsoft"],
+        choices=["aws", "azure", "gcp", "microsoft", "cncf", "devicon"],
         help="Process only a specific vendor (default: all)",
     )
     parser.add_argument(
@@ -143,7 +145,7 @@ def main() -> None:
     if args.dry_run:
         logger.info("[DRY RUN MODE] No files will be copied.")
 
-    vendors = [args.vendor] if args.vendor else ["aws", "azure", "gcp", "microsoft"]
+    vendors = [args.vendor] if args.vendor else ["aws", "azure", "gcp", "microsoft", "cncf", "devicon"]
     all_entries: list[IconEntry] = []
 
     for vendor in vendors:

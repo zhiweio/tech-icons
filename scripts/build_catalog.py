@@ -3,9 +3,9 @@
 
 Orchestrates the full pipeline:
   1. Normalize icons (scan assets, deduplicate, copy SVGs)
-  2. Generate catalog/icons.json with full metadata per icon
-  3. Generate catalog/keyword_index.json (inverted index)
-  4. Optionally compute embeddings (catalog/embeddings.npz + catalog/embedding_ids.json)
+  2. Generate tech_icons/catalog/icons.json with full metadata per icon
+  3. Generate tech_icons/catalog/keyword_index.json (inverted index)
+  4. Optionally compute embeddings (tech_icons/catalog/embeddings.npz + tech_icons/catalog/embedding_ids.json)
 
 Usage:
     python3 scripts/build_catalog.py [--skip-embeddings] [--vendor aws] [--force]
@@ -24,9 +24,7 @@ from pathlib import Path
 import yaml
 
 # Add project root to path
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-
-from src.normalize import (
+from tech_icons.normalize import (
     ASSETS_DIR,
     IconEntry,
     collect_all_icons,
@@ -44,7 +42,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-CATALOG_DIR = Path("catalog")
+CATALOG_DIR = Path("tech_icons/catalog")
 HASH_FILE = CATALOG_DIR / ".build_hash"
 
 
@@ -81,7 +79,7 @@ def needs_rebuild(assets_root: Path, force: bool = False) -> bool:
 
 
 def load_enrichments() -> dict:
-    """Load alias and tag enrichments from catalog/enrichments.yaml."""
+    """Load alias and tag enrichments from tech_icons/catalog/enrichments.yaml."""
     enrichments_path = CATALOG_DIR / "enrichments.yaml"
     if not enrichments_path.exists():
         logger.warning("No enrichments.yaml found, skipping enrichments")
@@ -191,8 +189,8 @@ def compute_embeddings(catalog: list[dict], output_dir: Path) -> None:
     """Compute sentence embeddings for catalog entries.
 
     Requires sentence-transformers. Outputs:
-      - catalog/embeddings.npz (numpy array)
-      - catalog/embedding_ids.json (ordered list of IDs matching embedding rows)
+      - tech_icons/catalog/embeddings.npz (numpy array)
+      - tech_icons/catalog/embedding_ids.json (ordered list of IDs matching embedding rows)
     """
     try:
         import numpy as np
@@ -367,11 +365,11 @@ def main() -> None:
     logger.info("=" * 60)
     logger.info("BUILD COMPLETE")
     logger.info("=" * 60)
-    logger.info(f"  catalog/icons.json          : {len(catalog)} entries")
-    logger.info(f"  catalog/keyword_index.json  : {len(keyword_index)} tokens")
+    logger.info(f"  tech_icons/catalog/icons.json          : {len(catalog)} entries")
+    logger.info(f"  tech_icons/catalog/keyword_index.json  : {len(keyword_index)} tokens")
     if not args.skip_embeddings:
-        logger.info(f"  catalog/embeddings.npz      : {len(catalog)} vectors")
-        logger.info(f"  catalog/embedding_ids.json  : {len(catalog)} IDs")
+        logger.info(f"  tech_icons/catalog/embeddings.npz      : {len(catalog)} vectors")
+        logger.info(f"  tech_icons/catalog/embedding_ids.json  : {len(catalog)} IDs")
 
 
 if __name__ == "__main__":

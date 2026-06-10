@@ -1,26 +1,35 @@
 # tech-icons
 
-MCP server exposing 2200+ cloud technology icons (AWS, Azure, GCP, Microsoft) as searchable tools. Features 3-tier search (exact → keyword → fuzzy → semantic), multiple output formats, and integrations with ppt-master and architecture diagram generators.
+MCP server exposing 3100+ cloud technology icons (AWS, Azure, GCP, Microsoft) as searchable tools. Features 3-tier search (exact → keyword → fuzzy → semantic), multiple output formats, and integrations with ppt-master and architecture diagram generators.
 
 | Vendor | Icons | Source |
 |--------|-------|--------|
-| AWS | 767 | Architecture-Service, Category, Resource, Group Icons (48px) |
-| Azure | 705 | Azure Public Service Icons |
-| GCP | 45 | Category Icons + Core Product Icons |
-| Microsoft | 772 | Fabric, M365, Dynamics 365, Entra, Power Platform |
-| **Total** | **2,289** | Deduplicated from 5,190 raw SVGs |
+| AWS | 765 | Architecture-Service, Category, Resource, Group Icons (48px) |
+| Azure | 704 | Azure Public Service Icons |
+| CNCF | 226 | CNCF landscape icon package |
+| Devicon | 578 | Devicon technology icon set |
+| GCP | 256 | Category Icons + Core Product Icons |
+| Microsoft | 611 | Fabric, M365, Dynamics 365, Entra, Power Platform |
+| **Total** | **3,140** | Deduplicated from 9,468 raw SVGs |
 
 ## Quick Start
 
+### End users (PyPI / uvx)
+
+The published wheel bundles the icon catalog and SVGs—no local build step.
+
 ```bash
-# Install dependencies
-uv sync
+uvx tech-icons
 
-# Build the icon catalog (scans assets/, generates catalog/)
-uv run python scripts/build_catalog.py
+uvx --with 'tech-icons[semantic]' tech-icons
 
-# Run the MCP server (stdio transport)
-uv run python src/server.py
+uvx --with 'tech-icons[web]' tech-icons --web
+```
+
+Run from this repository without a PyPI release:
+
+```bash
+uvx --from git+https://github.com/zhiweio/tech-icons tech-icons
 ```
 
 ### MCP Configuration
@@ -31,32 +40,24 @@ Add to your `.mcp.json` or MCP client config:
 {
   "mcpServers": {
     "tech-icons": {
-      "command": "python3",
-      "args": ["src/server.py"],
+      "command": "uvx",
+      "args": ["tech-icons"],
       "env": {}
     }
   }
 }
 ```
 
-## Architecture
 
+For semantic search, use "args": ["--with", "tech-icons[semantic]", "tech-icons"] with "command": "uvx" (or install `tech-icons[semantic]` in your environment).
+
+## Web UI
+
+```bash
+uvx --with 'tech-icons[web]' tech-icons --web --port 8765 --open
 ```
-assets/            → Raw vendor icon packages (SVG)
-    ↓
-scripts/normalize_icons.py → Normalize filenames, deduplicate
-    ↓
-scripts/build_catalog.py   → Generate metadata, keyword index, embeddings
-    ↓
-catalog/
-  icons.json           → Full icon metadata (2289 entries)
-  keyword_index.json   → Inverted index for keyword search
-  embeddings.npz       → Sentence-transformer embeddings (optional)
-    ↓
-src/search.py          → Multi-tier search engine
-src/formats.py         → Output format adapters
-src/server.py          → MCP server (stdio)
-```
+
+Opens the local icon browser at http://127.0.0.1:8765 (loopback only).
 
 ## Available Tools
 
@@ -90,7 +91,7 @@ Examples: `aws/compute/lambda`, `azure/databases/cosmos-db`, `gcp/containers/gke
 **ppt-master:** Use `format="ppt_master"` or the bridge script to export icons into ppt-master template directories.
 
 ```bash
-python3 -m src.bridges.ppt_master --icons aws/compute/lambda,gcp/compute/cloud-run --target ./templates/icons/tech/
+python3 -m tech_icons.bridges.ppt_master --icons aws/compute/lambda,gcp/compute/cloud-run --target ./templates/icons/tech/
 ```
 
 **Architecture diagrams:** Use `format="data_uri"` for HTML img tags or `format="inline_group"` for direct SVG composition. See [docs/integration-arch-diagram.md](docs/integration-arch-diagram.md).
@@ -125,13 +126,11 @@ make all
 Other useful commands:
 
 ```bash
-# Build catalog for a single vendor
-make build-catalog           # full build
-uv run python scripts/build_catalog.py --vendor aws
-uv run python scripts/build_catalog.py --skip-embeddings
-
 # Start MCP server
 make serve
+
+# Local icon browser
+make web
 ```
 
 ### Tooling

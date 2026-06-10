@@ -1,6 +1,6 @@
 # tech-icons — Cloud Tech Icon Search
 
-A skill providing searchable access to 2200+ cloud technology icons from AWS, Azure, GCP, and Microsoft via MCP tools. Returns icons in multiple formats suitable for presentations, architecture diagrams, and documentation.
+A skill providing searchable access to 3100+ cloud technology icons from AWS, Azure, GCP, and Microsoft via MCP tools. Returns icons in multiple formats suitable for presentations, architecture diagrams, and documentation.
 
 ## MCP Server
 
@@ -109,7 +109,7 @@ get_icon_svg(id="aws/compute/lambda", format="ppt_master")
 
 For bulk export into a ppt-master template directory:
 ```bash
-python3 -m src.bridges.ppt_master --icons aws/compute/lambda,azure/compute/function-apps --target ./templates/icons/tech/
+python3 -m tech_icons.bridges.ppt_master --icons aws/compute/lambda,azure/compute/function-apps --target ./templates/icons/tech/
 ```
 
 The bridge copies SVGs into the directory layout ppt-master expects: `{target}/tech/{vendor}/{name}.svg`

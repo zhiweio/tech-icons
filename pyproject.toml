@@ -1,28 +1,33 @@
+[build-system]
+requires = ["hatchling>=1.26.0"]
+build-backend = "hatchling.build"
+
 [project]
 name = "tech-icons"
-version = "0.1.0"
-description = "MCP server exposing 2200+ cloud tech icons as searchable tools"
+version = "0.0.1"
+description = "MCP server exposing 3100+ cloud tech icons as searchable tools"
 requires-python = ">=3.10"
 dependencies = [
     "mcp>=1.0.0",
-    "numpy>=2.2.6",
     "pyyaml>=6.0",
     "rapidfuzz>=3.0",
-    "sentence-transformers>=5.5.1",
 ]
 
 [project.optional-dependencies]
-embeddings = [
-    "sentence-transformers>=2.0",
-    "numpy>=1.24",
-]
 web = [
     "fastapi>=0.115",
     "uvicorn[standard]>=0.30",
 ]
+semantic = [
+    "sentence-transformers>=5.5.1",
+    "numpy>=2.2.6",
+]
+all = [
+    "tech-icons[web,semantic]",
+]
 
 [project.scripts]
-tech-icons-server = "src.server:main"
+tech-icons = "tech_icons.server:main"
 
 [dependency-groups]
 dev = [
@@ -31,9 +36,11 @@ dev = [
     "ruff>=0.11.0",
     "mypy>=1.15.0",
     "pre-commit>=4.2.0",
+    "hatchling>=1.26.0",
     "fastapi>=0.115",
     "uvicorn[standard]>=0.30",
     "httpx>=0.27",
+    "pytest-cov>=7.1.0",
 ]
 
 [tool.ruff]
@@ -78,3 +85,20 @@ ignore_missing_imports = true
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 asyncio_mode = "auto"
+
+[tool.hatch.build.targets.wheel]
+packages = ["tech_icons"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/tech_icons",
+    "/scripts",
+    "/tests",
+    "/pyproject.toml",
+    "/README.md",
+    "/Makefile",
+]
+exclude = [
+    "/assets",
+    "/tech_icons/catalog/.build_hash",
+]

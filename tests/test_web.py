@@ -19,7 +19,7 @@ def web_client(
     sample_svg_content: str,
     monkeypatch,
 ):
-    """TestClient over src.web.app with the engine pointed at temp fixtures."""
+    """TestClient over tech_icons.web.app with the engine pointed at temp fixtures."""
     catalog_dir = tmp_path / "catalog"
     catalog_dir.mkdir()
     (catalog_dir / "icons.json").write_text(json.dumps(sample_catalog))
@@ -33,10 +33,10 @@ def web_client(
         svg_path.write_text(sample_svg_content)
 
     # Reload module with patched paths
-    import src.web.app as web_app
-    from src.search import SearchEngine
+    import tech_icons.web.app as web_app
+    from tech_icons.search import SearchEngine
 
-    monkeypatch.setattr(web_app, "PROJECT_ROOT", tmp_path)
+    monkeypatch.setattr("tech_icons._paths.package_root", lambda: tmp_path)
     new_engine = SearchEngine(catalog_dir=catalog_dir)
     new_engine.load()
     monkeypatch.setattr(web_app, "engine", new_engine)

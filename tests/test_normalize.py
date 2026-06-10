@@ -6,14 +6,17 @@ from pathlib import Path
 
 import pytest
 
-from src.normalize import (
+from tech_icons.normalize import (
     IconEntry,
     clean_name,
     collect_all_icons,
     collect_aws_icons,
     collect_azure_icons,
+    collect_cncf_icons,
+    collect_devicon_icons,
     collect_gcp_category_icons,
     collect_gcp_core_product_icons,
+    collect_gcp_extended_icons,
     collect_gcp_icons,
     collect_microsoft_365_icons,
     collect_microsoft_dynamics_icons,
@@ -56,6 +59,12 @@ class TestCleanName:
             ("icon_48.svg", "icon"),
             ("icon_16.svg", "icon"),
             ("icon_32.svg", "icon"),
+            # Azure: "00029-icon-service-Function-Apps.svg" → "function-apps"
+            ("10086-icon-service-Storage-Accounts.svg", "storage-accounts"),
+            ("10029-icon-service-Function-Apps.svg", "function-apps"),
+            ("00328-icon-service-Host-Pools.svg", "host-pools"),
+            # Azure with parenthesised qualifier — parens dropped, hyphen preserved
+            ("10087-icon-service-Storage-Accounts-(Classic).svg", "storage-accounts-classic"),
         ],
     )
     def test_clean_name_variants(self, raw: str, expected: str):
@@ -265,14 +274,243 @@ class TestGCPParsing:
         entries = collect_gcp_icons(tmp_path)
         assert len(entries) == 2
 
-    def test_gcp_no_svg_dir_skipped(self, tmp_path: Path):
-        """Category dirs without SVG/ subdir are skipped."""
+    def test_gcp_flat_layout_is_collected(self, tmp_path: Path):
+        """Flat layout (SVGs directly under category dir, no SVG/ subdir) still works.
+
+        The collector rglobs from the package root and infers category from the
+        first meaningful parent directory, so it tolerates upstream restructuring.
+        """
         base = tmp_path / "gcp-category-icon-package" / "Compute"
         base.mkdir(parents=True)
-        (base / "compute-engine.svg").write_text("<svg></svg>")  # In wrong location
+        (base / "compute-engine.svg").write_text("<svg></svg>")
 
         entries = collect_gcp_category_icons(tmp_path)
-        assert entries == []
+        assert len(entries) == 1
+        assert entries[0].category == "compute"
+        assert entries[0].id == "gcp/compute/compute-engine"
+
+
+# ---------------------------------------------------------------------------
+# GCP extended (gcp-icon-package) tests
+# ---------------------------------------------------------------------------
+
+
+class TestGCPExtendedParsing:
+    """Tests for `gcp-icon-package` (extended product set)."""
+
+    def test_mapped_product_uses_curated_category(self, tmp_path: Path):
+        """Known products are placed in their curated category."""
+        prod = tmp_path / "gcp-icon-package" / "bigquery"
+        prod.mkdir(parents=True)
+        (prod / "bigquery.svg").write_text("<svg></svg>")
+
+        entries = collect_gcp_extended_icons(tmp_path)
+        assert len(entries) == 1
+        assert entries[0].vendor == "gcp"
+        assert entries[0].category == "data-analytics"
+        assert entries[0].id == "gcp/data-analytics/bigquery"
+
+    def test_snake_case_product_matches_curated_map(self, tmp_path: Path):
+        """``cloud_storage`` (snake_case) resolves to the same category as ``Cloud Storage``."""
+        prod = tmp_path / "gcp-icon-package" / "cloud_storage"
+        prod.mkdir(parents=True)
+        (prod / "cloud_storage.svg").write_text("<svg></svg>")
+
+        entries = collect_gcp_extended_icons(tmp_path)
+        assert len(entries) == 1
+        assert entries[0].category == "storage"
+
+    def test_cloud_functions_maps_to_serverless(self, tmp_path: Path):
+        """`cloud_functions` resolves to the curated ``serverless-computing`` bucket."""
+        prod = tmp_path / "gcp-icon-package" / "cloud_functions"
+        prod.mkdir(parents=True)
+        (prod / "cloud_functions.svg").write_text("<svg></svg>")
+
+        entries = collect_gcp_extended_icons(tmp_path)
+        assert len(entries) == 1
+        assert entries[0].id == "gcp/serverless-computing/cloud-functions"
+
+    def test_unmapped_product_falls_back_to_products(self, tmp_path: Path):
+        """Unknown products land in a generic ``products`` bucket."""
+        prod = tmp_path / "gcp-icon-package" / "some_unknown_product_xyz"
+        prod.mkdir(parents=True)
+        (prod / "some_unknown_product_xyz.svg").write_text("<svg></svg>")
+
+        entries = collect_gcp_extended_icons(tmp_path)
+        assert len(entries) == 1
+        assert entries[0].category == "products"
+        assert entries[0].id == "gcp/products/some-unknown-product-xyz"
+
+    def test_missing_package_returns_empty(self, tmp_path: Path):
+        assert collect_gcp_extended_icons(tmp_path) == []
+
+    def test_collect_gcp_icons_includes_extended(self, tmp_path: Path):
+        """collect_gcp_icons aggregates the extended package alongside the others."""
+        ext = tmp_path / "gcp-icon-package" / "dataflow"
+        ext.mkdir(parents=True)
+        (ext / "dataflow.svg").write_text("<svg></svg>")
+
+        entries = collect_gcp_icons(tmp_path)
+        assert any(e.id == "gcp/data-analytics/dataflow" for e in entries)
+
+
+# ---------------------------------------------------------------------------
+# CNCF (cncf-icon-package) tests
+# ---------------------------------------------------------------------------
+
+
+class TestCNCFParsing:
+    """Tests for `cncf-icon-package`."""
+
+    def test_prefers_icon_color_variant(self, tmp_path: Path):
+        """`icon/color/*.svg` wins over other layouts and variants."""
+        project = tmp_path / "cncf-icon-package" / "argo"
+        (project / "icon" / "color").mkdir(parents=True)
+        (project / "icon" / "black").mkdir(parents=True)
+        (project / "stacked" / "color").mkdir(parents=True)
+        chosen = project / "icon" / "color" / "argo-icon-color.svg"
+        chosen.write_text("<svg></svg>")
+        (project / "icon" / "black" / "argo-icon-black.svg").write_text("<svg></svg>")
+        (project / "stacked" / "color" / "argo-stacked-color.svg").write_text("<svg></svg>")
+
+        entries = collect_cncf_icons(tmp_path)
+        assert len(entries) == 1
+        entry = entries[0]
+        assert entry.vendor == "cncf"
+        assert entry.category == "cncf"
+        assert entry.id == "cncf/cncf/argo"
+        assert entry.source_path == chosen
+
+    def test_falls_back_when_icon_color_missing(self, tmp_path: Path):
+        """Projects without `icon/color` fall back to the next available variant."""
+        project = tmp_path / "cncf-icon-package" / "kubeclipper"
+        stacked = project / "stacked" / "color"
+        stacked.mkdir(parents=True)
+        fallback = stacked / "kubeclipper-stacked-color.svg"
+        fallback.write_text("<svg></svg>")
+
+        entries = collect_cncf_icons(tmp_path)
+        assert len(entries) == 1
+        assert entries[0].source_path == fallback
+        assert entries[0].id == "cncf/cncf/kubeclipper"
+
+    def test_falls_back_to_any_svg(self, tmp_path: Path):
+        """Projects with only off-priority variants still produce an entry."""
+        project = tmp_path / "cncf-icon-package" / "weirdproj"
+        odd = project / "misc"
+        odd.mkdir(parents=True)
+        svg = odd / "weirdproj.svg"
+        svg.write_text("<svg></svg>")
+
+        entries = collect_cncf_icons(tmp_path)
+        assert len(entries) == 1
+        assert entries[0].source_path == svg
+
+    def test_skips_project_with_no_svg(self, tmp_path: Path):
+        project = tmp_path / "cncf-icon-package" / "empty"
+        project.mkdir(parents=True)
+        assert collect_cncf_icons(tmp_path) == []
+
+    def test_missing_package_returns_empty(self, tmp_path: Path):
+        assert collect_cncf_icons(tmp_path) == []
+
+    def test_multiple_projects(self, tmp_path: Path):
+        """All projects get one representative icon each."""
+        for proj in ("argo", "tikv", "devfile"):
+            d = tmp_path / "cncf-icon-package" / proj / "icon" / "color"
+            d.mkdir(parents=True)
+            (d / f"{proj}-icon-color.svg").write_text("<svg></svg>")
+
+        entries = collect_cncf_icons(tmp_path)
+        assert len(entries) == 3
+        assert {e.name.split(" ", 1)[1] for e in entries} == {"Argo", "Tikv", "Devfile"}
+
+
+# ---------------------------------------------------------------------------
+# Devicon (dev-icon-package) tests
+# ---------------------------------------------------------------------------
+
+
+class TestDeviconParsing:
+    """Tests for `dev-icon-package` (devicon)."""
+
+    def test_prefers_original_variant(self, tmp_path: Path):
+        """`{name}-original.svg` wins over plain/line and any -wordmark variant."""
+        project = tmp_path / "dev-icon-package" / "react"
+        project.mkdir(parents=True)
+        for variant in ("original-wordmark", "plain", "plain-wordmark"):
+            (project / f"react-{variant}.svg").write_text("<svg></svg>")
+        chosen = project / "react-original.svg"
+        chosen.write_text("<svg></svg>")
+
+        entries = collect_devicon_icons(tmp_path)
+        assert len(entries) == 1
+        entry = entries[0]
+        assert entry.vendor == "devicon"
+        assert entry.category == "devicon"
+        assert entry.id == "devicon/devicon/react"
+        assert entry.source_path == chosen
+
+    def test_falls_back_to_plain_then_line(self, tmp_path: Path):
+        """When no `-original` exists, `plain` is preferred over `line`."""
+        proj_a = tmp_path / "dev-icon-package" / "javascript"
+        proj_a.mkdir(parents=True)
+        chosen_a = proj_a / "javascript-plain.svg"
+        chosen_a.write_text("<svg></svg>")
+        (proj_a / "javascript-line.svg").write_text("<svg></svg>")
+
+        proj_b = tmp_path / "dev-icon-package" / "aarch64"
+        proj_b.mkdir(parents=True)
+        chosen_b = proj_b / "aarch64-line.svg"
+        chosen_b.write_text("<svg></svg>")
+
+        entries = collect_devicon_icons(tmp_path)
+        srcs = {e.id: e.source_path for e in entries}
+        assert srcs["devicon/devicon/javascript"] == chosen_a
+        assert srcs["devicon/devicon/aarch64"] == chosen_b
+
+    def test_skips_eps_and_picks_any_svg_when_no_priority_match(self, tmp_path: Path):
+        """EPS files are ignored; if no priority variant exists, take any SVG."""
+        project = tmp_path / "dev-icon-package" / "weird"
+        project.mkdir(parents=True)
+        (project / "weird.eps").write_text("eps")
+        fallback = project / "weird-other.svg"
+        fallback.write_text("<svg></svg>")
+
+        entries = collect_devicon_icons(tmp_path)
+        assert len(entries) == 1
+        assert entries[0].source_path == fallback
+
+    def test_missing_package_returns_empty(self, tmp_path: Path):
+        assert collect_devicon_icons(tmp_path) == []
+
+
+# ---------------------------------------------------------------------------
+# Azure end-to-end naming (fixes "Missing icon entries" for Azure services)
+# ---------------------------------------------------------------------------
+
+
+class TestAzureNamingCleanup:
+    """Verify Azure's "\\d+-icon-service-" prefix and parenthesised qualifiers are stripped."""
+
+    def test_storage_accounts_id(self, tmp_path: Path):
+        base = tmp_path / "azure-icon-package" / "Icons" / "storage"
+        base.mkdir(parents=True)
+        (base / "10086-icon-service-Storage-Accounts.svg").write_text("<svg></svg>")
+        (base / "10087-icon-service-Storage-Accounts-(Classic).svg").write_text("<svg></svg>")
+
+        entries = collect_azure_icons(tmp_path)
+        ids = {e.id for e in entries}
+        assert "azure/storage/storage-accounts" in ids
+        assert "azure/storage/storage-accounts-classic" in ids
+
+    def test_function_apps_id(self, tmp_path: Path):
+        base = tmp_path / "azure-icon-package" / "Icons" / "compute"
+        base.mkdir(parents=True)
+        (base / "10029-icon-service-Function-Apps.svg").write_text("<svg></svg>")
+
+        entries = collect_azure_icons(tmp_path)
+        assert any(e.id == "azure/compute/function-apps" for e in entries)
 
 
 # ---------------------------------------------------------------------------
@@ -459,3 +697,82 @@ class TestCollectAllIcons:
         vendors = {e.vendor for e in entries}
         assert "aws" in vendors
         assert "azure" in vendors
+
+
+# ---------------------------------------------------------------------------
+# Robustness against internal-layout changes
+# ---------------------------------------------------------------------------
+
+
+class TestLayoutRobustness:
+    """The only stable contract is the top-level package dir name. Internal
+    subdirectory restructuring must not break icon collection.
+    """
+
+    def test_aws_service_icons_tolerate_renamed_release_dir(self, tmp_path: Path):
+        """AWS classification is filename-based, not release-dir based."""
+        # Hypothetical future release rename: Architecture-Service-Icons_2030 instead of _04302026
+        d = tmp_path / "aws-icon-package" / "Architecture-Service-Icons_2030" / "Arch_Compute" / "48"
+        d.mkdir(parents=True)
+        (d / "Arch_AWS-Lambda_48.svg").write_text("<svg></svg>")
+
+        entries = collect_aws_icons(tmp_path)
+        assert any(e.id == "aws/compute/lambda" for e in entries)
+
+    def test_aws_service_icons_tolerate_flat_layout(self, tmp_path: Path):
+        """Even without intermediate release/size subdirs, classification works
+        from filename prefix; category infers from the immediate parent dir.
+        """
+        d = tmp_path / "aws-icon-package" / "Compute"
+        d.mkdir(parents=True)
+        (d / "Arch_AWS-Lambda_48.svg").write_text("<svg></svg>")
+
+        entries = collect_aws_icons(tmp_path)
+        assert any(e.id == "aws/compute/lambda" for e in entries)
+
+    def test_fabric_tolerates_old_nested_layout(self, tmp_path: Path):
+        """Historical layout: microsoft-fabric-icon-package/package/dist/svg/*.svg"""
+        d = tmp_path / "microsoft-fabric-icon-package" / "package" / "dist" / "svg"
+        d.mkdir(parents=True)
+        (d / "data_warehouse_20_filled.svg").write_text("<svg></svg>")
+
+        entries = collect_microsoft_fabric_icons(tmp_path)
+        assert len(entries) == 1
+        assert entries[0].category == "fabric"
+
+    def test_fabric_tolerates_new_flat_layout(self, tmp_path: Path):
+        """Current layout: microsoft-fabric-icon-package/svg/*.svg"""
+        d = tmp_path / "microsoft-fabric-icon-package" / "svg"
+        d.mkdir(parents=True)
+        (d / "data_warehouse_20_filled.svg").write_text("<svg></svg>")
+
+        entries = collect_microsoft_fabric_icons(tmp_path)
+        assert len(entries) == 1
+        assert entries[0].category == "fabric"
+
+    def test_azure_tolerates_missing_icons_wrapper(self, tmp_path: Path):
+        """Azure works even if the `Icons/` wrapper is removed and categories
+        sit directly under the package dir.
+        """
+        d = tmp_path / "azure-icon-package" / "Compute"
+        d.mkdir(parents=True)
+        (d / "Virtual-Machines.svg").write_text("<svg></svg>")
+
+        entries = collect_azure_icons(tmp_path)
+        assert len(entries) == 1
+        assert entries[0].category == "compute"
+
+    def test_entra_excludes_bw_set(self, tmp_path: Path):
+        """Microsoft Entra collector excludes black-and-white variants."""
+        color = tmp_path / "microsoft-entra-architecture-icon-package" / "Microsoft Entra color icons SVG"
+        bw = tmp_path / "microsoft-entra-architecture-icon-package" / "Microsoft Entra BW icons SVG"
+        color.mkdir(parents=True)
+        bw.mkdir(parents=True)
+        (color / "Conditional-Access.svg").write_text("<svg></svg>")
+        (bw / "Conditional-Access-BW.svg").write_text("<svg></svg>")
+
+        entries = collect_microsoft_entra_icons(tmp_path)
+        # Only the color one should survive
+        sources = [str(e.source_path) for e in entries]
+        assert any("color" in s.lower() for s in sources)
+        assert not any("/bw " in s.lower() or "/bw/" in s.lower() or "bw icons" in s.lower() for s in sources)

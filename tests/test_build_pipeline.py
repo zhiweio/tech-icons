@@ -19,7 +19,7 @@ from scripts.build_catalog import (
     load_enrichments,
     needs_rebuild,
 )
-from src.normalize import IconEntry
+from tech_icons.normalize import IconEntry
 
 # ---------------------------------------------------------------------------
 # Fixtures
@@ -332,7 +332,7 @@ class TestIncrementalBuild:
 
     def test_new_icon_added_to_catalog(self, assets_dir: Path, catalog_dir: Path):
         """Adding a new SVG file to assets triggers inclusion in catalog."""
-        from src.normalize import collect_all_icons
+        from tech_icons.normalize import collect_all_icons
 
         entries_before = collect_all_icons(assets_dir)
         count_before = len(entries_before)
@@ -355,14 +355,14 @@ class TestVendorFilter:
     """Test --vendor filter builds only specified vendor."""
 
     def test_aws_only(self, assets_dir: Path):
-        from src.normalize import collect_aws_icons
+        from tech_icons.normalize import collect_aws_icons
 
         entries = collect_aws_icons(assets_dir)
         assert all(e.vendor == "aws" for e in entries)
         assert len(entries) >= 1
 
     def test_azure_only(self, assets_dir: Path):
-        from src.normalize import collect_azure_icons
+        from tech_icons.normalize import collect_azure_icons
 
         entries = collect_azure_icons(assets_dir)
         assert all(e.vendor == "azure" for e in entries)

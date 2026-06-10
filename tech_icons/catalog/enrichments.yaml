@@ -1,0 +1,296 @@
+# Enrichments: Manual alias and tag mappings for cross-vendor icon search
+#
+# Maps common technology terms to icon IDs across all cloud providers.
+# Used by the build pipeline to augment the keyword index with semantic aliases.
+
+aliases:
+  # Compute - Serverless
+  serverless:
+    - aws/compute/lambda
+    - azure/compute/function-apps
+    - gcp/serverless-computing/cloud-functions
+    - gcp/serverless-computing/cloud-run
+
+  faas:
+    - aws/compute/lambda
+    - azure/compute/function-apps
+    - gcp/serverless-computing/cloud-functions
+
+  function-as-a-service:
+    - aws/compute/lambda
+    - azure/compute/function-apps
+    - gcp/serverless-computing/cloud-functions
+
+  # Compute - VMs
+  virtual-machine:
+    - aws/compute/ec2
+    - azure/compute/virtual-machine
+    - gcp/compute/compute-engine
+
+  vm:
+    - aws/compute/ec2
+    - azure/compute/virtual-machine
+    - gcp/compute/compute-engine
+
+  # Containers
+  kubernetes:
+    - aws/containers/elastic-kubernetes-service
+    - azure/containers/kubernetes-services
+    - gcp/containers/gke
+
+  k8s:
+    - aws/containers/elastic-kubernetes-service
+    - azure/containers/kubernetes-services
+    - gcp/containers/gke
+
+  container-orchestration:
+    - aws/containers/elastic-kubernetes-service
+    - azure/containers/kubernetes-services
+    - gcp/containers/gke
+
+  container-registry:
+    - aws/containers/elastic-container-registry
+    - azure/containers/container-registries
+    - gcp/containers/artifact-registry
+
+  # Storage - Object Storage
+  object-storage:
+    - aws/storage/simple-storage-service
+    - azure/storage/storage-accounts
+    - gcp/storage/cloud-storage
+
+  blob-storage:
+    - aws/storage/simple-storage-service
+    - azure/storage/storage-accounts
+    - gcp/storage/cloud-storage
+
+  s3:
+    - aws/storage/simple-storage-service
+
+  # Databases - Relational
+  database:
+    - aws/databases/rds
+    - aws/databases/aurora
+    - azure/databases/sql-database
+    - azure/databases/azure-database-postgresql-server
+    - gcp/databases/cloud-sql
+    - gcp/databases/cloud-spanner
+    - gcp/databases/alloydb
+
+  relational-database:
+    - aws/databases/rds
+    - aws/databases/aurora
+    - azure/databases/sql-database
+    - gcp/databases/cloud-sql
+    - gcp/databases/cloud-spanner
+
+  sql:
+    - aws/databases/rds
+    - azure/databases/sql-database
+    - gcp/databases/cloud-sql
+
+  postgres:
+    - aws/databases/aurora
+    - azure/databases/azure-database-postgresql-server
+    - gcp/databases/cloud-sql
+    - gcp/databases/alloydb
+
+  # Databases - NoSQL
+  nosql:
+    - aws/databases/dynamodb
+    - azure/databases/azure-cosmos-db
+    - gcp/databases/firestore
+    - gcp/databases/bigtable
+
+  document-database:
+    - aws/databases/dynamodb
+    - azure/databases/azure-cosmos-db
+    - gcp/databases/firestore
+
+  # Networking
+  load-balancer:
+    - aws/networking-content-delivery/elastic-load-balancing
+    - azure/networking/load-balancers
+    - gcp/networking/cloud-load-balancing
+
+  cdn:
+    - aws/networking-content-delivery/cloudfront
+    - azure/networking/front-door-and-cdn-profiles
+    - gcp/networking/cloud-cdn
+
+  content-delivery-network:
+    - aws/networking-content-delivery/cloudfront
+    - azure/networking/front-door-and-cdn-profiles
+    - gcp/networking/cloud-cdn
+
+  dns:
+    - aws/networking-content-delivery/route-53
+    - azure/networking/dns-zones
+    - gcp/networking/cloud-dns
+
+  vpn:
+    - aws/networking-content-delivery/site-to-site-vpn
+    - azure/networking/virtual-network-gateways
+    - gcp/networking/cloud-vpn
+
+  virtual-network:
+    - aws/group/virtual-private-cloud-vpc
+    - azure/networking/virtual-networks
+    - gcp/networking/virtual-private-cloud
+
+  # AI & Machine Learning
+  machine-learning:
+    - aws/artificial-intelligence/sagemaker-ai
+    - azure/ai-and-machine-learning/machine-learning
+    - gcp/ai-machine-learning/vertexai
+
+  ai:
+    - aws/artificial-intelligence/sagemaker-ai
+    - azure/ai-and-machine-learning/machine-learning
+    - gcp/ai-machine-learning/vertexai
+
+  llm:
+    - aws/artificial-intelligence/bedrock
+    - azure/ai-and-machine-learning/azure-openai
+    - gcp/ai-machine-learning/vertexai
+
+  generative-ai:
+    - aws/artificial-intelligence/bedrock
+    - azure/ai-and-machine-learning/azure-openai
+    - gcp/ai-machine-learning/vertexai
+
+  # Data Analytics
+  data-warehouse:
+    - aws/analytics/redshift
+    - azure/databases/azure-synapse-analytics
+    - gcp/data-analytics/bigquery
+
+  analytics:
+    - aws/analytics/redshift
+    - aws/analytics/athena
+    - azure/databases/azure-synapse-analytics
+    - gcp/data-analytics/bigquery
+    - gcp/data-analytics/looker
+
+  data-lake:
+    - aws/analytics/lake-formation
+    - azure/storage/data-lake-storage-gen1
+    - gcp/storage/cloud-storage
+
+  streaming:
+    - aws/analytics/kinesis
+    - azure/analytics/event-hubs
+    - gcp/data-analytics/dataflow
+    - gcp/data-analytics/pubsub
+
+  # Messaging & Integration
+  message-queue:
+    - aws/application-integration/simple-queue-service
+    - azure/integration/azure-service-bus
+    - gcp/data-analytics/pubsub
+
+  event-bus:
+    - aws/application-integration/eventbridge
+    - azure/integration/event-grid-topics
+    - gcp/data-analytics/pubsub
+
+  api-gateway:
+    - aws/networking-content-delivery/api-gateway
+    - azure/integration/api-management-services
+    - gcp/integration-services/apigee
+
+  # Security & Identity
+  identity:
+    - aws/security-identity/identity-and-access-management
+    - azure/identity/entra-identity-roles-and-administrators
+    - gcp/security-identity/identity-and-access-management
+    - microsoft/entra/microsoft-entra-id-color-icon
+
+  iam:
+    - aws/security-identity/identity-and-access-management
+    - azure/identity/entra-identity-roles-and-administrators
+    - gcp/security-identity/identity-and-access-management
+
+  secrets-manager:
+    - aws/security-identity/secrets-manager
+    - azure/security/key-vaults
+    - gcp/security-identity/secret-manager
+
+  firewall:
+    - aws/security-identity/waf
+    - azure/networking/firewalls
+    - gcp/security-identity/cloud-armor
+
+  # Monitoring & Observability
+  monitoring:
+    - aws/management-tools/cloudwatch
+    - azure/management-and-governance/monitor
+    - gcp/management-tools/cloud-monitoring
+
+  logging:
+    - aws/management-tools/cloudwatch
+    - azure/management-and-governance/log-analytics-workspaces
+    - gcp/management-tools/cloud-logging
+
+  # DevOps & CI/CD
+  ci-cd:
+    - aws/developer-tools/codepipeline
+    - azure/devops/azure-devops
+    - gcp/containers/cloud-build
+
+  infrastructure-as-code:
+    - aws/management-tools/cloudformation
+    - azure/general/templates
+    - gcp/management-tools/cloud-deployment-manager
+
+  # Microsoft-specific
+  power-platform:
+    - microsoft/power-platform/powerapps-scalable
+    - microsoft/power-platform/powerautomate-scalable
+    - microsoft/power-platform/powerpages-scalable
+
+  low-code:
+    - microsoft/power-platform/powerapps-scalable
+    - microsoft/power-platform/powerautomate-scalable
+
+  business-intelligence:
+    - microsoft/fabric/power-bi
+    - gcp/data-analytics/looker
+
+tags:
+  # Cross-vendor capability tags
+  serverless:
+    - aws/compute/lambda
+    - azure/compute/function-apps
+    - gcp/serverless-computing/cloud-functions
+    - gcp/serverless-computing/cloud-run
+    - aws/application-integration/step-functions
+    - aws/application-integration/eventbridge
+
+  managed-service:
+    - aws/databases/rds
+    - aws/databases/aurora
+    - azure/databases/sql-database
+    - gcp/databases/cloud-sql
+    - gcp/databases/cloud-spanner
+
+  open-source:
+    - aws/containers/elastic-kubernetes-service
+    - azure/containers/kubernetes-services
+    - gcp/containers/gke
+    - aws/databases/aurora
+    - gcp/databases/alloydb
+
+  event-driven:
+    - aws/compute/lambda
+    - aws/application-integration/eventbridge
+    - aws/application-integration/simple-notification-service
+    - aws/application-integration/simple-queue-service
+    - azure/integration/event-grid-topics
+    - gcp/data-analytics/pubsub
+
+  real-time:
+    - aws/analytics/kinesis
+    - azure/analytics/stream-analytics-jobs
+    - gcp/data-analytics/dataflow
+    - gcp/data-analytics/pubsub

@@ -7,7 +7,7 @@ from pathlib import Path
 
 import pytest
 
-from src.formats import (
+from tech_icons.formats import (
     IconNotFoundError,
     base64_svg,
     data_uri,

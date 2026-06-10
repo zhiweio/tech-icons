@@ -7,7 +7,7 @@ from pathlib import Path
 import pytest
 import yaml
 
-from src.concepts import ConceptRegistry
+from tech_icons.concepts import ConceptRegistry
 
 
 @pytest.fixture

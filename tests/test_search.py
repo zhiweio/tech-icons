@@ -7,7 +7,7 @@ from pathlib import Path
 
 import pytest
 
-from src.search import SearchEngine, SearchResult
+from tech_icons.search import SearchEngine, SearchResult
 
 # ---------------------------------------------------------------------------
 # Exact ID match (Tier 1)

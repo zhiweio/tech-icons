@@ -311,7 +311,7 @@ def search_engine(
     """Initialized SearchEngine with sample data (no embeddings)."""
     import yaml
 
-    from src.search import SearchEngine
+    from tech_icons.search import SearchEngine
 
     catalog_dir = tmp_path / "catalog"
     catalog_dir.mkdir()
