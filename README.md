@@ -1,11 +1,12 @@
 <!-- markdownlint-disable MD033 MD041 -->
 <!-- mcp-name: tech-icons -->
+# tech-icons
+
+**English** | [中文](docs/README_zh.md)
 
 <p align="center">
   <img src="./docs/images/brand-logo.jpg" alt="tech-icons" width="150" onerror="this.style.display='none'">
 </p>
-
-<h1 align="center">tech-icons</h1>
 
 <p align="center">
   <strong>3,100+ Cloud Tech Icons · Searchable MCP Server · Architecture Diagrams</strong>
@@ -20,14 +21,10 @@
 </p>
 
 <p align="center">
-  <em>English</em> · <a href="./README_zh.md">中文</a>
+  <img src="docs/images/banner.png" alt="tech-icons" />
 </p>
 
----
-
-# tech-icons
-
-> The missing icon layer for AI-assisted architecture diagramming. Give your LLMs the power to *see* and *place* cloud icons across AWS, Azure, GCP, and Microsoft—directly, without switching tabs or hunting through vendor docs.
+The missing icon layer for AI-assisted architecture diagramming. Give your LLMs the power to *see* and *place* cloud icons across AWS, Azure, GCP, and Microsoft—directly, without switching tabs or hunting through vendor docs.
 
 ## ✨ Features
 
@@ -340,7 +337,9 @@ IDs are **lowercase**, with **hyphens** for multi-word names. Use `list_categori
 
 ## 🏗️ Architecture & Design
 
-![](docs/images/tech-icons-architecture.png)
+<p align="center">
+  <img src="docs/images/tech-icons-architecture.png" alt="tech-icons-architecture" />
+</p>
 
 ### Key Design Decisions
 

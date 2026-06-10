@@ -1,11 +1,12 @@
 <!-- markdownlint-disable MD033 MD041 -->
 <!-- mcp-name: tech-icons -->
+# tech-icons
+
+[English](docs/README.md) | **中文**
 
 <p align="center">
   <img src="./docs/images/brand-logo.jpg" alt="tech-icons" width="150 onerror="this.style.display='none'">
 </p>
-
-<h1 align="center">tech-icons</h1>
 
 <p align="center">
   <strong>3,100+ 技术图标 · MCP 搜索服务 · 架构图</strong>
@@ -20,14 +21,10 @@
 </p>
 
 <p align="center">
-  <a href="./README.md"><em>English</em></a> · <em>中文</em>
+  <img src="docs/images/banner.png" alt="tech-icons" />
 </p>
 
----
-
-# tech-icons
-
-> 面向 AI 辅助架构图绘制的图标层。让 LLM 能够*看到*并*放置* AWS、Azure、GCP、Microsoft 的云服务图标——无需切换标签页或在各厂商文档中翻找。
+面向 AI 辅助架构图绘制的图标层。让 LLM 能够*看到*并*放置* AWS、Azure、GCP、Microsoft 的云服务图标——无需切换标签页或在各厂商文档中翻找。
 
 ## ✨ 功能特性
 
@@ -340,7 +337,9 @@ ID 全部为**小写**，多词名称用**连字符**分隔。使用 `list_categ
 
 ## 🏗️ 架构设计
 
-![](docs/images/tech-icons-architecture.png)
+<p align="center">
+  <img src="docs/images/tech-icons-architecture.png" alt="tech-icons-architecture" />
+</p>
 
 ### 核心设计决策
 
