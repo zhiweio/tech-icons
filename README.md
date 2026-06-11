@@ -2,7 +2,7 @@
 <!-- mcp-name: tech-icons -->
 # tech-icons
 
-**English** | [中文](docs/README_zh.md)
+**English** | [中文](./README_zh.md)
 
 <p align="center">
   <img src="./docs/images/brand-logo.jpg" alt="tech-icons" width="150" onerror="this.style.display='none'">
@@ -76,6 +76,7 @@ The missing icon layer for AI-assisted architecture diagramming. Give your LLMs 
     - [Running Tests](#running-tests)
     - [Tooling](#tooling)
   - [❓ FAQ](#-faq)
+  - [🏅 Icon Sources & Attributions](#-icon-sources--attributions)
   - [📄 License](#-license)
 
 ## 🚀 Quick Start
@@ -494,6 +495,28 @@ A: Yes. Put SVG files under `assets/your-vendor-*`, update `tech_icons/normalize
 **Q: What MCP protocol version does this support?**
 A: FastMCP 3.4 supports MCP protocol version `2025-03-26`. All transports (stdio, Streamable HTTP) use this protocol.
 
+## 🏅 Icon Sources & Attributions
+
+tech-icons **aggregates** icons from the following sources. The project itself (server, search engine, tooling) is MIT-licensed, but the bundled icon files retain their original licenses and terms. Please review each source's license before redistributing or modifying the icons.
+
+| Source | Vendor(s) | License / Terms | Notes |
+|--------|-----------|-----------------|-------|
+| [AWS Architecture Icons](https://aws.amazon.com/architecture/icons/) | `aws` | AWS [Terms of Service](https://aws.amazon.com/architecture/icons/) | Free to use for architecture diagrams. |
+| [Azure Architecture Icons](https://learn.microsoft.com/en-us/azure/architecture/icons/) | `azure` | [Microsoft Terms](https://learn.microsoft.com/en-us/azure/architecture/icons/) | Free to use for architecture diagrams. |
+| [Google Cloud Icons](https://cloud.google.com/icons) | `gcp` | Google Cloud [Brand Guidelines](https://cloud.google.com/icons) | Free to use for architecture diagrams. |
+| [Microsoft 365 Architecture Icons](https://learn.microsoft.com/en-us/previous-versions/microsoft-365/solutions/architecture-icons-templates) | `microsoft` (365) | [Microsoft Terms](https://learn.microsoft.com/en-us/previous-versions/microsoft-365/solutions/architecture-icons-templates) | |
+| [Dynamics 365 Icons](https://learn.microsoft.com/en-us/dynamics365/get-started/icons) | `microsoft` (dynamics-365) | [Microsoft Terms](https://learn.microsoft.com/en-us/dynamics365/get-started/icons) | |
+| [Microsoft Entra Architecture Icons](https://learn.microsoft.com/en-us/entra/architecture/architecture-icons) | `microsoft` (entra) | [Microsoft Terms](https://learn.microsoft.com/en-us/entra/architecture/architecture-icons) | |
+| [Microsoft Fabric Icons](https://learn.microsoft.com/en-us/fabric/fundamentals/icons) | `microsoft` (fabric) | [Microsoft Terms](https://learn.microsoft.com/en-us/fabric/fundamentals/icons) | |
+| [Power Platform Icons](https://learn.microsoft.com/en-us/power-platform/guidance/icons) | `microsoft` (power-platform) | [Microsoft Terms](https://learn.microsoft.com/en-us/power-platform/guidance/icons) | |
+| [CNCF Artwork](https://github.com/cncf/artwork) | `cncf` | CNCF [Trademark & Logo Guidelines](https://github.com/cncf/artwork) | Trademarks owned by CNCF and respective projects. |
+| [Devicon](https://github.com/devicons/devicon) | `devicon` | [MIT License](https://github.com/devicons/devicon/blob/master/LICENSE) | Icon fonts and SVGs for software technologies. |
+| [Developer Icons](https://github.com/xandemon/developer-icons) | `developer` | [MIT License](https://github.com/xandemon/developer-icons) | Flat, colored technology icons. |
+
+> **Note**: This project does **not** claim ownership of any bundled icon files. The icons are provided as-is from their respective upstream sources for convenience in AI-assisted diagramming workflows. The MIT license of this project applies to the server code, search engine, tooling, and documentation — **not** to the third-party icon assets.
+
 ## 📄 License
 
-MIT © [zhiweio](https://github.com/zhiweio)
+**Project code** (server, search engine, tooling, docs): MIT © [zhiweio](https://github.com/zhiweio)
+
+**Bundled icons**: Each icon set retains its original license and terms as listed in [Icon Sources & Attributions](#-icon-sources--attributions).

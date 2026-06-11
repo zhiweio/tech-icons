@@ -30,6 +30,7 @@ from tech_icons.normalize import (
     collect_all_icons,
     collect_aws_icons,
     collect_azure_icons,
+    collect_developer_icons,
     collect_gcp_icons,
     collect_microsoft_icons,
     deduplicate_entries,
@@ -255,7 +256,7 @@ def main() -> None:
     )
     parser.add_argument(
         "--vendor",
-        choices=["aws", "azure", "gcp", "microsoft"],
+        choices=["aws", "azure", "gcp", "microsoft", "developer"],
         help="Process only a specific vendor",
     )
     parser.add_argument(
@@ -298,6 +299,7 @@ def main() -> None:
             "azure": collect_azure_icons,
             "gcp": collect_gcp_icons,
             "microsoft": collect_microsoft_icons,
+            "developer": collect_developer_icons,
         }
         entries = collector_map[args.vendor](assets_root)
     else:

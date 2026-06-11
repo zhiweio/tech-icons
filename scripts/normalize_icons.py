@@ -24,6 +24,7 @@ from tech_icons.normalize import (
     collect_aws_icons,
     collect_azure_icons,
     collect_cncf_icons,
+    collect_developer_icons,
     collect_devicon_icons,
     collect_gcp_icons,
     collect_microsoft_icons,
@@ -77,6 +78,7 @@ def normalize_vendor(
         "microsoft": collect_microsoft_icons,
         "cncf": collect_cncf_icons,
         "devicon": collect_devicon_icons,
+        "developer": collect_developer_icons,
     }
 
     collector = collector_map.get(vendor)
@@ -115,7 +117,7 @@ def main() -> None:
     )
     parser.add_argument(
         "--vendor",
-        choices=["aws", "azure", "gcp", "microsoft", "cncf", "devicon"],
+        choices=["aws", "azure", "gcp", "microsoft", "cncf", "devicon", "developer"],
         help="Process only a specific vendor (default: all)",
     )
     parser.add_argument(
@@ -145,7 +147,7 @@ def main() -> None:
     if args.dry_run:
         logger.info("[DRY RUN MODE] No files will be copied.")
 
-    vendors = [args.vendor] if args.vendor else ["aws", "azure", "gcp", "microsoft", "cncf", "devicon"]
+    vendors = [args.vendor] if args.vendor else ["aws", "azure", "gcp", "microsoft", "cncf", "devicon", "developer"]
     all_entries: list[IconEntry] = []
 
     for vendor in vendors:

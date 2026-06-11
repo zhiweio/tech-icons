@@ -46,7 +46,7 @@ logger = logging.getLogger(__name__)
 mcp = FastMCP("tech-icons")
 engine = SearchEngine()
 
-VENDOR_OPTIONS = Literal["aws", "azure", "gcp", "microsoft"]
+VENDOR_OPTIONS = Literal["aws", "azure", "gcp", "microsoft", "cncf", "devicon", "developer"]
 FORMAT_OPTIONS = Literal["raw", "path", "base64", "data_uri", "ppt_master", "inline_group"]
 TRANSPORT_OPTIONS = Literal["stdio", "http", "dual"]
 
@@ -59,7 +59,9 @@ TRANSPORT_OPTIONS = Literal["stdio", "http", "dual"]
 @mcp.tool
 def search_icons(
     query: Annotated[str, "Search query (name, ID, or description)"],
-    vendor: Annotated[VENDOR_OPTIONS | None, "Filter by vendor: aws, azure, gcp, microsoft"] = None,
+    vendor: Annotated[
+        VENDOR_OPTIONS | None, "Filter by vendor: aws, azure, gcp, microsoft, cncf, devicon, developer"
+    ] = None,
     category: Annotated[str | None, "Filter by category (e.g., compute, databases)"] = None,
     limit: Annotated[int, "Max results to return (default 10)"] = 10,
 ) -> list[dict]:
@@ -234,7 +236,7 @@ def _run_ppt_master_export(icon_spec: str, target: Path, symlink: bool) -> None:
         all_ids = [entry["id"] for entry in export_engine.catalog]
         logger.info(f"Exporting all {len(all_ids)} icons to {target}")
         export_icons(all_ids, target, symlink=symlink, engine=export_engine)
-    elif icon_spec in ("aws", "azure", "gcp", "microsoft", "cncf", "devicon"):
+    elif icon_spec in ("aws", "azure", "gcp", "microsoft", "cncf", "devicon", "developer"):
         export_vendor(icon_spec, target, symlink=symlink, engine=export_engine)
     else:
         icon_ids = [x.strip() for x in icon_spec.split(",") if x.strip()]
@@ -275,7 +277,7 @@ def main(argv: list[str] | None = None) -> None:
         help=(
             "Export icons for ppt-master. Provide comma-separated icon IDs (e.g. "
             "'aws/compute/lambda,azure/compute/function-apps'), a vendor name (aws|azure|"
-            "gcp|microsoft|cncf|devicon), or omit for all icons. "
+            "gcp|microsoft|cncf|devicon|developer), or omit for all icons. "
             "Use --target to set output dir (default: ./templates/icons/)."
         ),
     )

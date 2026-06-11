@@ -20,6 +20,7 @@ from fastapi.staticfiles import StaticFiles
 
 from tech_icons._paths import icon_path
 from tech_icons.formats import IconNotFoundError, format_icon
+from tech_icons.normalize import VENDOR_SOURCES
 from tech_icons.search import SearchEngine
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
@@ -61,6 +62,19 @@ def health() -> dict:
         "status": "ok",
         "icons": len(engine.catalog),
         "concepts": len(engine.concepts.all_groups),
+    }
+
+
+@app.get("/api/sources")
+def list_sources() -> dict:
+    """List icon source attributions."""
+    return {
+        "description": (
+            "The MIT license of this project applies to the server code, "
+            "search engine, tooling, and documentation — NOT to the bundled "
+            "icon files. Each icon set retains its original license and terms."
+        ),
+        "sources": VENDOR_SOURCES,
     }
 
 

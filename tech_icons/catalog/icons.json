@@ -59465,5 +59465,4877 @@
       "zustand"
     ],
     "description": "Devicon Zustand - devicon devicon service"
+  },
+  {
+    "id": "developer/developer/android",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Android",
+    "filename": "android.svg",
+    "path": "icons/developer/developer/android.svg",
+    "aliases": [
+      "android"
+    ],
+    "tags": [
+      "android",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Android - developer developer service"
+  },
+  {
+    "id": "developer/developer/angular",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Angular",
+    "filename": "angular.svg",
+    "path": "icons/developer/developer/angular.svg",
+    "aliases": [
+      "angular"
+    ],
+    "tags": [
+      "angular",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Angular - developer developer service"
+  },
+  {
+    "id": "developer/developer/ansible",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Ansible",
+    "filename": "ansible.svg",
+    "path": "icons/developer/developer/ansible.svg",
+    "aliases": [
+      "ansible"
+    ],
+    "tags": [
+      "ansible",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Ansible - developer developer service"
+  },
+  {
+    "id": "developer/developer/anthropic",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Anthropic",
+    "filename": "anthropic.svg",
+    "path": "icons/developer/developer/anthropic.svg",
+    "aliases": [
+      "anthropic"
+    ],
+    "tags": [
+      "anthropic",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Anthropic - developer developer service"
+  },
+  {
+    "id": "developer/developer/apache",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Apache",
+    "filename": "apache.svg",
+    "path": "icons/developer/developer/apache.svg",
+    "aliases": [
+      "apache"
+    ],
+    "tags": [
+      "apache",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Apache - developer developer service"
+  },
+  {
+    "id": "developer/developer/apple",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Apple",
+    "filename": "apple.svg",
+    "path": "icons/developer/developer/apple.svg",
+    "aliases": [
+      "apple"
+    ],
+    "tags": [
+      "apple",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Apple - developer developer service"
+  },
+  {
+    "id": "developer/developer/appwrite",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Appwrite",
+    "filename": "appwrite.svg",
+    "path": "icons/developer/developer/appwrite.svg",
+    "aliases": [
+      "appwrite"
+    ],
+    "tags": [
+      "appwrite",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Appwrite - developer developer service"
+  },
+  {
+    "id": "developer/developer/arc",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Arc",
+    "filename": "arc.svg",
+    "path": "icons/developer/developer/arc.svg",
+    "aliases": [
+      "arc"
+    ],
+    "tags": [
+      "arc",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Arc - developer developer service"
+  },
+  {
+    "id": "developer/developer/astro",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Astro",
+    "filename": "astro.svg",
+    "path": "icons/developer/developer/astro.svg",
+    "aliases": [
+      "astro"
+    ],
+    "tags": [
+      "astro",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Astro - developer developer service"
+  },
+  {
+    "id": "developer/developer/atlassian",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Atlassian",
+    "filename": "atlassian.svg",
+    "path": "icons/developer/developer/atlassian.svg",
+    "aliases": [
+      "atlassian"
+    ],
+    "tags": [
+      "atlassian",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Atlassian - developer developer service"
+  },
+  {
+    "id": "developer/developer/atom",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Atom",
+    "filename": "atom.svg",
+    "path": "icons/developer/developer/atom.svg",
+    "aliases": [
+      "atom"
+    ],
+    "tags": [
+      "atom",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Atom - developer developer service"
+  },
+  {
+    "id": "developer/developer/auth0",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Auth0",
+    "filename": "auth0.svg",
+    "path": "icons/developer/developer/auth0.svg",
+    "aliases": [
+      "auth0"
+    ],
+    "tags": [
+      "auth0",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Auth0 - developer developer service"
+  },
+  {
+    "id": "developer/developer/avajs",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Avajs",
+    "filename": "avajs.svg",
+    "path": "icons/developer/developer/avajs.svg",
+    "aliases": [
+      "avajs"
+    ],
+    "tags": [
+      "avajs",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Avajs - developer developer service"
+  },
+  {
+    "id": "developer/developer/aws",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer AWS",
+    "filename": "aws.svg",
+    "path": "icons/developer/developer/aws.svg",
+    "aliases": [
+      "aws"
+    ],
+    "tags": [
+      "aws",
+      "developer",
+      "development"
+    ],
+    "description": "Developer AWS - developer developer service"
+  },
+  {
+    "id": "developer/developer/axiom",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Axiom",
+    "filename": "axiom.svg",
+    "path": "icons/developer/developer/axiom.svg",
+    "aliases": [
+      "axiom"
+    ],
+    "tags": [
+      "axiom",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Axiom - developer developer service"
+  },
+  {
+    "id": "developer/developer/axure",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Axure",
+    "filename": "axure.svg",
+    "path": "icons/developer/developer/axure.svg",
+    "aliases": [
+      "axure"
+    ],
+    "tags": [
+      "axure",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Axure - developer developer service"
+  },
+  {
+    "id": "developer/developer/azure",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Azure",
+    "filename": "azure.svg",
+    "path": "icons/developer/developer/azure.svg",
+    "aliases": [
+      "azure"
+    ],
+    "tags": [
+      "azure",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Azure - developer developer service"
+  },
+  {
+    "id": "developer/developer/babel",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Babel",
+    "filename": "babel.svg",
+    "path": "icons/developer/developer/babel.svg",
+    "aliases": [
+      "babel"
+    ],
+    "tags": [
+      "babel",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Babel - developer developer service"
+  },
+  {
+    "id": "developer/developer/backbonejs",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Backbonejs",
+    "filename": "backbonejs.svg",
+    "path": "icons/developer/developer/backbonejs.svg",
+    "aliases": [
+      "backbonejs"
+    ],
+    "tags": [
+      "backbonejs",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Backbonejs - developer developer service"
+  },
+  {
+    "id": "developer/developer/bard",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Bard",
+    "filename": "bard.svg",
+    "path": "icons/developer/developer/bard.svg",
+    "aliases": [
+      "bard"
+    ],
+    "tags": [
+      "bard",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Bard - developer developer service"
+  },
+  {
+    "id": "developer/developer/bash",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Bash",
+    "filename": "bash.svg",
+    "path": "icons/developer/developer/bash.svg",
+    "aliases": [
+      "bash"
+    ],
+    "tags": [
+      "bash",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Bash - developer developer service"
+  },
+  {
+    "id": "developer/developer/bing",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Bing",
+    "filename": "bing.svg",
+    "path": "icons/developer/developer/bing.svg",
+    "aliases": [
+      "bing"
+    ],
+    "tags": [
+      "bing",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Bing - developer developer service"
+  },
+  {
+    "id": "developer/developer/biome",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Biome",
+    "filename": "biome.svg",
+    "path": "icons/developer/developer/biome.svg",
+    "aliases": [
+      "biome"
+    ],
+    "tags": [
+      "biome",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Biome - developer developer service"
+  },
+  {
+    "id": "developer/developer/bitbucket",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Bitbucket",
+    "filename": "bitbucket.svg",
+    "path": "icons/developer/developer/bitbucket.svg",
+    "aliases": [
+      "bitbucket"
+    ],
+    "tags": [
+      "bitbucket",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Bitbucket - developer developer service"
+  },
+  {
+    "id": "developer/developer/bitnami",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Bitnami",
+    "filename": "bitnami.svg",
+    "path": "icons/developer/developer/bitnami.svg",
+    "aliases": [
+      "bitnami"
+    ],
+    "tags": [
+      "bitnami",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Bitnami - developer developer service"
+  },
+  {
+    "id": "developer/developer/blueprintjs",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Blueprintjs",
+    "filename": "blueprintjs.svg",
+    "path": "icons/developer/developer/blueprintjs.svg",
+    "aliases": [
+      "blueprintjs"
+    ],
+    "tags": [
+      "blueprintjs",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Blueprintjs - developer developer service"
+  },
+  {
+    "id": "developer/developer/bluesky",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Bluesky",
+    "filename": "bluesky.svg",
+    "path": "icons/developer/developer/bluesky.svg",
+    "aliases": [
+      "bluesky"
+    ],
+    "tags": [
+      "bluesky",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Bluesky - developer developer service"
+  },
+  {
+    "id": "developer/developer/bootstrap4",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Bootstrap4",
+    "filename": "bootstrap4.svg",
+    "path": "icons/developer/developer/bootstrap4.svg",
+    "aliases": [
+      "bootstrap4"
+    ],
+    "tags": [
+      "bootstrap4",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Bootstrap4 - developer developer service"
+  },
+  {
+    "id": "developer/developer/bootstrap5",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Bootstrap5",
+    "filename": "bootstrap5.svg",
+    "path": "icons/developer/developer/bootstrap5.svg",
+    "aliases": [
+      "bootstrap5"
+    ],
+    "tags": [
+      "bootstrap5",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Bootstrap5 - developer developer service"
+  },
+  {
+    "id": "developer/developer/brave",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Brave",
+    "filename": "brave.svg",
+    "path": "icons/developer/developer/brave.svg",
+    "aliases": [
+      "brave"
+    ],
+    "tags": [
+      "brave",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Brave - developer developer service"
+  },
+  {
+    "id": "developer/developer/bulmaui",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Bulmaui",
+    "filename": "bulmaui.svg",
+    "path": "icons/developer/developer/bulmaui.svg",
+    "aliases": [
+      "bulmaui"
+    ],
+    "tags": [
+      "bulmaui",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Bulmaui - developer developer service"
+  },
+  {
+    "id": "developer/developer/bunjs",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Bunjs",
+    "filename": "bunjs.svg",
+    "path": "icons/developer/developer/bunjs.svg",
+    "aliases": [
+      "bunjs"
+    ],
+    "tags": [
+      "bunjs",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Bunjs - developer developer service"
+  },
+  {
+    "id": "developer/developer/c",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer C",
+    "filename": "c.svg",
+    "path": "icons/developer/developer/c.svg",
+    "aliases": [
+      "c"
+    ],
+    "tags": [
+      "c",
+      "developer",
+      "development"
+    ],
+    "description": "Developer C - developer developer service"
+  },
+  {
+    "id": "developer/developer/c-plus-plus",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer C Plus Plus",
+    "filename": "c-plus-plus.svg",
+    "path": "icons/developer/developer/c-plus-plus.svg",
+    "aliases": [
+      "c",
+      "plus"
+    ],
+    "tags": [
+      "c",
+      "developer",
+      "development",
+      "plus"
+    ],
+    "description": "Developer C Plus Plus - developer developer service"
+  },
+  {
+    "id": "developer/developer/c-sharp",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer C Sharp",
+    "filename": "c-sharp.svg",
+    "path": "icons/developer/developer/c-sharp.svg",
+    "aliases": [
+      "c",
+      "sharp"
+    ],
+    "tags": [
+      "c",
+      "developer",
+      "development",
+      "sharp"
+    ],
+    "description": "Developer C Sharp - developer developer service"
+  },
+  {
+    "id": "developer/developer/cakephp",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Cakephp",
+    "filename": "cakephp.svg",
+    "path": "icons/developer/developer/cakephp.svg",
+    "aliases": [
+      "cakephp"
+    ],
+    "tags": [
+      "cakephp",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Cakephp - developer developer service"
+  },
+  {
+    "id": "developer/developer/canva",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Canva",
+    "filename": "canva.svg",
+    "path": "icons/developer/developer/canva.svg",
+    "aliases": [
+      "canva"
+    ],
+    "tags": [
+      "canva",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Canva - developer developer service"
+  },
+  {
+    "id": "developer/developer/cassandradb",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Cassandradb",
+    "filename": "cassandradb.svg",
+    "path": "icons/developer/developer/cassandradb.svg",
+    "aliases": [
+      "cassandradb"
+    ],
+    "tags": [
+      "cassandradb",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Cassandradb - developer developer service"
+  },
+  {
+    "id": "developer/developer/chakraui",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Chakraui",
+    "filename": "chakraui.svg",
+    "path": "icons/developer/developer/chakraui.svg",
+    "aliases": [
+      "chakraui"
+    ],
+    "tags": [
+      "chakraui",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Chakraui - developer developer service"
+  },
+  {
+    "id": "developer/developer/chatgpt",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Chatgpt",
+    "filename": "chatgpt.svg",
+    "path": "icons/developer/developer/chatgpt.svg",
+    "aliases": [
+      "chatgpt"
+    ],
+    "tags": [
+      "chatgpt",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Chatgpt - developer developer service"
+  },
+  {
+    "id": "developer/developer/chrome",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Chrome",
+    "filename": "chrome.svg",
+    "path": "icons/developer/developer/chrome.svg",
+    "aliases": [
+      "chrome"
+    ],
+    "tags": [
+      "chrome",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Chrome - developer developer service"
+  },
+  {
+    "id": "developer/developer/chromium",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Chromium",
+    "filename": "chromium.svg",
+    "path": "icons/developer/developer/chromium.svg",
+    "aliases": [
+      "chromium"
+    ],
+    "tags": [
+      "chromium",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Chromium - developer developer service"
+  },
+  {
+    "id": "developer/developer/circleci",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Circleci",
+    "filename": "circleci.svg",
+    "path": "icons/developer/developer/circleci.svg",
+    "aliases": [
+      "circleci"
+    ],
+    "tags": [
+      "circleci",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Circleci - developer developer service"
+  },
+  {
+    "id": "developer/developer/claude-ai",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Claude AI",
+    "filename": "claude-ai.svg",
+    "path": "icons/developer/developer/claude-ai.svg",
+    "aliases": [
+      "ai",
+      "claude"
+    ],
+    "tags": [
+      "ai",
+      "claude",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Claude AI - developer developer service"
+  },
+  {
+    "id": "developer/developer/clerk",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Clerk",
+    "filename": "clerk.svg",
+    "path": "icons/developer/developer/clerk.svg",
+    "aliases": [
+      "clerk"
+    ],
+    "tags": [
+      "clerk",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Clerk - developer developer service"
+  },
+  {
+    "id": "developer/developer/clickhouse",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Clickhouse",
+    "filename": "clickhouse.svg",
+    "path": "icons/developer/developer/clickhouse.svg",
+    "aliases": [
+      "clickhouse"
+    ],
+    "tags": [
+      "clickhouse",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Clickhouse - developer developer service"
+  },
+  {
+    "id": "developer/developer/clojure",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Clojure",
+    "filename": "clojure.svg",
+    "path": "icons/developer/developer/clojure.svg",
+    "aliases": [
+      "clojure"
+    ],
+    "tags": [
+      "clojure",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Clojure - developer developer service"
+  },
+  {
+    "id": "developer/developer/cloudflare",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Cloudflare",
+    "filename": "cloudflare.svg",
+    "path": "icons/developer/developer/cloudflare.svg",
+    "aliases": [
+      "cloudflare"
+    ],
+    "tags": [
+      "cloudflare",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Cloudflare - developer developer service"
+  },
+  {
+    "id": "developer/developer/cloudinary",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Cloudinary",
+    "filename": "cloudinary.svg",
+    "path": "icons/developer/developer/cloudinary.svg",
+    "aliases": [
+      "cloudinary"
+    ],
+    "tags": [
+      "cloudinary",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Cloudinary - developer developer service"
+  },
+  {
+    "id": "developer/developer/codefresh",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Codefresh",
+    "filename": "codefresh.svg",
+    "path": "icons/developer/developer/codefresh.svg",
+    "aliases": [
+      "codefresh"
+    ],
+    "tags": [
+      "codefresh",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Codefresh - developer developer service"
+  },
+  {
+    "id": "developer/developer/codeigniter",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Codeigniter",
+    "filename": "codeigniter.svg",
+    "path": "icons/developer/developer/codeigniter.svg",
+    "aliases": [
+      "codeigniter"
+    ],
+    "tags": [
+      "codeigniter",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Codeigniter - developer developer service"
+  },
+  {
+    "id": "developer/developer/convex",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Convex",
+    "filename": "convex.svg",
+    "path": "icons/developer/developer/convex.svg",
+    "aliases": [
+      "convex"
+    ],
+    "tags": [
+      "convex",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Convex - developer developer service"
+  },
+  {
+    "id": "developer/developer/copilot",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Copilot",
+    "filename": "copilot.svg",
+    "path": "icons/developer/developer/copilot.svg",
+    "aliases": [
+      "copilot"
+    ],
+    "tags": [
+      "copilot",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Copilot - developer developer service"
+  },
+  {
+    "id": "developer/developer/crystal",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Crystal",
+    "filename": "crystal.svg",
+    "path": "icons/developer/developer/crystal.svg",
+    "aliases": [
+      "crystal"
+    ],
+    "tags": [
+      "crystal",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Crystal - developer developer service"
+  },
+  {
+    "id": "developer/developer/css",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Css",
+    "filename": "css.svg",
+    "path": "icons/developer/developer/css.svg",
+    "aliases": [
+      "css"
+    ],
+    "tags": [
+      "css",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Css - developer developer service"
+  },
+  {
+    "id": "developer/developer/css3",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Css3",
+    "filename": "css3.svg",
+    "path": "icons/developer/developer/css3.svg",
+    "aliases": [
+      "css3"
+    ],
+    "tags": [
+      "css3",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Css3 - developer developer service"
+  },
+  {
+    "id": "developer/developer/cypress",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Cypress",
+    "filename": "cypress.svg",
+    "path": "icons/developer/developer/cypress.svg",
+    "aliases": [
+      "cypress"
+    ],
+    "tags": [
+      "cypress",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Cypress - developer developer service"
+  },
+  {
+    "id": "developer/developer/dart",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Dart",
+    "filename": "dart.svg",
+    "path": "icons/developer/developer/dart.svg",
+    "aliases": [
+      "dart"
+    ],
+    "tags": [
+      "dart",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Dart - developer developer service"
+  },
+  {
+    "id": "developer/developer/datadog",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Datadog",
+    "filename": "datadog.svg",
+    "path": "icons/developer/developer/datadog.svg",
+    "aliases": [
+      "datadog"
+    ],
+    "tags": [
+      "datadog",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Datadog - developer developer service"
+  },
+  {
+    "id": "developer/developer/deepseek",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Deepseek",
+    "filename": "deepseek.svg",
+    "path": "icons/developer/developer/deepseek.svg",
+    "aliases": [
+      "deepseek"
+    ],
+    "tags": [
+      "deepseek",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Deepseek - developer developer service"
+  },
+  {
+    "id": "developer/developer/deno",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Deno",
+    "filename": "deno.svg",
+    "path": "icons/developer/developer/deno.svg",
+    "aliases": [
+      "deno"
+    ],
+    "tags": [
+      "deno",
+      "developer",
+      "development"
+    ],
+    "description": "Developer Deno - developer developer service"
+  },
+  {
+    "id": "developer/developer/deno-fresh",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Deno Fresh",
+    "filename": "deno-fresh.svg",
+    "path": "icons/developer/developer/deno-fresh.svg",
+    "aliases": [
+      "deno",
+      "fresh"
+    ],
+    "tags": [
+      "deno",
+      "developer",
+      "development",
+      "fresh"
+    ],
+    "description": "Developer Deno Fresh - developer developer service"
+  },
+  {
+    "id": "developer/developer/developer-icons",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Developer Icons",
+    "filename": "developer-icons.svg",
+    "path": "icons/developer/developer/developer-icons.svg",
+    "aliases": [
+      "developer",
+      "icons"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "icons"
+    ],
+    "description": "Developer Developer Icons - developer developer service"
+  },
+  {
+    "id": "developer/developer/digitalocean",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Digitalocean",
+    "filename": "digitalocean.svg",
+    "path": "icons/developer/developer/digitalocean.svg",
+    "aliases": [
+      "digitalocean"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "digitalocean"
+    ],
+    "description": "Developer Digitalocean - developer developer service"
+  },
+  {
+    "id": "developer/developer/discord",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Discord",
+    "filename": "discord.svg",
+    "path": "icons/developer/developer/discord.svg",
+    "aliases": [
+      "discord"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "discord"
+    ],
+    "description": "Developer Discord - developer developer service"
+  },
+  {
+    "id": "developer/developer/django",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Django",
+    "filename": "django.svg",
+    "path": "icons/developer/developer/django.svg",
+    "aliases": [
+      "django"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "django"
+    ],
+    "description": "Developer Django - developer developer service"
+  },
+  {
+    "id": "developer/developer/dlang",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Dlang",
+    "filename": "dlang.svg",
+    "path": "icons/developer/developer/dlang.svg",
+    "aliases": [
+      "dlang"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "dlang"
+    ],
+    "description": "Developer Dlang - developer developer service"
+  },
+  {
+    "id": "developer/developer/docker",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Docker",
+    "filename": "docker.svg",
+    "path": "icons/developer/developer/docker.svg",
+    "aliases": [
+      "docker"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "docker"
+    ],
+    "description": "Developer Docker - developer developer service"
+  },
+  {
+    "id": "developer/developer/doctrine",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Doctrine",
+    "filename": "doctrine.svg",
+    "path": "icons/developer/developer/doctrine.svg",
+    "aliases": [
+      "doctrine"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "doctrine"
+    ],
+    "description": "Developer Doctrine - developer developer service"
+  },
+  {
+    "id": "developer/developer/docusaurus",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Docusaurus",
+    "filename": "docusaurus.svg",
+    "path": "icons/developer/developer/docusaurus.svg",
+    "aliases": [
+      "docusaurus"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "docusaurus"
+    ],
+    "description": "Developer Docusaurus - developer developer service"
+  },
+  {
+    "id": "developer/developer/dovetail",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Dovetail",
+    "filename": "dovetail.svg",
+    "path": "icons/developer/developer/dovetail.svg",
+    "aliases": [
+      "dovetail"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "dovetail"
+    ],
+    "description": "Developer Dovetail - developer developer service"
+  },
+  {
+    "id": "developer/developer/ec2",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer EC2",
+    "filename": "ec2.svg",
+    "path": "icons/developer/developer/ec2.svg",
+    "aliases": [
+      "ec2"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "ec2"
+    ],
+    "description": "Developer EC2 - developer developer service"
+  },
+  {
+    "id": "developer/developer/edge",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Edge",
+    "filename": "edge.svg",
+    "path": "icons/developer/developer/edge.svg",
+    "aliases": [
+      "edge"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "edge"
+    ],
+    "description": "Developer Edge - developer developer service"
+  },
+  {
+    "id": "developer/developer/elastic",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Elastic",
+    "filename": "elastic.svg",
+    "path": "icons/developer/developer/elastic.svg",
+    "aliases": [
+      "elastic"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "elastic"
+    ],
+    "description": "Developer Elastic - developer developer service"
+  },
+  {
+    "id": "developer/developer/electron",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Electron",
+    "filename": "electron.svg",
+    "path": "icons/developer/developer/electron.svg",
+    "aliases": [
+      "electron"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "electron"
+    ],
+    "description": "Developer Electron - developer developer service"
+  },
+  {
+    "id": "developer/developer/elementui",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Elementui",
+    "filename": "elementui.svg",
+    "path": "icons/developer/developer/elementui.svg",
+    "aliases": [
+      "elementui"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "elementui"
+    ],
+    "description": "Developer Elementui - developer developer service"
+  },
+  {
+    "id": "developer/developer/elixir",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Elixir",
+    "filename": "elixir.svg",
+    "path": "icons/developer/developer/elixir.svg",
+    "aliases": [
+      "elixir"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "elixir"
+    ],
+    "description": "Developer Elixir - developer developer service"
+  },
+  {
+    "id": "developer/developer/ember",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Ember",
+    "filename": "ember.svg",
+    "path": "icons/developer/developer/ember.svg",
+    "aliases": [
+      "ember"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "ember"
+    ],
+    "description": "Developer Ember - developer developer service"
+  },
+  {
+    "id": "developer/developer/erlang",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Erlang",
+    "filename": "erlang.svg",
+    "path": "icons/developer/developer/erlang.svg",
+    "aliases": [
+      "erlang"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "erlang"
+    ],
+    "description": "Developer Erlang - developer developer service"
+  },
+  {
+    "id": "developer/developer/esbuild",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Esbuild",
+    "filename": "esbuild.svg",
+    "path": "icons/developer/developer/esbuild.svg",
+    "aliases": [
+      "esbuild"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "esbuild"
+    ],
+    "description": "Developer Esbuild - developer developer service"
+  },
+  {
+    "id": "developer/developer/eslint",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Eslint",
+    "filename": "eslint.svg",
+    "path": "icons/developer/developer/eslint.svg",
+    "aliases": [
+      "eslint"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "eslint"
+    ],
+    "description": "Developer Eslint - developer developer service"
+  },
+  {
+    "id": "developer/developer/expressjs",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Expressjs",
+    "filename": "expressjs.svg",
+    "path": "icons/developer/developer/expressjs.svg",
+    "aliases": [
+      "expressjs"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "expressjs"
+    ],
+    "description": "Developer Expressjs - developer developer service"
+  },
+  {
+    "id": "developer/developer/facebook",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Facebook",
+    "filename": "facebook.svg",
+    "path": "icons/developer/developer/facebook.svg",
+    "aliases": [
+      "facebook"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "facebook"
+    ],
+    "description": "Developer Facebook - developer developer service"
+  },
+  {
+    "id": "developer/developer/fast-api",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Fast API",
+    "filename": "fast-api.svg",
+    "path": "icons/developer/developer/fast-api.svg",
+    "aliases": [
+      "api",
+      "fast"
+    ],
+    "tags": [
+      "api",
+      "developer",
+      "development",
+      "fast"
+    ],
+    "description": "Developer Fast API - developer developer service"
+  },
+  {
+    "id": "developer/developer/faunadb",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Faunadb",
+    "filename": "faunadb.svg",
+    "path": "icons/developer/developer/faunadb.svg",
+    "aliases": [
+      "faunadb"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "faunadb"
+    ],
+    "description": "Developer Faunadb - developer developer service"
+  },
+  {
+    "id": "developer/developer/figma",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Figma",
+    "filename": "figma.svg",
+    "path": "icons/developer/developer/figma.svg",
+    "aliases": [
+      "figma"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "figma"
+    ],
+    "description": "Developer Figma - developer developer service"
+  },
+  {
+    "id": "developer/developer/firebase",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Firebase",
+    "filename": "firebase.svg",
+    "path": "icons/developer/developer/firebase.svg",
+    "aliases": [
+      "firebase"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "firebase"
+    ],
+    "description": "Developer Firebase - developer developer service"
+  },
+  {
+    "id": "developer/developer/firefox",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Firefox",
+    "filename": "firefox.svg",
+    "path": "icons/developer/developer/firefox.svg",
+    "aliases": [
+      "firefox"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "firefox"
+    ],
+    "description": "Developer Firefox - developer developer service"
+  },
+  {
+    "id": "developer/developer/flask",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Flask",
+    "filename": "flask.svg",
+    "path": "icons/developer/developer/flask.svg",
+    "aliases": [
+      "flask"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "flask"
+    ],
+    "description": "Developer Flask - developer developer service"
+  },
+  {
+    "id": "developer/developer/flutter",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Flutter",
+    "filename": "flutter.svg",
+    "path": "icons/developer/developer/flutter.svg",
+    "aliases": [
+      "flutter"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "flutter"
+    ],
+    "description": "Developer Flutter - developer developer service"
+  },
+  {
+    "id": "developer/developer/flyio",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Flyio",
+    "filename": "flyio.svg",
+    "path": "icons/developer/developer/flyio.svg",
+    "aliases": [
+      "flyio"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "flyio"
+    ],
+    "description": "Developer Flyio - developer developer service"
+  },
+  {
+    "id": "developer/developer/framer",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Framer",
+    "filename": "framer.svg",
+    "path": "icons/developer/developer/framer.svg",
+    "aliases": [
+      "framer"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "framer"
+    ],
+    "description": "Developer Framer - developer developer service"
+  },
+  {
+    "id": "developer/developer/gatsby",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Gatsby",
+    "filename": "gatsby.svg",
+    "path": "icons/developer/developer/gatsby.svg",
+    "aliases": [
+      "gatsby"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "gatsby"
+    ],
+    "description": "Developer Gatsby - developer developer service"
+  },
+  {
+    "id": "developer/developer/git",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Git",
+    "filename": "git.svg",
+    "path": "icons/developer/developer/git.svg",
+    "aliases": [
+      "git"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "git"
+    ],
+    "description": "Developer Git - developer developer service"
+  },
+  {
+    "id": "developer/developer/github",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Github",
+    "filename": "github.svg",
+    "path": "icons/developer/developer/github.svg",
+    "aliases": [
+      "github"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "github"
+    ],
+    "description": "Developer Github - developer developer service"
+  },
+  {
+    "id": "developer/developer/github-copilot",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Github Copilot",
+    "filename": "github-copilot.svg",
+    "path": "icons/developer/developer/github-copilot.svg",
+    "aliases": [
+      "copilot",
+      "github"
+    ],
+    "tags": [
+      "copilot",
+      "developer",
+      "development",
+      "github"
+    ],
+    "description": "Developer Github Copilot - developer developer service"
+  },
+  {
+    "id": "developer/developer/gitlab",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Gitlab",
+    "filename": "gitlab.svg",
+    "path": "icons/developer/developer/gitlab.svg",
+    "aliases": [
+      "gitlab"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "gitlab"
+    ],
+    "description": "Developer Gitlab - developer developer service"
+  },
+  {
+    "id": "developer/developer/gmail",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Gmail",
+    "filename": "gmail.svg",
+    "path": "icons/developer/developer/gmail.svg",
+    "aliases": [
+      "gmail"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "gmail"
+    ],
+    "description": "Developer Gmail - developer developer service"
+  },
+  {
+    "id": "developer/developer/go",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Go",
+    "filename": "go.svg",
+    "path": "icons/developer/developer/go.svg",
+    "aliases": [
+      "go"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "go"
+    ],
+    "description": "Developer Go - developer developer service"
+  },
+  {
+    "id": "developer/developer/google",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Google",
+    "filename": "google.svg",
+    "path": "icons/developer/developer/google.svg",
+    "aliases": [
+      "google"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "google"
+    ],
+    "description": "Developer Google - developer developer service"
+  },
+  {
+    "id": "developer/developer/google-cloud",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Google Cloud",
+    "filename": "google-cloud.svg",
+    "path": "icons/developer/developer/google-cloud.svg",
+    "aliases": [
+      "cloud",
+      "google"
+    ],
+    "tags": [
+      "cloud",
+      "developer",
+      "development",
+      "google"
+    ],
+    "description": "Developer Google Cloud - developer developer service"
+  },
+  {
+    "id": "developer/developer/grafana",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Grafana",
+    "filename": "grafana.svg",
+    "path": "icons/developer/developer/grafana.svg",
+    "aliases": [
+      "grafana"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "grafana"
+    ],
+    "description": "Developer Grafana - developer developer service"
+  },
+  {
+    "id": "developer/developer/grafbase",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Grafbase",
+    "filename": "grafbase.svg",
+    "path": "icons/developer/developer/grafbase.svg",
+    "aliases": [
+      "grafbase"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "grafbase"
+    ],
+    "description": "Developer Grafbase - developer developer service"
+  },
+  {
+    "id": "developer/developer/graphite",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Graphite",
+    "filename": "graphite.svg",
+    "path": "icons/developer/developer/graphite.svg",
+    "aliases": [
+      "graphite"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "graphite"
+    ],
+    "description": "Developer Graphite - developer developer service"
+  },
+  {
+    "id": "developer/developer/graphql",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Graphql",
+    "filename": "graphql.svg",
+    "path": "icons/developer/developer/graphql.svg",
+    "aliases": [
+      "graphql"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "graphql"
+    ],
+    "description": "Developer Graphql - developer developer service"
+  },
+  {
+    "id": "developer/developer/gridsome",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Gridsome",
+    "filename": "gridsome.svg",
+    "path": "icons/developer/developer/gridsome.svg",
+    "aliases": [
+      "gridsome"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "gridsome"
+    ],
+    "description": "Developer Gridsome - developer developer service"
+  },
+  {
+    "id": "developer/developer/gruntjs",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Gruntjs",
+    "filename": "gruntjs.svg",
+    "path": "icons/developer/developer/gruntjs.svg",
+    "aliases": [
+      "gruntjs"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "gruntjs"
+    ],
+    "description": "Developer Gruntjs - developer developer service"
+  },
+  {
+    "id": "developer/developer/gulp",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Gulp",
+    "filename": "gulp.svg",
+    "path": "icons/developer/developer/gulp.svg",
+    "aliases": [
+      "gulp"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "gulp"
+    ],
+    "description": "Developer Gulp - developer developer service"
+  },
+  {
+    "id": "developer/developer/hashnode",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Hashnode",
+    "filename": "hashnode.svg",
+    "path": "icons/developer/developer/hashnode.svg",
+    "aliases": [
+      "hashnode"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "hashnode"
+    ],
+    "description": "Developer Hashnode - developer developer service"
+  },
+  {
+    "id": "developer/developer/haskell",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Haskell",
+    "filename": "haskell.svg",
+    "path": "icons/developer/developer/haskell.svg",
+    "aliases": [
+      "haskell"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "haskell"
+    ],
+    "description": "Developer Haskell - developer developer service"
+  },
+  {
+    "id": "developer/developer/headlessui",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Headlessui",
+    "filename": "headlessui.svg",
+    "path": "icons/developer/developer/headlessui.svg",
+    "aliases": [
+      "headlessui"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "headlessui"
+    ],
+    "description": "Developer Headlessui - developer developer service"
+  },
+  {
+    "id": "developer/developer/heroku",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Heroku",
+    "filename": "heroku.svg",
+    "path": "icons/developer/developer/heroku.svg",
+    "aliases": [
+      "heroku"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "heroku"
+    ],
+    "description": "Developer Heroku - developer developer service"
+  },
+  {
+    "id": "developer/developer/hexo",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Hexo",
+    "filename": "hexo.svg",
+    "path": "icons/developer/developer/hexo.svg",
+    "aliases": [
+      "hexo"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "hexo"
+    ],
+    "description": "Developer Hexo - developer developer service"
+  },
+  {
+    "id": "developer/developer/hhvm",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Hhvm",
+    "filename": "hhvm.svg",
+    "path": "icons/developer/developer/hhvm.svg",
+    "aliases": [
+      "hhvm"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "hhvm"
+    ],
+    "description": "Developer Hhvm - developer developer service"
+  },
+  {
+    "id": "developer/developer/homebrew",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Homebrew",
+    "filename": "homebrew.svg",
+    "path": "icons/developer/developer/homebrew.svg",
+    "aliases": [
+      "homebrew"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "homebrew"
+    ],
+    "description": "Developer Homebrew - developer developer service"
+  },
+  {
+    "id": "developer/developer/hotjar",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Hotjar",
+    "filename": "hotjar.svg",
+    "path": "icons/developer/developer/hotjar.svg",
+    "aliases": [
+      "hotjar"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "hotjar"
+    ],
+    "description": "Developer Hotjar - developer developer service"
+  },
+  {
+    "id": "developer/developer/html5",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Html5",
+    "filename": "html5.svg",
+    "path": "icons/developer/developer/html5.svg",
+    "aliases": [
+      "html5"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "html5"
+    ],
+    "description": "Developer Html5 - developer developer service"
+  },
+  {
+    "id": "developer/developer/hugging-face",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Hugging Face",
+    "filename": "hugging-face.svg",
+    "path": "icons/developer/developer/hugging-face.svg",
+    "aliases": [
+      "face",
+      "hugging"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "face",
+      "hugging"
+    ],
+    "description": "Developer Hugging Face - developer developer service"
+  },
+  {
+    "id": "developer/developer/hyper2",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Hyper2",
+    "filename": "hyper2.svg",
+    "path": "icons/developer/developer/hyper2.svg",
+    "aliases": [
+      "hyper2"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "hyper2"
+    ],
+    "description": "Developer Hyper2 - developer developer service"
+  },
+  {
+    "id": "developer/developer/i18next",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer I18next",
+    "filename": "i18next.svg",
+    "path": "icons/developer/developer/i18next.svg",
+    "aliases": [
+      "i18next"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "i18next"
+    ],
+    "description": "Developer I18next - developer developer service"
+  },
+  {
+    "id": "developer/developer/indesign",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Indesign",
+    "filename": "indesign.svg",
+    "path": "icons/developer/developer/indesign.svg",
+    "aliases": [
+      "indesign"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "indesign"
+    ],
+    "description": "Developer Indesign - developer developer service"
+  },
+  {
+    "id": "developer/developer/insomnia",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Insomnia",
+    "filename": "insomnia.svg",
+    "path": "icons/developer/developer/insomnia.svg",
+    "aliases": [
+      "insomnia"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "insomnia"
+    ],
+    "description": "Developer Insomnia - developer developer service"
+  },
+  {
+    "id": "developer/developer/instagram",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Instagram",
+    "filename": "instagram.svg",
+    "path": "icons/developer/developer/instagram.svg",
+    "aliases": [
+      "instagram"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "instagram"
+    ],
+    "description": "Developer Instagram - developer developer service"
+  },
+  {
+    "id": "developer/developer/internet-explorer",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Internet Explorer",
+    "filename": "internet-explorer.svg",
+    "path": "icons/developer/developer/internet-explorer.svg",
+    "aliases": [
+      "explorer",
+      "internet"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "explorer",
+      "internet"
+    ],
+    "description": "Developer Internet Explorer - developer developer service"
+  },
+  {
+    "id": "developer/developer/invision",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Invision",
+    "filename": "invision.svg",
+    "path": "icons/developer/developer/invision.svg",
+    "aliases": [
+      "invision"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "invision"
+    ],
+    "description": "Developer Invision - developer developer service"
+  },
+  {
+    "id": "developer/developer/ionic",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Ionic",
+    "filename": "ionic.svg",
+    "path": "icons/developer/developer/ionic.svg",
+    "aliases": [
+      "ionic"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "ionic"
+    ],
+    "description": "Developer Ionic - developer developer service"
+  },
+  {
+    "id": "developer/developer/jamstack",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Jamstack",
+    "filename": "jamstack.svg",
+    "path": "icons/developer/developer/jamstack.svg",
+    "aliases": [
+      "jamstack"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "jamstack"
+    ],
+    "description": "Developer Jamstack - developer developer service"
+  },
+  {
+    "id": "developer/developer/java",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Java",
+    "filename": "java.svg",
+    "path": "icons/developer/developer/java.svg",
+    "aliases": [
+      "java"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "java"
+    ],
+    "description": "Developer Java - developer developer service"
+  },
+  {
+    "id": "developer/developer/javascript",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Javascript",
+    "filename": "javascript.svg",
+    "path": "icons/developer/developer/javascript.svg",
+    "aliases": [
+      "javascript"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "javascript"
+    ],
+    "description": "Developer Javascript - developer developer service"
+  },
+  {
+    "id": "developer/developer/jenkins",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Jenkins",
+    "filename": "jenkins.svg",
+    "path": "icons/developer/developer/jenkins.svg",
+    "aliases": [
+      "jenkins"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "jenkins"
+    ],
+    "description": "Developer Jenkins - developer developer service"
+  },
+  {
+    "id": "developer/developer/jest",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Jest",
+    "filename": "jest.svg",
+    "path": "icons/developer/developer/jest.svg",
+    "aliases": [
+      "jest"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "jest"
+    ],
+    "description": "Developer Jest - developer developer service"
+  },
+  {
+    "id": "developer/developer/jira",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Jira",
+    "filename": "jira.svg",
+    "path": "icons/developer/developer/jira.svg",
+    "aliases": [
+      "jira"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "jira"
+    ],
+    "description": "Developer Jira - developer developer service"
+  },
+  {
+    "id": "developer/developer/jquery",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Jquery",
+    "filename": "jquery.svg",
+    "path": "icons/developer/developer/jquery.svg",
+    "aliases": [
+      "jquery"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "jquery"
+    ],
+    "description": "Developer Jquery - developer developer service"
+  },
+  {
+    "id": "developer/developer/jslint",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Jslint",
+    "filename": "jslint.svg",
+    "path": "icons/developer/developer/jslint.svg",
+    "aliases": [
+      "jslint"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "jslint"
+    ],
+    "description": "Developer Jslint - developer developer service"
+  },
+  {
+    "id": "developer/developer/json",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Json",
+    "filename": "json.svg",
+    "path": "icons/developer/developer/json.svg",
+    "aliases": [
+      "json"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "json"
+    ],
+    "description": "Developer Json - developer developer service"
+  },
+  {
+    "id": "developer/developer/k6",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer K6",
+    "filename": "k6.svg",
+    "path": "icons/developer/developer/k6.svg",
+    "aliases": [
+      "k6"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "k6"
+    ],
+    "description": "Developer K6 - developer developer service"
+  },
+  {
+    "id": "developer/developer/kafka",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Kafka",
+    "filename": "kafka.svg",
+    "path": "icons/developer/developer/kafka.svg",
+    "aliases": [
+      "kafka"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "kafka"
+    ],
+    "description": "Developer Kafka - developer developer service"
+  },
+  {
+    "id": "developer/developer/kibana",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Kibana",
+    "filename": "kibana.svg",
+    "path": "icons/developer/developer/kibana.svg",
+    "aliases": [
+      "kibana"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "kibana"
+    ],
+    "description": "Developer Kibana - developer developer service"
+  },
+  {
+    "id": "developer/developer/kotlin",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Kotlin",
+    "filename": "kotlin.svg",
+    "path": "icons/developer/developer/kotlin.svg",
+    "aliases": [
+      "kotlin"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "kotlin"
+    ],
+    "description": "Developer Kotlin - developer developer service"
+  },
+  {
+    "id": "developer/developer/kubernetes",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Kubernetes",
+    "filename": "kubernetes.svg",
+    "path": "icons/developer/developer/kubernetes.svg",
+    "aliases": [
+      "kubernetes"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "kubernetes"
+    ],
+    "description": "Developer Kubernetes - developer developer service"
+  },
+  {
+    "id": "developer/developer/laravel",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Laravel",
+    "filename": "laravel.svg",
+    "path": "icons/developer/developer/laravel.svg",
+    "aliases": [
+      "laravel"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "laravel"
+    ],
+    "description": "Developer Laravel - developer developer service"
+  },
+  {
+    "id": "developer/developer/lerna",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Lerna",
+    "filename": "lerna.svg",
+    "path": "icons/developer/developer/lerna.svg",
+    "aliases": [
+      "lerna"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "lerna"
+    ],
+    "description": "Developer Lerna - developer developer service"
+  },
+  {
+    "id": "developer/developer/less",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Less",
+    "filename": "less.svg",
+    "path": "icons/developer/developer/less.svg",
+    "aliases": [
+      "less"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "less"
+    ],
+    "description": "Developer Less - developer developer service"
+  },
+  {
+    "id": "developer/developer/lightroom",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Lightroom",
+    "filename": "lightroom.svg",
+    "path": "icons/developer/developer/lightroom.svg",
+    "aliases": [
+      "lightroom"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "lightroom"
+    ],
+    "description": "Developer Lightroom - developer developer service"
+  },
+  {
+    "id": "developer/developer/linkedin",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Linkedin",
+    "filename": "linkedin.svg",
+    "path": "icons/developer/developer/linkedin.svg",
+    "aliases": [
+      "linkedin"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "linkedin"
+    ],
+    "description": "Developer Linkedin - developer developer service"
+  },
+  {
+    "id": "developer/developer/linux",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Linux",
+    "filename": "linux.svg",
+    "path": "icons/developer/developer/linux.svg",
+    "aliases": [
+      "linux"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "linux"
+    ],
+    "description": "Developer Linux - developer developer service"
+  },
+  {
+    "id": "developer/developer/lit",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Lit",
+    "filename": "lit.svg",
+    "path": "icons/developer/developer/lit.svg",
+    "aliases": [
+      "lit"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "lit"
+    ],
+    "description": "Developer Lit - developer developer service"
+  },
+  {
+    "id": "developer/developer/liveblocks",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Liveblocks",
+    "filename": "liveblocks.svg",
+    "path": "icons/developer/developer/liveblocks.svg",
+    "aliases": [
+      "liveblocks"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "liveblocks"
+    ],
+    "description": "Developer Liveblocks - developer developer service"
+  },
+  {
+    "id": "developer/developer/logrocket",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Logrocket",
+    "filename": "logrocket.svg",
+    "path": "icons/developer/developer/logrocket.svg",
+    "aliases": [
+      "logrocket"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "logrocket"
+    ],
+    "description": "Developer Logrocket - developer developer service"
+  },
+  {
+    "id": "developer/developer/lokalise",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Lokalise",
+    "filename": "lokalise.svg",
+    "path": "icons/developer/developer/lokalise.svg",
+    "aliases": [
+      "lokalise"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "lokalise"
+    ],
+    "description": "Developer Lokalise - developer developer service"
+  },
+  {
+    "id": "developer/developer/lua",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Lua",
+    "filename": "lua.svg",
+    "path": "icons/developer/developer/lua.svg",
+    "aliases": [
+      "lua"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "lua"
+    ],
+    "description": "Developer Lua - developer developer service"
+  },
+  {
+    "id": "developer/developer/lunacy",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Lunacy",
+    "filename": "lunacy.svg",
+    "path": "icons/developer/developer/lunacy.svg",
+    "aliases": [
+      "lunacy"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "lunacy"
+    ],
+    "description": "Developer Lunacy - developer developer service"
+  },
+  {
+    "id": "developer/developer/mariadb",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Mariadb",
+    "filename": "mariadb.svg",
+    "path": "icons/developer/developer/mariadb.svg",
+    "aliases": [
+      "mariadb"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "mariadb"
+    ],
+    "description": "Developer Mariadb - developer developer service"
+  },
+  {
+    "id": "developer/developer/marionette",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Marionette",
+    "filename": "marionette.svg",
+    "path": "icons/developer/developer/marionette.svg",
+    "aliases": [
+      "marionette"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "marionette"
+    ],
+    "description": "Developer Marionette - developer developer service"
+  },
+  {
+    "id": "developer/developer/markdown",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Markdown",
+    "filename": "markdown.svg",
+    "path": "icons/developer/developer/markdown.svg",
+    "aliases": [
+      "markdown"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "markdown"
+    ],
+    "description": "Developer Markdown - developer developer service"
+  },
+  {
+    "id": "developer/developer/mastodon",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Mastodon",
+    "filename": "mastodon.svg",
+    "path": "icons/developer/developer/mastodon.svg",
+    "aliases": [
+      "mastodon"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "mastodon"
+    ],
+    "description": "Developer Mastodon - developer developer service"
+  },
+  {
+    "id": "developer/developer/materialui",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Materialui",
+    "filename": "materialui.svg",
+    "path": "icons/developer/developer/materialui.svg",
+    "aliases": [
+      "materialui"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "materialui"
+    ],
+    "description": "Developer Materialui - developer developer service"
+  },
+  {
+    "id": "developer/developer/messenger",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Messenger",
+    "filename": "messenger.svg",
+    "path": "icons/developer/developer/messenger.svg",
+    "aliases": [
+      "messenger"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "messenger"
+    ],
+    "description": "Developer Messenger - developer developer service"
+  },
+  {
+    "id": "developer/developer/meta",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Meta",
+    "filename": "meta.svg",
+    "path": "icons/developer/developer/meta.svg",
+    "aliases": [
+      "meta"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "meta"
+    ],
+    "description": "Developer Meta - developer developer service"
+  },
+  {
+    "id": "developer/developer/microsoft",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Microsoft",
+    "filename": "microsoft.svg",
+    "path": "icons/developer/developer/microsoft.svg",
+    "aliases": [
+      "microsoft"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "microsoft"
+    ],
+    "description": "Developer Microsoft - developer developer service"
+  },
+  {
+    "id": "developer/developer/microsoft-sql-server",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Microsoft SQL Server",
+    "filename": "microsoft-sql-server.svg",
+    "path": "icons/developer/developer/microsoft-sql-server.svg",
+    "aliases": [
+      "microsoft",
+      "server",
+      "sql"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "microsoft",
+      "server",
+      "sql"
+    ],
+    "description": "Developer Microsoft SQL Server - developer developer service"
+  },
+  {
+    "id": "developer/developer/miro",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Miro",
+    "filename": "miro.svg",
+    "path": "icons/developer/developer/miro.svg",
+    "aliases": [
+      "miro"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "miro"
+    ],
+    "description": "Developer Miro - developer developer service"
+  },
+  {
+    "id": "developer/developer/mochajs",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Mochajs",
+    "filename": "mochajs.svg",
+    "path": "icons/developer/developer/mochajs.svg",
+    "aliases": [
+      "mochajs"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "mochajs"
+    ],
+    "description": "Developer Mochajs - developer developer service"
+  },
+  {
+    "id": "developer/developer/mongodb",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Mongodb",
+    "filename": "mongodb.svg",
+    "path": "icons/developer/developer/mongodb.svg",
+    "aliases": [
+      "mongodb"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "mongodb"
+    ],
+    "description": "Developer Mongodb - developer developer service"
+  },
+  {
+    "id": "developer/developer/mozilla",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Mozilla",
+    "filename": "mozilla.svg",
+    "path": "icons/developer/developer/mozilla.svg",
+    "aliases": [
+      "mozilla"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "mozilla"
+    ],
+    "description": "Developer Mozilla - developer developer service"
+  },
+  {
+    "id": "developer/developer/mysql",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Mysql",
+    "filename": "mysql.svg",
+    "path": "icons/developer/developer/mysql.svg",
+    "aliases": [
+      "mysql"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "mysql"
+    ],
+    "description": "Developer Mysql - developer developer service"
+  },
+  {
+    "id": "developer/developer/neovim",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Neovim",
+    "filename": "neovim.svg",
+    "path": "icons/developer/developer/neovim.svg",
+    "aliases": [
+      "neovim"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "neovim"
+    ],
+    "description": "Developer Neovim - developer developer service"
+  },
+  {
+    "id": "developer/developer/nestjs",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Nestjs",
+    "filename": "nestjs.svg",
+    "path": "icons/developer/developer/nestjs.svg",
+    "aliases": [
+      "nestjs"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "nestjs"
+    ],
+    "description": "Developer Nestjs - developer developer service"
+  },
+  {
+    "id": "developer/developer/netlify",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Netlify",
+    "filename": "netlify.svg",
+    "path": "icons/developer/developer/netlify.svg",
+    "aliases": [
+      "netlify"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "netlify"
+    ],
+    "description": "Developer Netlify - developer developer service"
+  },
+  {
+    "id": "developer/developer/netlify2",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Netlify2",
+    "filename": "netlify2.svg",
+    "path": "icons/developer/developer/netlify2.svg",
+    "aliases": [
+      "netlify2"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "netlify2"
+    ],
+    "description": "Developer Netlify2 - developer developer service"
+  },
+  {
+    "id": "developer/developer/nextjs",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Nextjs",
+    "filename": "nextjs.svg",
+    "path": "icons/developer/developer/nextjs.svg",
+    "aliases": [
+      "nextjs"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "nextjs"
+    ],
+    "description": "Developer Nextjs - developer developer service"
+  },
+  {
+    "id": "developer/developer/nim",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Nim",
+    "filename": "nim.svg",
+    "path": "icons/developer/developer/nim.svg",
+    "aliases": [
+      "nim"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "nim"
+    ],
+    "description": "Developer Nim - developer developer service"
+  },
+  {
+    "id": "developer/developer/nodejs",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Nodejs",
+    "filename": "nodejs.svg",
+    "path": "icons/developer/developer/nodejs.svg",
+    "aliases": [
+      "nodejs"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "nodejs"
+    ],
+    "description": "Developer Nodejs - developer developer service"
+  },
+  {
+    "id": "developer/developer/notion",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Notion",
+    "filename": "notion.svg",
+    "path": "icons/developer/developer/notion.svg",
+    "aliases": [
+      "notion"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "notion"
+    ],
+    "description": "Developer Notion - developer developer service"
+  },
+  {
+    "id": "developer/developer/npm",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Npm",
+    "filename": "npm.svg",
+    "path": "icons/developer/developer/npm.svg",
+    "aliases": [
+      "npm"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "npm"
+    ],
+    "description": "Developer Npm - developer developer service"
+  },
+  {
+    "id": "developer/developer/numpy",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Numpy",
+    "filename": "numpy.svg",
+    "path": "icons/developer/developer/numpy.svg",
+    "aliases": [
+      "numpy"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "numpy"
+    ],
+    "description": "Developer Numpy - developer developer service"
+  },
+  {
+    "id": "developer/developer/nuxtjs",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Nuxtjs",
+    "filename": "nuxtjs.svg",
+    "path": "icons/developer/developer/nuxtjs.svg",
+    "aliases": [
+      "nuxtjs"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "nuxtjs"
+    ],
+    "description": "Developer Nuxtjs - developer developer service"
+  },
+  {
+    "id": "developer/developer/nx",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Nx",
+    "filename": "nx.svg",
+    "path": "icons/developer/developer/nx.svg",
+    "aliases": [
+      "nx"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "nx"
+    ],
+    "description": "Developer Nx - developer developer service"
+  },
+  {
+    "id": "developer/developer/ocaml",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Ocaml",
+    "filename": "ocaml.svg",
+    "path": "icons/developer/developer/ocaml.svg",
+    "aliases": [
+      "ocaml"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "ocaml"
+    ],
+    "description": "Developer Ocaml - developer developer service"
+  },
+  {
+    "id": "developer/developer/onedrive",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Onedrive",
+    "filename": "onedrive.svg",
+    "path": "icons/developer/developer/onedrive.svg",
+    "aliases": [
+      "onedrive"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "onedrive"
+    ],
+    "description": "Developer Onedrive - developer developer service"
+  },
+  {
+    "id": "developer/developer/openai",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Openai",
+    "filename": "openai.svg",
+    "path": "icons/developer/developer/openai.svg",
+    "aliases": [
+      "openai"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "openai"
+    ],
+    "description": "Developer Openai - developer developer service"
+  },
+  {
+    "id": "developer/developer/opera",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Opera",
+    "filename": "opera.svg",
+    "path": "icons/developer/developer/opera.svg",
+    "aliases": [
+      "opera"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "opera"
+    ],
+    "description": "Developer Opera - developer developer service"
+  },
+  {
+    "id": "developer/developer/oracle",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Oracle",
+    "filename": "oracle.svg",
+    "path": "icons/developer/developer/oracle.svg",
+    "aliases": [
+      "oracle"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "oracle"
+    ],
+    "description": "Developer Oracle - developer developer service"
+  },
+  {
+    "id": "developer/developer/outlook",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Outlook",
+    "filename": "outlook.svg",
+    "path": "icons/developer/developer/outlook.svg",
+    "aliases": [
+      "outlook"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "outlook"
+    ],
+    "description": "Developer Outlook - developer developer service"
+  },
+  {
+    "id": "developer/developer/pandacss",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Pandacss",
+    "filename": "pandacss.svg",
+    "path": "icons/developer/developer/pandacss.svg",
+    "aliases": [
+      "pandacss"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "pandacss"
+    ],
+    "description": "Developer Pandacss - developer developer service"
+  },
+  {
+    "id": "developer/developer/photoshop",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Photoshop",
+    "filename": "photoshop.svg",
+    "path": "icons/developer/developer/photoshop.svg",
+    "aliases": [
+      "photoshop"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "photoshop"
+    ],
+    "description": "Developer Photoshop - developer developer service"
+  },
+  {
+    "id": "developer/developer/php",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Php",
+    "filename": "php.svg",
+    "path": "icons/developer/developer/php.svg",
+    "aliases": [
+      "php"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "php"
+    ],
+    "description": "Developer Php - developer developer service"
+  },
+  {
+    "id": "developer/developer/pinia",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Pinia",
+    "filename": "pinia.svg",
+    "path": "icons/developer/developer/pinia.svg",
+    "aliases": [
+      "pinia"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "pinia"
+    ],
+    "description": "Developer Pinia - developer developer service"
+  },
+  {
+    "id": "developer/developer/pinterest",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Pinterest",
+    "filename": "pinterest.svg",
+    "path": "icons/developer/developer/pinterest.svg",
+    "aliases": [
+      "pinterest"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "pinterest"
+    ],
+    "description": "Developer Pinterest - developer developer service"
+  },
+  {
+    "id": "developer/developer/pixijs",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Pixijs",
+    "filename": "pixijs.svg",
+    "path": "icons/developer/developer/pixijs.svg",
+    "aliases": [
+      "pixijs"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "pixijs"
+    ],
+    "description": "Developer Pixijs - developer developer service"
+  },
+  {
+    "id": "developer/developer/playwright",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Playwright",
+    "filename": "playwright.svg",
+    "path": "icons/developer/developer/playwright.svg",
+    "aliases": [
+      "playwright"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "playwright"
+    ],
+    "description": "Developer Playwright - developer developer service"
+  },
+  {
+    "id": "developer/developer/pnpm",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Pnpm",
+    "filename": "pnpm.svg",
+    "path": "icons/developer/developer/pnpm.svg",
+    "aliases": [
+      "pnpm"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "pnpm"
+    ],
+    "description": "Developer Pnpm - developer developer service"
+  },
+  {
+    "id": "developer/developer/postgresql",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Postgresql",
+    "filename": "postgresql.svg",
+    "path": "icons/developer/developer/postgresql.svg",
+    "aliases": [
+      "postgresql"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "postgresql"
+    ],
+    "description": "Developer Postgresql - developer developer service"
+  },
+  {
+    "id": "developer/developer/postman",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Postman",
+    "filename": "postman.svg",
+    "path": "icons/developer/developer/postman.svg",
+    "aliases": [
+      "postman"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "postman"
+    ],
+    "description": "Developer Postman - developer developer service"
+  },
+  {
+    "id": "developer/developer/powershell",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Powershell",
+    "filename": "powershell.svg",
+    "path": "icons/developer/developer/powershell.svg",
+    "aliases": [
+      "powershell"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "powershell"
+    ],
+    "description": "Developer Powershell - developer developer service"
+  },
+  {
+    "id": "developer/developer/preact",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Preact",
+    "filename": "preact.svg",
+    "path": "icons/developer/developer/preact.svg",
+    "aliases": [
+      "preact"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "preact"
+    ],
+    "description": "Developer Preact - developer developer service"
+  },
+  {
+    "id": "developer/developer/presto",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Presto",
+    "filename": "presto.svg",
+    "path": "icons/developer/developer/presto.svg",
+    "aliases": [
+      "presto"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "presto"
+    ],
+    "description": "Developer Presto - developer developer service"
+  },
+  {
+    "id": "developer/developer/prettier",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Prettier",
+    "filename": "prettier.svg",
+    "path": "icons/developer/developer/prettier.svg",
+    "aliases": [
+      "prettier"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "prettier"
+    ],
+    "description": "Developer Prettier - developer developer service"
+  },
+  {
+    "id": "developer/developer/prisma",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Prisma",
+    "filename": "prisma.svg",
+    "path": "icons/developer/developer/prisma.svg",
+    "aliases": [
+      "prisma"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "prisma"
+    ],
+    "description": "Developer Prisma - developer developer service"
+  },
+  {
+    "id": "developer/developer/pugjs",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Pugjs",
+    "filename": "pugjs.svg",
+    "path": "icons/developer/developer/pugjs.svg",
+    "aliases": [
+      "pugjs"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "pugjs"
+    ],
+    "description": "Developer Pugjs - developer developer service"
+  },
+  {
+    "id": "developer/developer/pulumi",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Pulumi",
+    "filename": "pulumi.svg",
+    "path": "icons/developer/developer/pulumi.svg",
+    "aliases": [
+      "pulumi"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "pulumi"
+    ],
+    "description": "Developer Pulumi - developer developer service"
+  },
+  {
+    "id": "developer/developer/pwa",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Pwa",
+    "filename": "pwa.svg",
+    "path": "icons/developer/developer/pwa.svg",
+    "aliases": [
+      "pwa"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "pwa"
+    ],
+    "description": "Developer Pwa - developer developer service"
+  },
+  {
+    "id": "developer/developer/python",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Python",
+    "filename": "python.svg",
+    "path": "icons/developer/developer/python.svg",
+    "aliases": [
+      "python"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "python"
+    ],
+    "description": "Developer Python - developer developer service"
+  },
+  {
+    "id": "developer/developer/pytorch",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Pytorch",
+    "filename": "pytorch.svg",
+    "path": "icons/developer/developer/pytorch.svg",
+    "aliases": [
+      "pytorch"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "pytorch"
+    ],
+    "description": "Developer Pytorch - developer developer service"
+  },
+  {
+    "id": "developer/developer/pytorch3d",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Pytorch3d",
+    "filename": "pytorch3d.svg",
+    "path": "icons/developer/developer/pytorch3d.svg",
+    "aliases": [
+      "pytorch3d"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "pytorch3d"
+    ],
+    "description": "Developer Pytorch3d - developer developer service"
+  },
+  {
+    "id": "developer/developer/qwik",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Qwik",
+    "filename": "qwik.svg",
+    "path": "icons/developer/developer/qwik.svg",
+    "aliases": [
+      "qwik"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "qwik"
+    ],
+    "description": "Developer Qwik - developer developer service"
+  },
+  {
+    "id": "developer/developer/r",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer R",
+    "filename": "r.svg",
+    "path": "icons/developer/developer/r.svg",
+    "aliases": [
+      "r"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "r"
+    ],
+    "description": "Developer R - developer developer service"
+  },
+  {
+    "id": "developer/developer/radixui",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Radixui",
+    "filename": "radixui.svg",
+    "path": "icons/developer/developer/radixui.svg",
+    "aliases": [
+      "radixui"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "radixui"
+    ],
+    "description": "Developer Radixui - developer developer service"
+  },
+  {
+    "id": "developer/developer/rails",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Rails",
+    "filename": "rails.svg",
+    "path": "icons/developer/developer/rails.svg",
+    "aliases": [
+      "rails"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "rails"
+    ],
+    "description": "Developer Rails - developer developer service"
+  },
+  {
+    "id": "developer/developer/railway",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Railway",
+    "filename": "railway.svg",
+    "path": "icons/developer/developer/railway.svg",
+    "aliases": [
+      "railway"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "railway"
+    ],
+    "description": "Developer Railway - developer developer service"
+  },
+  {
+    "id": "developer/developer/react-query",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer React Query",
+    "filename": "react-query.svg",
+    "path": "icons/developer/developer/react-query.svg",
+    "aliases": [
+      "query",
+      "react"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "query",
+      "react"
+    ],
+    "description": "Developer React Query - developer developer service"
+  },
+  {
+    "id": "developer/developer/reactjs",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Reactjs",
+    "filename": "reactjs.svg",
+    "path": "icons/developer/developer/reactjs.svg",
+    "aliases": [
+      "reactjs"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "reactjs"
+    ],
+    "description": "Developer Reactjs - developer developer service"
+  },
+  {
+    "id": "developer/developer/reactrouter",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Reactrouter",
+    "filename": "reactrouter.svg",
+    "path": "icons/developer/developer/reactrouter.svg",
+    "aliases": [
+      "reactrouter"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "reactrouter"
+    ],
+    "description": "Developer Reactrouter - developer developer service"
+  },
+  {
+    "id": "developer/developer/reddit",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Reddit",
+    "filename": "reddit.svg",
+    "path": "icons/developer/developer/reddit.svg",
+    "aliases": [
+      "reddit"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "reddit"
+    ],
+    "description": "Developer Reddit - developer developer service"
+  },
+  {
+    "id": "developer/developer/redhat",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Redhat",
+    "filename": "redhat.svg",
+    "path": "icons/developer/developer/redhat.svg",
+    "aliases": [
+      "redhat"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "redhat"
+    ],
+    "description": "Developer Redhat - developer developer service"
+  },
+  {
+    "id": "developer/developer/redis",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Redis",
+    "filename": "redis.svg",
+    "path": "icons/developer/developer/redis.svg",
+    "aliases": [
+      "redis"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "redis"
+    ],
+    "description": "Developer Redis - developer developer service"
+  },
+  {
+    "id": "developer/developer/redux",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Redux",
+    "filename": "redux.svg",
+    "path": "icons/developer/developer/redux.svg",
+    "aliases": [
+      "redux"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "redux"
+    ],
+    "description": "Developer Redux - developer developer service"
+  },
+  {
+    "id": "developer/developer/redux-saga",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Redux Saga",
+    "filename": "redux-saga.svg",
+    "path": "icons/developer/developer/redux-saga.svg",
+    "aliases": [
+      "redux",
+      "saga"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "redux",
+      "saga"
+    ],
+    "description": "Developer Redux Saga - developer developer service"
+  },
+  {
+    "id": "developer/developer/remix",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Remix",
+    "filename": "remix.svg",
+    "path": "icons/developer/developer/remix.svg",
+    "aliases": [
+      "remix"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "remix"
+    ],
+    "description": "Developer Remix - developer developer service"
+  },
+  {
+    "id": "developer/developer/render",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Render",
+    "filename": "render.svg",
+    "path": "icons/developer/developer/render.svg",
+    "aliases": [
+      "render"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "render"
+    ],
+    "description": "Developer Render - developer developer service"
+  },
+  {
+    "id": "developer/developer/resend",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Resend",
+    "filename": "resend.svg",
+    "path": "icons/developer/developer/resend.svg",
+    "aliases": [
+      "resend"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "resend"
+    ],
+    "description": "Developer Resend - developer developer service"
+  },
+  {
+    "id": "developer/developer/rollup",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Rollup",
+    "filename": "rollup.svg",
+    "path": "icons/developer/developer/rollup.svg",
+    "aliases": [
+      "rollup"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "rollup"
+    ],
+    "description": "Developer Rollup - developer developer service"
+  },
+  {
+    "id": "developer/developer/ruby",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Ruby",
+    "filename": "ruby.svg",
+    "path": "icons/developer/developer/ruby.svg",
+    "aliases": [
+      "ruby"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "ruby"
+    ],
+    "description": "Developer Ruby - developer developer service"
+  },
+  {
+    "id": "developer/developer/rust",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Rust",
+    "filename": "rust.svg",
+    "path": "icons/developer/developer/rust.svg",
+    "aliases": [
+      "rust"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "rust"
+    ],
+    "description": "Developer Rust - developer developer service"
+  },
+  {
+    "id": "developer/developer/safari",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Safari",
+    "filename": "safari.svg",
+    "path": "icons/developer/developer/safari.svg",
+    "aliases": [
+      "safari"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "safari"
+    ],
+    "description": "Developer Safari - developer developer service"
+  },
+  {
+    "id": "developer/developer/sass",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Sass",
+    "filename": "sass.svg",
+    "path": "icons/developer/developer/sass.svg",
+    "aliases": [
+      "sass"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "sass"
+    ],
+    "description": "Developer Sass - developer developer service"
+  },
+  {
+    "id": "developer/developer/scala",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Scala",
+    "filename": "scala.svg",
+    "path": "icons/developer/developer/scala.svg",
+    "aliases": [
+      "scala"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "scala"
+    ],
+    "description": "Developer Scala - developer developer service"
+  },
+  {
+    "id": "developer/developer/semanticui",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Semanticui",
+    "filename": "semanticui.svg",
+    "path": "icons/developer/developer/semanticui.svg",
+    "aliases": [
+      "semanticui"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "semanticui"
+    ],
+    "description": "Developer Semanticui - developer developer service"
+  },
+  {
+    "id": "developer/developer/serverless",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Serverless",
+    "filename": "serverless.svg",
+    "path": "icons/developer/developer/serverless.svg",
+    "aliases": [
+      "serverless"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "serverless"
+    ],
+    "description": "Developer Serverless - developer developer service"
+  },
+  {
+    "id": "developer/developer/shadcnui",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Shadcnui",
+    "filename": "shadcnui.svg",
+    "path": "icons/developer/developer/shadcnui.svg",
+    "aliases": [
+      "shadcnui"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "shadcnui"
+    ],
+    "description": "Developer Shadcnui - developer developer service"
+  },
+  {
+    "id": "developer/developer/shopware",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Shopware",
+    "filename": "shopware.svg",
+    "path": "icons/developer/developer/shopware.svg",
+    "aliases": [
+      "shopware"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "shopware"
+    ],
+    "description": "Developer Shopware - developer developer service"
+  },
+  {
+    "id": "developer/developer/sketch",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Sketch",
+    "filename": "sketch.svg",
+    "path": "icons/developer/developer/sketch.svg",
+    "aliases": [
+      "sketch"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "sketch"
+    ],
+    "description": "Developer Sketch - developer developer service"
+  },
+  {
+    "id": "developer/developer/sketch2",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Sketch2",
+    "filename": "sketch2.svg",
+    "path": "icons/developer/developer/sketch2.svg",
+    "aliases": [
+      "sketch2"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "sketch2"
+    ],
+    "description": "Developer Sketch2 - developer developer service"
+  },
+  {
+    "id": "developer/developer/skype",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Skype",
+    "filename": "skype.svg",
+    "path": "icons/developer/developer/skype.svg",
+    "aliases": [
+      "skype"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "skype"
+    ],
+    "description": "Developer Skype - developer developer service"
+  },
+  {
+    "id": "developer/developer/slack",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Slack",
+    "filename": "slack.svg",
+    "path": "icons/developer/developer/slack.svg",
+    "aliases": [
+      "slack"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "slack"
+    ],
+    "description": "Developer Slack - developer developer service"
+  },
+  {
+    "id": "developer/developer/solidity",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Solidity",
+    "filename": "solidity.svg",
+    "path": "icons/developer/developer/solidity.svg",
+    "aliases": [
+      "solidity"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "solidity"
+    ],
+    "description": "Developer Solidity - developer developer service"
+  },
+  {
+    "id": "developer/developer/solidjs",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Solidjs",
+    "filename": "solidjs.svg",
+    "path": "icons/developer/developer/solidjs.svg",
+    "aliases": [
+      "solidjs"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "solidjs"
+    ],
+    "description": "Developer Solidjs - developer developer service"
+  },
+  {
+    "id": "developer/developer/spring",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Spring",
+    "filename": "spring.svg",
+    "path": "icons/developer/developer/spring.svg",
+    "aliases": [
+      "spring"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "spring"
+    ],
+    "description": "Developer Spring - developer developer service"
+  },
+  {
+    "id": "developer/developer/storyblok",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Storyblok",
+    "filename": "storyblok.svg",
+    "path": "icons/developer/developer/storyblok.svg",
+    "aliases": [
+      "storyblok"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "storyblok"
+    ],
+    "description": "Developer Storyblok - developer developer service"
+  },
+  {
+    "id": "developer/developer/storybook",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Storybook",
+    "filename": "storybook.svg",
+    "path": "icons/developer/developer/storybook.svg",
+    "aliases": [
+      "storybook"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "storybook"
+    ],
+    "description": "Developer Storybook - developer developer service"
+  },
+  {
+    "id": "developer/developer/stream",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Stream",
+    "filename": "stream.svg",
+    "path": "icons/developer/developer/stream.svg",
+    "aliases": [
+      "stream"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "stream"
+    ],
+    "description": "Developer Stream - developer developer service"
+  },
+  {
+    "id": "developer/developer/stylelint",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Stylelint",
+    "filename": "stylelint.svg",
+    "path": "icons/developer/developer/stylelint.svg",
+    "aliases": [
+      "stylelint"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "stylelint"
+    ],
+    "description": "Developer Stylelint - developer developer service"
+  },
+  {
+    "id": "developer/developer/sublime",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Sublime",
+    "filename": "sublime.svg",
+    "path": "icons/developer/developer/sublime.svg",
+    "aliases": [
+      "sublime"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "sublime"
+    ],
+    "description": "Developer Sublime - developer developer service"
+  },
+  {
+    "id": "developer/developer/supabase",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Supabase",
+    "filename": "supabase.svg",
+    "path": "icons/developer/developer/supabase.svg",
+    "aliases": [
+      "supabase"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "supabase"
+    ],
+    "description": "Developer Supabase - developer developer service"
+  },
+  {
+    "id": "developer/developer/sveltejs",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Sveltejs",
+    "filename": "sveltejs.svg",
+    "path": "icons/developer/developer/sveltejs.svg",
+    "aliases": [
+      "sveltejs"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "sveltejs"
+    ],
+    "description": "Developer Sveltejs - developer developer service"
+  },
+  {
+    "id": "developer/developer/swagger",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Swagger",
+    "filename": "swagger.svg",
+    "path": "icons/developer/developer/swagger.svg",
+    "aliases": [
+      "swagger"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "swagger"
+    ],
+    "description": "Developer Swagger - developer developer service"
+  },
+  {
+    "id": "developer/developer/swift",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Swift",
+    "filename": "swift.svg",
+    "path": "icons/developer/developer/swift.svg",
+    "aliases": [
+      "swift"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "swift"
+    ],
+    "description": "Developer Swift - developer developer service"
+  },
+  {
+    "id": "developer/developer/symfony",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Symfony",
+    "filename": "symfony.svg",
+    "path": "icons/developer/developer/symfony.svg",
+    "aliases": [
+      "symfony"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "symfony"
+    ],
+    "description": "Developer Symfony - developer developer service"
+  },
+  {
+    "id": "developer/developer/trpc",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Trpc",
+    "filename": "trpc.svg",
+    "path": "icons/developer/developer/trpc.svg",
+    "aliases": [
+      "trpc"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "trpc"
+    ],
+    "description": "Developer Trpc - developer developer service"
+  },
+  {
+    "id": "developer/developer/tailwindcss",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Tailwindcss",
+    "filename": "tailwindcss.svg",
+    "path": "icons/developer/developer/tailwindcss.svg",
+    "aliases": [
+      "tailwindcss"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "tailwindcss"
+    ],
+    "description": "Developer Tailwindcss - developer developer service"
+  },
+  {
+    "id": "developer/developer/telegram",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Telegram",
+    "filename": "telegram.svg",
+    "path": "icons/developer/developer/telegram.svg",
+    "aliases": [
+      "telegram"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "telegram"
+    ],
+    "description": "Developer Telegram - developer developer service"
+  },
+  {
+    "id": "developer/developer/tensorflow",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Tensorflow",
+    "filename": "tensorflow.svg",
+    "path": "icons/developer/developer/tensorflow.svg",
+    "aliases": [
+      "tensorflow"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "tensorflow"
+    ],
+    "description": "Developer Tensorflow - developer developer service"
+  },
+  {
+    "id": "developer/developer/terraform",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Terraform",
+    "filename": "terraform.svg",
+    "path": "icons/developer/developer/terraform.svg",
+    "aliases": [
+      "terraform"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "terraform"
+    ],
+    "description": "Developer Terraform - developer developer service"
+  },
+  {
+    "id": "developer/developer/threads",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Threads",
+    "filename": "threads.svg",
+    "path": "icons/developer/developer/threads.svg",
+    "aliases": [
+      "threads"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "threads"
+    ],
+    "description": "Developer Threads - developer developer service"
+  },
+  {
+    "id": "developer/developer/threejs",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Threejs",
+    "filename": "threejs.svg",
+    "path": "icons/developer/developer/threejs.svg",
+    "aliases": [
+      "threejs"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "threejs"
+    ],
+    "description": "Developer Threejs - developer developer service"
+  },
+  {
+    "id": "developer/developer/tiktok",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Tiktok",
+    "filename": "tiktok.svg",
+    "path": "icons/developer/developer/tiktok.svg",
+    "aliases": [
+      "tiktok"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "tiktok"
+    ],
+    "description": "Developer Tiktok - developer developer service"
+  },
+  {
+    "id": "developer/developer/tinyhttp",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Tinyhttp",
+    "filename": "tinyhttp.svg",
+    "path": "icons/developer/developer/tinyhttp.svg",
+    "aliases": [
+      "tinyhttp"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "tinyhttp"
+    ],
+    "description": "Developer Tinyhttp - developer developer service"
+  },
+  {
+    "id": "developer/developer/tor",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Tor",
+    "filename": "tor.svg",
+    "path": "icons/developer/developer/tor.svg",
+    "aliases": [
+      "tor"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "tor"
+    ],
+    "description": "Developer Tor - developer developer service"
+  },
+  {
+    "id": "developer/developer/twitter",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Twitter",
+    "filename": "twitter.svg",
+    "path": "icons/developer/developer/twitter.svg",
+    "aliases": [
+      "twitter"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "twitter"
+    ],
+    "description": "Developer Twitter - developer developer service"
+  },
+  {
+    "id": "developer/developer/typescript",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Typescript",
+    "filename": "typescript.svg",
+    "path": "icons/developer/developer/typescript.svg",
+    "aliases": [
+      "typescript"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "typescript"
+    ],
+    "description": "Developer Typescript - developer developer service"
+  },
+  {
+    "id": "developer/developer/ubuntu",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Ubuntu",
+    "filename": "ubuntu.svg",
+    "path": "icons/developer/developer/ubuntu.svg",
+    "aliases": [
+      "ubuntu"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "ubuntu"
+    ],
+    "description": "Developer Ubuntu - developer developer service"
+  },
+  {
+    "id": "developer/developer/unjs",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Unjs",
+    "filename": "unjs.svg",
+    "path": "icons/developer/developer/unjs.svg",
+    "aliases": [
+      "unjs"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "unjs"
+    ],
+    "description": "Developer Unjs - developer developer service"
+  },
+  {
+    "id": "developer/developer/upwork",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Upwork",
+    "filename": "upwork.svg",
+    "path": "icons/developer/developer/upwork.svg",
+    "aliases": [
+      "upwork"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "upwork"
+    ],
+    "description": "Developer Upwork - developer developer service"
+  },
+  {
+    "id": "developer/developer/vagrant",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Vagrant",
+    "filename": "vagrant.svg",
+    "path": "icons/developer/developer/vagrant.svg",
+    "aliases": [
+      "vagrant"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "vagrant"
+    ],
+    "description": "Developer Vagrant - developer developer service"
+  },
+  {
+    "id": "developer/developer/vercel",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Vercel",
+    "filename": "vercel.svg",
+    "path": "icons/developer/developer/vercel.svg",
+    "aliases": [
+      "vercel"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "vercel"
+    ],
+    "description": "Developer Vercel - developer developer service"
+  },
+  {
+    "id": "developer/developer/vim",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Vim",
+    "filename": "vim.svg",
+    "path": "icons/developer/developer/vim.svg",
+    "aliases": [
+      "vim"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "vim"
+    ],
+    "description": "Developer Vim - developer developer service"
+  },
+  {
+    "id": "developer/developer/visualbasic",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Visualbasic",
+    "filename": "visualbasic.svg",
+    "path": "icons/developer/developer/visualbasic.svg",
+    "aliases": [
+      "visualbasic"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "visualbasic"
+    ],
+    "description": "Developer Visualbasic - developer developer service"
+  },
+  {
+    "id": "developer/developer/vitejs",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Vitejs",
+    "filename": "vitejs.svg",
+    "path": "icons/developer/developer/vitejs.svg",
+    "aliases": [
+      "vitejs"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "vitejs"
+    ],
+    "description": "Developer Vitejs - developer developer service"
+  },
+  {
+    "id": "developer/developer/vitest",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Vitest",
+    "filename": "vitest.svg",
+    "path": "icons/developer/developer/vitest.svg",
+    "aliases": [
+      "vitest"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "vitest"
+    ],
+    "description": "Developer Vitest - developer developer service"
+  },
+  {
+    "id": "developer/developer/vivaldi",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Vivaldi",
+    "filename": "vivaldi.svg",
+    "path": "icons/developer/developer/vivaldi.svg",
+    "aliases": [
+      "vivaldi"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "vivaldi"
+    ],
+    "description": "Developer Vivaldi - developer developer service"
+  },
+  {
+    "id": "developer/developer/vk",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Vk",
+    "filename": "vk.svg",
+    "path": "icons/developer/developer/vk.svg",
+    "aliases": [
+      "vk"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "vk"
+    ],
+    "description": "Developer Vk - developer developer service"
+  },
+  {
+    "id": "developer/developer/vscode",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Vscode",
+    "filename": "vscode.svg",
+    "path": "icons/developer/developer/vscode.svg",
+    "aliases": [
+      "vscode"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "vscode"
+    ],
+    "description": "Developer Vscode - developer developer service"
+  },
+  {
+    "id": "developer/developer/vuejs",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Vuejs",
+    "filename": "vuejs.svg",
+    "path": "icons/developer/developer/vuejs.svg",
+    "aliases": [
+      "vuejs"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "vuejs"
+    ],
+    "description": "Developer Vuejs - developer developer service"
+  },
+  {
+    "id": "developer/developer/webassembly",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Webassembly",
+    "filename": "webassembly.svg",
+    "path": "icons/developer/developer/webassembly.svg",
+    "aliases": [
+      "webassembly"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "webassembly"
+    ],
+    "description": "Developer Webassembly - developer developer service"
+  },
+  {
+    "id": "developer/developer/webpack",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Webpack",
+    "filename": "webpack.svg",
+    "path": "icons/developer/developer/webpack.svg",
+    "aliases": [
+      "webpack"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "webpack"
+    ],
+    "description": "Developer Webpack - developer developer service"
+  },
+  {
+    "id": "developer/developer/webrtc",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Webrtc",
+    "filename": "webrtc.svg",
+    "path": "icons/developer/developer/webrtc.svg",
+    "aliases": [
+      "webrtc"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "webrtc"
+    ],
+    "description": "Developer Webrtc - developer developer service"
+  },
+  {
+    "id": "developer/developer/whatsapp",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Whatsapp",
+    "filename": "whatsapp.svg",
+    "path": "icons/developer/developer/whatsapp.svg",
+    "aliases": [
+      "whatsapp"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "whatsapp"
+    ],
+    "description": "Developer Whatsapp - developer developer service"
+  },
+  {
+    "id": "developer/developer/wordpress",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Wordpress",
+    "filename": "wordpress.svg",
+    "path": "icons/developer/developer/wordpress.svg",
+    "aliases": [
+      "wordpress"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "wordpress"
+    ],
+    "description": "Developer Wordpress - developer developer service"
+  },
+  {
+    "id": "developer/developer/x",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer X",
+    "filename": "x.svg",
+    "path": "icons/developer/developer/x.svg",
+    "aliases": [
+      "x"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "x"
+    ],
+    "description": "Developer X - developer developer service"
+  },
+  {
+    "id": "developer/developer/xamarin",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Xamarin",
+    "filename": "xamarin.svg",
+    "path": "icons/developer/developer/xamarin.svg",
+    "aliases": [
+      "xamarin"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "xamarin"
+    ],
+    "description": "Developer Xamarin - developer developer service"
+  },
+  {
+    "id": "developer/developer/xd",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Xd",
+    "filename": "xd.svg",
+    "path": "icons/developer/developer/xd.svg",
+    "aliases": [
+      "xd"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "xd"
+    ],
+    "description": "Developer Xd - developer developer service"
+  },
+  {
+    "id": "developer/developer/yoga",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Yoga",
+    "filename": "yoga.svg",
+    "path": "icons/developer/developer/yoga.svg",
+    "aliases": [
+      "yoga"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "yoga"
+    ],
+    "description": "Developer Yoga - developer developer service"
+  },
+  {
+    "id": "developer/developer/youtube",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Youtube",
+    "filename": "youtube.svg",
+    "path": "icons/developer/developer/youtube.svg",
+    "aliases": [
+      "youtube"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "youtube"
+    ],
+    "description": "Developer Youtube - developer developer service"
+  },
+  {
+    "id": "developer/developer/zen",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Zen",
+    "filename": "zen.svg",
+    "path": "icons/developer/developer/zen.svg",
+    "aliases": [
+      "zen"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "zen"
+    ],
+    "description": "Developer Zen - developer developer service"
+  },
+  {
+    "id": "developer/developer/zod",
+    "vendor": "developer",
+    "category": "developer",
+    "name": "Developer Zod",
+    "filename": "zod.svg",
+    "path": "icons/developer/developer/zod.svg",
+    "aliases": [
+      "zod"
+    ],
+    "tags": [
+      "developer",
+      "development",
+      "zod"
+    ],
+    "description": "Developer Zod - developer developer service"
   }
 ]

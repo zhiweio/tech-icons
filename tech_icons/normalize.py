@@ -11,6 +11,26 @@ Per-vendor handlers select files by:
     numeric size dirs, `dist`, `package`, etc.)
   * **fixed category** for vendors whose packages map 1:1 to a category (Microsoft Fabric,
     Power Platform, Entra, Dynamics 365, Microsoft 365).
+
+Icon Source Attributions
+------------------------
+This project aggregates SVG icons from the following upstream sources.
+The MIT license of this project does NOT apply to the bundled icon files.
+Each icon set retains its original license and terms.
+
+  * AWS Architecture Icons   — https://aws.amazon.com/architecture/icons/
+  * Azure Architecture Icons  — https://learn.microsoft.com/en-us/azure/architecture/icons/
+  * Google Cloud Icons        — https://cloud.google.com/icons
+  * Microsoft 365 Icons       — https://learn.microsoft.com/en-us/previous-versions/microsoft-365/solutions/architecture-icons-templates
+  * Dynamics 365 Icons        — https://learn.microsoft.com/en-us/dynamics365/get-started/icons
+  * Entra Architecture Icons  — https://learn.microsoft.com/en-us/entra/architecture/architecture-icons
+  * Microsoft Fabric Icons    — https://learn.microsoft.com/en-us/fabric/fundamentals/icons
+  * Power Platform Icons      — https://learn.microsoft.com/en-us/power-platform/guidance/icons
+  * CNCF Artwork              — https://github.com/cncf/artwork
+  * Devicon                   — https://github.com/devicons/devicon
+  * Developer Icons           — https://github.com/xandemon/developer-icons
+
+Please review each source's license before redistributing or modifying the bundled icons.
 """
 
 from __future__ import annotations
@@ -25,6 +45,25 @@ logger = logging.getLogger(__name__)
 ASSETS_DIR = Path("assets")
 # Catalog path prefix for bundled SVG assets.
 ICONS_DIR = Path("icons")
+
+# Vendor → upstream source URL mapping for attribution.
+# The MIT license of this project does NOT apply to bundled icon files;
+# each set retains its original license and terms.
+VENDOR_SOURCES: dict[str, str] = {
+    "aws": "https://aws.amazon.com/architecture/icons/",
+    "azure": "https://learn.microsoft.com/en-us/azure/architecture/icons/",
+    "gcp": "https://cloud.google.com/icons",
+    "cncf": "https://github.com/cncf/artwork",
+    "devicon": "https://github.com/devicons/devicon",
+    "developer": "https://github.com/xandemon/developer-icons",
+    # Microsoft sub-vendors
+    "microsoft-365": "https://learn.microsoft.com/en-us/previous-versions/microsoft-365/solutions/architecture-icons-templates",
+    "dynamics-365": "https://learn.microsoft.com/en-us/dynamics365/get-started/icons",
+    "entra": "https://learn.microsoft.com/en-us/entra/architecture/architecture-icons",
+    "fabric": "https://learn.microsoft.com/en-us/fabric/fundamentals/icons",
+    "power-platform": "https://learn.microsoft.com/en-us/power-platform/guidance/icons",
+    "microsoft": "https://learn.microsoft.com/en-us/azure/architecture/icons/",  # generic fallback
+}
 
 # Directory names that carry no category information — skipped when walking up
 # from an SVG file to infer its category.
@@ -685,6 +724,128 @@ def collect_devicon_icons(assets_root: Path) -> list[IconEntry]:
 
 
 # ---------------------------------------------------------------------------
+# Developer Icons Handler
+# ---------------------------------------------------------------------------
+# Package: `developer-icons-package/` — flat layout with one SVG per icon.
+# Variant priority: plain > colored > dark/light > wordmark.
+# Many icons have multiple variants (e.g., `github-dark`, `github-light`,
+# `github-dark-wordmark`); we pick the best representative.
+
+_DEVELOPER_PKG = "developer-icons-package"
+
+# Priority: plain name first, then color-specific variants, wordmarks last
+_DEVELOPER_VARIANT_ORDER: tuple[str, ...] = (
+    "",  # plain (e.g., android.svg)
+    "original",  # original-color variants
+    "colored",  # colored variants
+    "color",  # color variants
+    "dark",  # dark theme
+    "light",  # light theme
+    "basic-dark",  # basic dark
+    "basic-light",  # basic light
+    "wordmark",  # wordmark versions (lowest)
+    "dark-wordmark",
+    "light-wordmark",
+    "basic",
+)
+
+
+def _pick_developer_svg(package_dir: Path, base_name: str, variants: list[Path]) -> Path | None:
+    """Pick the best SVG variant for a developer icon."""
+    # Build a lookup: variant_suffix -> Path
+    by_suffix: dict[str, Path] = {}
+    for p in variants:
+        stem = p.stem
+        if stem == base_name:
+            suffix = ""
+        elif stem.startswith(base_name + "-"):
+            suffix = stem[len(base_name) + 1 :]
+        else:
+            continue
+        by_suffix[suffix] = p
+
+    for order_suffix in _DEVELOPER_VARIANT_ORDER:
+        if order_suffix in by_suffix:
+            return by_suffix[order_suffix]
+
+    # Fallback: return any variant that starts with base_name
+    for p in variants:
+        if p.stem == base_name or p.stem.startswith(base_name + "-"):
+            return p
+
+    return None
+
+
+def _group_developer_icons(package_dir: Path) -> dict[str, list[Path]]:
+    """Group developer icon SVGs by base name.
+
+    Returns dict of base_name -> list of SVG paths (including all variants).
+    """
+    groups: dict[str, list[Path]] = {}
+
+    for svg_path in sorted(package_dir.glob("*.svg")):
+        stem = svg_path.stem
+        # Try to determine the base name by stripping known suffixes
+        base = stem
+        for suffix in [
+            "-original",
+            "-colored",
+            "-color",
+            "-dark-wordmark",
+            "-light-wordmark",
+            "-basic-dark",
+            "-basic-light",
+            "-dark",
+            "-light",
+            "-wordmark",
+            "-basic",
+        ]:
+            if base.endswith(suffix):
+                base = base[: -len(suffix)]
+                break
+
+        groups.setdefault(base, []).append(svg_path)
+
+    return groups
+
+
+def collect_developer_icons(assets_root: Path) -> list[IconEntry]:
+    """All technology icons under `developer-icons-package/`."""
+    pkg_root = assets_root / _DEVELOPER_PKG
+    if not pkg_root.exists():
+        logger.warning(f"{_DEVELOPER_PKG} not found: {pkg_root}")
+        return []
+
+    entries: list[IconEntry] = []
+    groups = _group_developer_icons(pkg_root)
+
+    for base_name, svg_list in sorted(groups.items()):
+        chosen = _pick_developer_svg(pkg_root, base_name, svg_list)
+        if chosen is None:
+            continue
+        name = clean_name(base_name)
+        if not name:
+            continue
+        category = "developer"
+        icon_id = generate_canonical_id("developer", category, name)
+        dest = ICONS_DIR / "developer" / category / f"{name}.svg"
+        tags = list(dict.fromkeys(["developer", "development", *name.split("-")[:3]]))
+        entries.append(
+            IconEntry(
+                id=icon_id,
+                vendor="developer",
+                category=category,
+                name=_format_display_name("developer", name),
+                filename=f"{name}.svg",
+                source_path=chosen,
+                dest_path=dest,
+                tags=tags,
+            )
+        )
+    return entries
+
+
+# ---------------------------------------------------------------------------
 # Display / tag helpers
 # ---------------------------------------------------------------------------
 
@@ -727,6 +888,7 @@ _VENDOR_DISPLAY = {
     "microsoft": "Microsoft",
     "cncf": "CNCF",
     "devicon": "Devicon",
+    "developer": "Developer",
 }
 
 
@@ -1034,4 +1196,5 @@ def collect_all_icons(assets_root: Path) -> list[IconEntry]:
     entries.extend(collect_microsoft_icons(assets_root))
     entries.extend(collect_cncf_icons(assets_root))
     entries.extend(collect_devicon_icons(assets_root))
+    entries.extend(collect_developer_icons(assets_root))
     return deduplicate_entries(entries)

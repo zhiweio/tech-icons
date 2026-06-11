@@ -159,7 +159,7 @@ def main() -> None:
     parser.add_argument(
         "--vendor",
         type=str,
-        choices=["aws", "azure", "gcp", "microsoft", "cncf", "devicon"],
+        choices=["aws", "azure", "gcp", "microsoft", "cncf", "devicon", "developer"],
         help="Export all icons for a vendor (batch mode)",
     )
     parser.add_argument(

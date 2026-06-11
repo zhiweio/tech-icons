@@ -555,7 +555,8 @@
     "gcp/ai-machine-learning/tensorflow-enterprise",
     "gcp/ai-machine-learning/text-to-speech",
     "gcp/ai-machine-learning/video-intelligence-api",
-    "gcp/ai-machine-learning/visual-inspection"
+    "gcp/ai-machine-learning/visual-inspection",
+    "developer/developer/claude-ai"
   ],
   "ai-and-machine-learning": [
     "azure/ai-and-machine-learning/batch-ai",
@@ -948,13 +949,15 @@
     "gcp/hybrid-and-multicloud/vmware-engine"
   ],
   "android": [
-    "devicon/devicon/android"
+    "devicon/devicon/android",
+    "developer/developer/android"
   ],
   "androidstudio": [
     "devicon/devicon/androidstudio"
   ],
   "angular": [
-    "devicon/devicon/angular"
+    "devicon/devicon/angular",
+    "developer/developer/angular"
   ],
   "angularjs": [
     "devicon/devicon/angularjs"
@@ -966,7 +969,8 @@
     "azure/ai-and-machine-learning/anomaly-detector"
   ],
   "ansible": [
-    "devicon/devicon/ansible"
+    "devicon/devicon/ansible",
+    "developer/developer/ansible"
   ],
   "ansys": [
     "devicon/devicon/ansys"
@@ -980,6 +984,9 @@
     "gcp/hybrid-and-multicloud/anthos-service-mesh",
     "gcp/serverless-computing/cloud-run-for-anthos",
     "gcp/containers/migrate-for-anthos"
+  ],
+  "anthropic": [
+    "developer/developer/anthropic"
   ],
   "antrea": [
     "cncf/cncf/antrea"
@@ -999,7 +1006,8 @@
     "aws/application-integration/managed-workflows-for-apache-airflow",
     "aws/artificial-intelligence/apache-mxnet-on-aws",
     "azure/other/managed-instance-apache-cassandra",
-    "devicon/devicon/apache"
+    "devicon/devicon/apache",
+    "developer/developer/apache"
   ],
   "apacheairflow": [
     "devicon/devicon/apacheairflow"
@@ -1043,7 +1051,8 @@
     "gcp/ai-machine-learning/healthcare-nlp-api",
     "gcp/ai-machine-learning/media-translation-api",
     "gcp/ai-machine-learning/retail-api",
-    "gcp/ai-machine-learning/video-intelligence-api"
+    "gcp/ai-machine-learning/video-intelligence-api",
+    "developer/developer/fast-api"
   ],
   "api-gateway": [
     "aws/networking-content-delivery/api-gateway",
@@ -1131,7 +1140,8 @@
   ],
   "apple": [
     "azure/intune/device-security-apple",
-    "devicon/devicon/apple"
+    "devicon/devicon/apple",
+    "developer/developer/apple"
   ],
   "applens": [
     "azure/azure-ecosystem/applens"
@@ -1283,7 +1293,8 @@
     "aws/application-integration/appsync"
   ],
   "appwrite": [
-    "devicon/devicon/appwrite"
+    "devicon/devicon/appwrite",
+    "developer/developer/appwrite"
   ],
   "aquila": [
     "azure/other/aquila"
@@ -1295,7 +1306,8 @@
     "azure/other/arc-postgresql",
     "azure/other/arc-sql-managed-instance",
     "azure/other/arc-sql-server",
-    "azure/other/arc-data-services"
+    "azure/other/arc-data-services",
+    "developer/developer/arc"
   ],
   "architected": [
     "aws/management-tools/well-architected-tool"
@@ -1548,7 +1560,8 @@
     "microsoft/fabric/window-asterisk-new"
   ],
   "astro": [
-    "devicon/devicon/astro"
+    "devicon/devicon/astro",
+    "developer/developer/astro"
   ],
   "at": [
     "aws/databases/oracle-database-at-aws",
@@ -1567,11 +1580,15 @@
   "atlantis": [
     "cncf/cncf/atlantis"
   ],
+  "atlassian": [
+    "developer/developer/atlassian"
+  ],
   "atm": [
     "azure/networking/atm-multistack"
   ],
   "atom": [
-    "devicon/devicon/atom"
+    "devicon/devicon/atom",
+    "developer/developer/atom"
   ],
   "attach": [
     "microsoft/microsoft-365/attach",
@@ -1617,6 +1634,9 @@
     "aws/databases/aurora-amazon-rds-instance",
     "aws/databases/aurora-trusted-language-extensions-for-postgresql"
   ],
+  "auth0": [
+    "developer/developer/auth0"
+  ],
   "authentication": [
     "azure/identity/multi-factor-authentication",
     "azure/security/multifactor-authentication"
@@ -1658,6 +1678,9 @@
   ],
   "availability": [
     "azure/compute/availability-sets"
+  ],
+  "avajs": [
+    "developer/developer/avajs"
   ],
   "avs": [
     "azure/other/avs-vm"
@@ -2433,10 +2456,17 @@
     "aws/storage/simple-storage-service-s3-storage-lens",
     "aws/storage/simple-storage-service-s3-tables",
     "aws/storage/simple-storage-service-s3-vectors",
-    "aws/storage/simple-storage-service-vpc-access-points"
+    "aws/storage/simple-storage-service-vpc-access-points",
+    "developer/developer/aws"
+  ],
+  "axiom": [
+    "developer/developer/axiom"
   ],
   "axios": [
     "devicon/devicon/axios"
+  ],
+  "axure": [
+    "developer/developer/axure"
   ],
   "az": [
     "aws/databases/rds-multi-az-db-cluster",
@@ -3147,7 +3177,8 @@
     "azure/web/cognitive-services",
     "azure/web/azure-media-service",
     "azure/web/azure-spring-apps",
-    "devicon/devicon/azure"
+    "devicon/devicon/azure",
+    "developer/developer/azure"
   ],
   "azure-ecosystem": [
     "azure/azure-ecosystem/collaborative-service",
@@ -3182,13 +3213,15 @@
     "azure/identity/azure-ad-b2c"
   ],
   "babel": [
-    "devicon/devicon/babel"
+    "devicon/devicon/babel",
+    "developer/developer/babel"
   ],
   "babylonjs": [
     "devicon/devicon/babylonjs"
   ],
   "backbonejs": [
-    "devicon/devicon/backbonejs"
+    "devicon/devicon/backbonejs",
+    "developer/developer/backbonejs"
   ],
   "backint": [
     "aws/management-tools/backint-agent"
@@ -3280,6 +3313,9 @@
     "microsoft/fabric/trophy-data-bar-vertical",
     "microsoft/microsoft-365/data-bar-vertical"
   ],
+  "bard": [
+    "developer/developer/bard"
+  ],
   "bare": [
     "azure/other/bare-metal-infrastructure",
     "gcp/compute/bare-metal-solutions"
@@ -3295,7 +3331,8 @@
     "azure/intune/security-baselines"
   ],
   "bash": [
-    "devicon/devicon/bash"
+    "devicon/devicon/bash",
+    "developer/developer/bash"
   ],
   "bastions": [
     "azure/networking/bastions"
@@ -3363,14 +3400,22 @@
     "gcp/security-identity/binary-authorization",
     "microsoft/fabric/datatype-binary"
   ],
+  "bing": [
+    "developer/developer/bing"
+  ],
   "binoculars": [
     "microsoft/fabric/binoculars"
   ],
   "biome": [
-    "devicon/devicon/biome"
+    "devicon/devicon/biome",
+    "developer/developer/biome"
   ],
   "bitbucket": [
-    "devicon/devicon/bitbucket"
+    "devicon/devicon/bitbucket",
+    "developer/developer/bitbucket"
+  ],
+  "bitnami": [
+    "developer/developer/bitnami"
   ],
   "biz": [
     "azure/general/biz-talk"
@@ -3426,8 +3471,14 @@
     "microsoft/microsoft-365/building-people-blue-gray",
     "microsoft/microsoft-365/building-people-blue-light"
   ],
+  "blueprintjs": [
+    "developer/developer/blueprintjs"
+  ],
   "blueprints": [
     "azure/management-and-governance/blueprints"
+  ],
+  "bluesky": [
+    "developer/developer/bluesky"
   ],
   "board": [
     "aws/iot/iot-hardware-board",
@@ -3455,6 +3506,12 @@
   ],
   "bootstrap": [
     "devicon/devicon/bootstrap"
+  ],
+  "bootstrap4": [
+    "developer/developer/bootstrap4"
+  ],
+  "bootstrap5": [
+    "developer/developer/bootstrap5"
   ],
   "border": [
     "microsoft/fabric/border-inside-all",
@@ -3521,6 +3578,9 @@
     "microsoft/fabric/diagram-branch",
     "microsoft/fabric/diagram-branch-link",
     "microsoft/fabric/diagram-branch-sync"
+  ],
+  "brave": [
+    "developer/developer/brave"
   ],
   "breeze": [
     "azure/new-icons/breeze"
@@ -3599,8 +3659,14 @@
   "bulma": [
     "devicon/devicon/bulma"
   ],
+  "bulmaui": [
+    "developer/developer/bulmaui"
+  ],
   "bun": [
     "devicon/devicon/bun"
+  ],
+  "bunjs": [
+    "developer/developer/bunjs"
   ],
   "burner": [
     "cncf/cncf/kube-burner"
@@ -3723,7 +3789,8 @@
     "devicon/devicon/cairo"
   ],
   "cakephp": [
-    "devicon/devicon/cakephp"
+    "devicon/devicon/cakephp",
+    "developer/developer/cakephp"
   ],
   "calculator": [
     "microsoft/fabric/calculator-brackets",
@@ -3757,7 +3824,8 @@
     "microsoft/microsoft-365/camera"
   ],
   "canva": [
-    "devicon/devicon/canva"
+    "devicon/devicon/canva",
+    "developer/developer/canva"
   ],
   "canvas": [
     "aws/artificial-intelligence/sagemaker-ai-canvas"
@@ -3804,6 +3872,9 @@
   "cassandra": [
     "azure/other/managed-instance-apache-cassandra",
     "devicon/devicon/cassandra"
+  ],
+  "cassandradb": [
+    "developer/developer/cassandradb"
   ],
   "catalog": [
     "aws/management-tools/service-catalog",
@@ -3926,7 +3997,8 @@
     "azure/other/open-supply-chain-platform"
   ],
   "chakraui": [
-    "devicon/devicon/chakraui"
+    "devicon/devicon/chakraui",
+    "developer/developer/chakraui"
   ],
   "chandelier": [
     "aws/quantum-technologies/braket-chandelier"
@@ -3960,6 +4032,9 @@
   ],
   "chatbot": [
     "aws/management-tools/chatbot"
+  ],
+  "chatgpt": [
+    "developer/developer/chatgpt"
   ],
   "check": [
     "microsoft/microsoft-365/check"
@@ -3998,7 +4073,11 @@
     "aws/quantum-technologies/braket-chip"
   ],
   "chrome": [
-    "devicon/devicon/chrome"
+    "devicon/devicon/chrome",
+    "developer/developer/chrome"
+  ],
+  "chromium": [
+    "developer/developer/chromium"
   ],
   "chubaofs": [
     "cncf/cncf/chubaofs"
@@ -4046,7 +4125,8 @@
     "microsoft/microsoft-365/checkmark-circle-light"
   ],
   "circleci": [
-    "devicon/devicon/circleci"
+    "devicon/devicon/circleci",
+    "developer/developer/circleci"
   ],
   "circles": [
     "microsoft/microsoft-365/grid-circles"
@@ -4076,14 +4156,21 @@
     "azure/networking/reserved-ip-addresses-classic",
     "azure/storage/storage-accounts-classic"
   ],
+  "claude": [
+    "developer/developer/claude-ai"
+  ],
   "clean": [
     "aws/analytics/clean-rooms"
+  ],
+  "clerk": [
+    "developer/developer/clerk"
   ],
   "cli": [
     "aws/containers/elastic-container-service-copiiot-cli"
   ],
   "clickhouse": [
-    "devicon/devicon/clickhouse"
+    "devicon/devicon/clickhouse",
+    "developer/developer/clickhouse"
   ],
   "client": [
     "aws/networking-content-delivery/client-vpn",
@@ -4113,7 +4200,8 @@
     "microsoft/microsoft-365/arrow-clockwise"
   ],
   "clojure": [
-    "devicon/devicon/clojure"
+    "devicon/devicon/clojure",
+    "developer/developer/clojure"
   ],
   "clojurescript": [
     "devicon/devicon/clojurescript"
@@ -4448,7 +4536,8 @@
     "cncf/cncf/werf",
     "cncf/cncf/xregistry",
     "cncf/cncf/youki",
-    "cncf/cncf/zot"
+    "cncf/cncf/zot",
+    "developer/developer/google-cloud"
   ],
   "cloud-financial-management": [
     "aws/cloud-financial-management/billing-conductor",
@@ -4697,7 +4786,8 @@
     "cncf/cncf/cloudevents"
   ],
   "cloudflare": [
-    "devicon/devicon/cloudflare"
+    "devicon/devicon/cloudflare",
+    "developer/developer/cloudflare"
   ],
   "cloudflareworkers": [
     "devicon/devicon/cloudflareworkers"
@@ -4718,6 +4808,9 @@
   ],
   "cloudhsm": [
     "aws/security-identity/cloudhsm"
+  ],
+  "cloudinary": [
+    "developer/developer/cloudinary"
   ],
   "cloudnativepg": [
     "cncf/cncf/cloudnativepg"
@@ -5069,11 +5162,15 @@
   "codedeploy": [
     "aws/developer-tools/codedeploy"
   ],
+  "codefresh": [
+    "developer/developer/codefresh"
+  ],
   "codeguru": [
     "aws/artificial-intelligence/codeguru"
   ],
   "codeigniter": [
-    "devicon/devicon/codeigniter"
+    "devicon/devicon/codeigniter",
+    "developer/developer/codeigniter"
   ],
   "codepen": [
     "devicon/devicon/codepen"
@@ -5632,6 +5729,9 @@
   "converter": [
     "aws/migration-modernization/mainframe-modernization-converter"
   ],
+  "convex": [
+    "developer/developer/convex"
+  ],
   "copa": [
     "cncf/cncf/copa"
   ],
@@ -5639,7 +5739,9 @@
     "aws/containers/elastic-container-service-copiiot-cli"
   ],
   "copilot": [
-    "microsoft/fabric/copilot"
+    "microsoft/fabric/copilot",
+    "developer/developer/copilot",
+    "developer/developer/github-copilot"
   ],
   "copilotstudio": [
     "microsoft/power-platform/copilotstudio-scalable"
@@ -5739,13 +5841,18 @@
     "aws/security-identity/payment-cryptography"
   ],
   "crystal": [
-    "devicon/devicon/crystal"
+    "devicon/devicon/crystal",
+    "developer/developer/crystal"
   ],
   "csharp": [
     "devicon/devicon/csharp"
   ],
+  "css": [
+    "developer/developer/css"
+  ],
   "css3": [
-    "devicon/devicon/css3"
+    "devicon/devicon/css3",
+    "developer/developer/css3"
   ],
   "cube": [
     "microsoft/fabric/cube-cone-arrow-curved-right",
@@ -5819,6 +5926,9 @@
   "cx": [
     "gcp/ai-machine-learning/dialogflow-cx"
   ],
+  "cypress": [
+    "developer/developer/cypress"
+  ],
   "cypressio": [
     "devicon/devicon/cypressio"
   ],
@@ -5854,7 +5964,8 @@
     "microsoft/microsoft-365/building-people-teams-dark"
   ],
   "dart": [
-    "devicon/devicon/dart"
+    "devicon/devicon/dart",
+    "developer/developer/dart"
   ],
   "dash": [
     "azure/other/sonic-dash"
@@ -6884,7 +6995,8 @@
     "azure/analytics/azure-databricks"
   ],
   "datadog": [
-    "devicon/devicon/datadog"
+    "devicon/devicon/datadog",
+    "developer/developer/datadog"
   ],
   "dataflow": [
     "gcp/data-analytics/dataflow",
@@ -7014,6 +7126,9 @@
   "deepracer": [
     "aws/artificial-intelligence/deepracer"
   ],
+  "deepseek": [
+    "developer/developer/deepseek"
+  ],
   "default": [
     "aws/application-integration/eventbridge-default-event-bus"
   ],
@@ -7127,6 +7242,10 @@
   "delta": [
     "aws/media-services/elemental-delta"
   ],
+  "deno": [
+    "developer/developer/deno",
+    "developer/developer/deno-fresh"
+  ],
   "denojs": [
     "devicon/devicon/denojs"
   ],
@@ -7217,7 +7336,292 @@
     "gcp/developer-tools/trace",
     "microsoft/fabric/developer-board-lightning-asterisk",
     "microsoft/fabric/developer-board-lightning-kql",
-    "microsoft/fabric/developer-board-lightning-sparkle"
+    "microsoft/fabric/developer-board-lightning-sparkle",
+    "developer/developer/android",
+    "developer/developer/angular",
+    "developer/developer/ansible",
+    "developer/developer/anthropic",
+    "developer/developer/apache",
+    "developer/developer/apple",
+    "developer/developer/appwrite",
+    "developer/developer/arc",
+    "developer/developer/astro",
+    "developer/developer/atlassian",
+    "developer/developer/atom",
+    "developer/developer/auth0",
+    "developer/developer/avajs",
+    "developer/developer/aws",
+    "developer/developer/axiom",
+    "developer/developer/axure",
+    "developer/developer/azure",
+    "developer/developer/babel",
+    "developer/developer/backbonejs",
+    "developer/developer/bard",
+    "developer/developer/bash",
+    "developer/developer/bing",
+    "developer/developer/biome",
+    "developer/developer/bitbucket",
+    "developer/developer/bitnami",
+    "developer/developer/blueprintjs",
+    "developer/developer/bluesky",
+    "developer/developer/bootstrap4",
+    "developer/developer/bootstrap5",
+    "developer/developer/brave",
+    "developer/developer/bulmaui",
+    "developer/developer/bunjs",
+    "developer/developer/c",
+    "developer/developer/c-plus-plus",
+    "developer/developer/c-sharp",
+    "developer/developer/cakephp",
+    "developer/developer/canva",
+    "developer/developer/cassandradb",
+    "developer/developer/chakraui",
+    "developer/developer/chatgpt",
+    "developer/developer/chrome",
+    "developer/developer/chromium",
+    "developer/developer/circleci",
+    "developer/developer/claude-ai",
+    "developer/developer/clerk",
+    "developer/developer/clickhouse",
+    "developer/developer/clojure",
+    "developer/developer/cloudflare",
+    "developer/developer/cloudinary",
+    "developer/developer/codefresh",
+    "developer/developer/codeigniter",
+    "developer/developer/convex",
+    "developer/developer/copilot",
+    "developer/developer/crystal",
+    "developer/developer/css",
+    "developer/developer/css3",
+    "developer/developer/cypress",
+    "developer/developer/dart",
+    "developer/developer/datadog",
+    "developer/developer/deepseek",
+    "developer/developer/deno",
+    "developer/developer/deno-fresh",
+    "developer/developer/developer-icons",
+    "developer/developer/digitalocean",
+    "developer/developer/discord",
+    "developer/developer/django",
+    "developer/developer/dlang",
+    "developer/developer/docker",
+    "developer/developer/doctrine",
+    "developer/developer/docusaurus",
+    "developer/developer/dovetail",
+    "developer/developer/ec2",
+    "developer/developer/edge",
+    "developer/developer/elastic",
+    "developer/developer/electron",
+    "developer/developer/elementui",
+    "developer/developer/elixir",
+    "developer/developer/ember",
+    "developer/developer/erlang",
+    "developer/developer/esbuild",
+    "developer/developer/eslint",
+    "developer/developer/expressjs",
+    "developer/developer/facebook",
+    "developer/developer/fast-api",
+    "developer/developer/faunadb",
+    "developer/developer/figma",
+    "developer/developer/firebase",
+    "developer/developer/firefox",
+    "developer/developer/flask",
+    "developer/developer/flutter",
+    "developer/developer/flyio",
+    "developer/developer/framer",
+    "developer/developer/gatsby",
+    "developer/developer/git",
+    "developer/developer/github",
+    "developer/developer/github-copilot",
+    "developer/developer/gitlab",
+    "developer/developer/gmail",
+    "developer/developer/go",
+    "developer/developer/google",
+    "developer/developer/google-cloud",
+    "developer/developer/grafana",
+    "developer/developer/grafbase",
+    "developer/developer/graphite",
+    "developer/developer/graphql",
+    "developer/developer/gridsome",
+    "developer/developer/gruntjs",
+    "developer/developer/gulp",
+    "developer/developer/hashnode",
+    "developer/developer/haskell",
+    "developer/developer/headlessui",
+    "developer/developer/heroku",
+    "developer/developer/hexo",
+    "developer/developer/hhvm",
+    "developer/developer/homebrew",
+    "developer/developer/hotjar",
+    "developer/developer/html5",
+    "developer/developer/hugging-face",
+    "developer/developer/hyper2",
+    "developer/developer/i18next",
+    "developer/developer/indesign",
+    "developer/developer/insomnia",
+    "developer/developer/instagram",
+    "developer/developer/internet-explorer",
+    "developer/developer/invision",
+    "developer/developer/ionic",
+    "developer/developer/jamstack",
+    "developer/developer/java",
+    "developer/developer/javascript",
+    "developer/developer/jenkins",
+    "developer/developer/jest",
+    "developer/developer/jira",
+    "developer/developer/jquery",
+    "developer/developer/jslint",
+    "developer/developer/json",
+    "developer/developer/k6",
+    "developer/developer/kafka",
+    "developer/developer/kibana",
+    "developer/developer/kotlin",
+    "developer/developer/kubernetes",
+    "developer/developer/laravel",
+    "developer/developer/lerna",
+    "developer/developer/less",
+    "developer/developer/lightroom",
+    "developer/developer/linkedin",
+    "developer/developer/linux",
+    "developer/developer/lit",
+    "developer/developer/liveblocks",
+    "developer/developer/logrocket",
+    "developer/developer/lokalise",
+    "developer/developer/lua",
+    "developer/developer/lunacy",
+    "developer/developer/mariadb",
+    "developer/developer/marionette",
+    "developer/developer/markdown",
+    "developer/developer/mastodon",
+    "developer/developer/materialui",
+    "developer/developer/messenger",
+    "developer/developer/meta",
+    "developer/developer/microsoft",
+    "developer/developer/microsoft-sql-server",
+    "developer/developer/miro",
+    "developer/developer/mochajs",
+    "developer/developer/mongodb",
+    "developer/developer/mozilla",
+    "developer/developer/mysql",
+    "developer/developer/neovim",
+    "developer/developer/nestjs",
+    "developer/developer/netlify",
+    "developer/developer/netlify2",
+    "developer/developer/nextjs",
+    "developer/developer/nim",
+    "developer/developer/nodejs",
+    "developer/developer/notion",
+    "developer/developer/npm",
+    "developer/developer/numpy",
+    "developer/developer/nuxtjs",
+    "developer/developer/nx",
+    "developer/developer/ocaml",
+    "developer/developer/onedrive",
+    "developer/developer/openai",
+    "developer/developer/opera",
+    "developer/developer/oracle",
+    "developer/developer/outlook",
+    "developer/developer/pandacss",
+    "developer/developer/photoshop",
+    "developer/developer/php",
+    "developer/developer/pinia",
+    "developer/developer/pinterest",
+    "developer/developer/pixijs",
+    "developer/developer/playwright",
+    "developer/developer/pnpm",
+    "developer/developer/postgresql",
+    "developer/developer/postman",
+    "developer/developer/powershell",
+    "developer/developer/preact",
+    "developer/developer/presto",
+    "developer/developer/prettier",
+    "developer/developer/prisma",
+    "developer/developer/pugjs",
+    "developer/developer/pulumi",
+    "developer/developer/pwa",
+    "developer/developer/python",
+    "developer/developer/pytorch",
+    "developer/developer/pytorch3d",
+    "developer/developer/qwik",
+    "developer/developer/r",
+    "developer/developer/radixui",
+    "developer/developer/rails",
+    "developer/developer/railway",
+    "developer/developer/react-query",
+    "developer/developer/reactjs",
+    "developer/developer/reactrouter",
+    "developer/developer/reddit",
+    "developer/developer/redhat",
+    "developer/developer/redis",
+    "developer/developer/redux",
+    "developer/developer/redux-saga",
+    "developer/developer/remix",
+    "developer/developer/render",
+    "developer/developer/resend",
+    "developer/developer/rollup",
+    "developer/developer/ruby",
+    "developer/developer/rust",
+    "developer/developer/safari",
+    "developer/developer/sass",
+    "developer/developer/scala",
+    "developer/developer/semanticui",
+    "developer/developer/serverless",
+    "developer/developer/shadcnui",
+    "developer/developer/shopware",
+    "developer/developer/sketch",
+    "developer/developer/sketch2",
+    "developer/developer/skype",
+    "developer/developer/slack",
+    "developer/developer/solidity",
+    "developer/developer/solidjs",
+    "developer/developer/spring",
+    "developer/developer/storyblok",
+    "developer/developer/storybook",
+    "developer/developer/stream",
+    "developer/developer/stylelint",
+    "developer/developer/sublime",
+    "developer/developer/supabase",
+    "developer/developer/sveltejs",
+    "developer/developer/swagger",
+    "developer/developer/swift",
+    "developer/developer/symfony",
+    "developer/developer/trpc",
+    "developer/developer/tailwindcss",
+    "developer/developer/telegram",
+    "developer/developer/tensorflow",
+    "developer/developer/terraform",
+    "developer/developer/threads",
+    "developer/developer/threejs",
+    "developer/developer/tiktok",
+    "developer/developer/tinyhttp",
+    "developer/developer/tor",
+    "developer/developer/twitter",
+    "developer/developer/typescript",
+    "developer/developer/ubuntu",
+    "developer/developer/unjs",
+    "developer/developer/upwork",
+    "developer/developer/vagrant",
+    "developer/developer/vercel",
+    "developer/developer/vim",
+    "developer/developer/visualbasic",
+    "developer/developer/vitejs",
+    "developer/developer/vitest",
+    "developer/developer/vivaldi",
+    "developer/developer/vk",
+    "developer/developer/vscode",
+    "developer/developer/vuejs",
+    "developer/developer/webassembly",
+    "developer/developer/webpack",
+    "developer/developer/webrtc",
+    "developer/developer/whatsapp",
+    "developer/developer/wordpress",
+    "developer/developer/x",
+    "developer/developer/xamarin",
+    "developer/developer/xd",
+    "developer/developer/yoga",
+    "developer/developer/youtube",
+    "developer/developer/zen",
+    "developer/developer/zod"
   ],
   "developer-tools": [
     "aws/developer-tools/cloud-control-api",
@@ -7248,7 +7652,292 @@
     "gcp/developer-tools/trace"
   ],
   "development": [
-    "aws/developer-tools/cloud-development-kit"
+    "aws/developer-tools/cloud-development-kit",
+    "developer/developer/android",
+    "developer/developer/angular",
+    "developer/developer/ansible",
+    "developer/developer/anthropic",
+    "developer/developer/apache",
+    "developer/developer/apple",
+    "developer/developer/appwrite",
+    "developer/developer/arc",
+    "developer/developer/astro",
+    "developer/developer/atlassian",
+    "developer/developer/atom",
+    "developer/developer/auth0",
+    "developer/developer/avajs",
+    "developer/developer/aws",
+    "developer/developer/axiom",
+    "developer/developer/axure",
+    "developer/developer/azure",
+    "developer/developer/babel",
+    "developer/developer/backbonejs",
+    "developer/developer/bard",
+    "developer/developer/bash",
+    "developer/developer/bing",
+    "developer/developer/biome",
+    "developer/developer/bitbucket",
+    "developer/developer/bitnami",
+    "developer/developer/blueprintjs",
+    "developer/developer/bluesky",
+    "developer/developer/bootstrap4",
+    "developer/developer/bootstrap5",
+    "developer/developer/brave",
+    "developer/developer/bulmaui",
+    "developer/developer/bunjs",
+    "developer/developer/c",
+    "developer/developer/c-plus-plus",
+    "developer/developer/c-sharp",
+    "developer/developer/cakephp",
+    "developer/developer/canva",
+    "developer/developer/cassandradb",
+    "developer/developer/chakraui",
+    "developer/developer/chatgpt",
+    "developer/developer/chrome",
+    "developer/developer/chromium",
+    "developer/developer/circleci",
+    "developer/developer/claude-ai",
+    "developer/developer/clerk",
+    "developer/developer/clickhouse",
+    "developer/developer/clojure",
+    "developer/developer/cloudflare",
+    "developer/developer/cloudinary",
+    "developer/developer/codefresh",
+    "developer/developer/codeigniter",
+    "developer/developer/convex",
+    "developer/developer/copilot",
+    "developer/developer/crystal",
+    "developer/developer/css",
+    "developer/developer/css3",
+    "developer/developer/cypress",
+    "developer/developer/dart",
+    "developer/developer/datadog",
+    "developer/developer/deepseek",
+    "developer/developer/deno",
+    "developer/developer/deno-fresh",
+    "developer/developer/developer-icons",
+    "developer/developer/digitalocean",
+    "developer/developer/discord",
+    "developer/developer/django",
+    "developer/developer/dlang",
+    "developer/developer/docker",
+    "developer/developer/doctrine",
+    "developer/developer/docusaurus",
+    "developer/developer/dovetail",
+    "developer/developer/ec2",
+    "developer/developer/edge",
+    "developer/developer/elastic",
+    "developer/developer/electron",
+    "developer/developer/elementui",
+    "developer/developer/elixir",
+    "developer/developer/ember",
+    "developer/developer/erlang",
+    "developer/developer/esbuild",
+    "developer/developer/eslint",
+    "developer/developer/expressjs",
+    "developer/developer/facebook",
+    "developer/developer/fast-api",
+    "developer/developer/faunadb",
+    "developer/developer/figma",
+    "developer/developer/firebase",
+    "developer/developer/firefox",
+    "developer/developer/flask",
+    "developer/developer/flutter",
+    "developer/developer/flyio",
+    "developer/developer/framer",
+    "developer/developer/gatsby",
+    "developer/developer/git",
+    "developer/developer/github",
+    "developer/developer/github-copilot",
+    "developer/developer/gitlab",
+    "developer/developer/gmail",
+    "developer/developer/go",
+    "developer/developer/google",
+    "developer/developer/google-cloud",
+    "developer/developer/grafana",
+    "developer/developer/grafbase",
+    "developer/developer/graphite",
+    "developer/developer/graphql",
+    "developer/developer/gridsome",
+    "developer/developer/gruntjs",
+    "developer/developer/gulp",
+    "developer/developer/hashnode",
+    "developer/developer/haskell",
+    "developer/developer/headlessui",
+    "developer/developer/heroku",
+    "developer/developer/hexo",
+    "developer/developer/hhvm",
+    "developer/developer/homebrew",
+    "developer/developer/hotjar",
+    "developer/developer/html5",
+    "developer/developer/hugging-face",
+    "developer/developer/hyper2",
+    "developer/developer/i18next",
+    "developer/developer/indesign",
+    "developer/developer/insomnia",
+    "developer/developer/instagram",
+    "developer/developer/internet-explorer",
+    "developer/developer/invision",
+    "developer/developer/ionic",
+    "developer/developer/jamstack",
+    "developer/developer/java",
+    "developer/developer/javascript",
+    "developer/developer/jenkins",
+    "developer/developer/jest",
+    "developer/developer/jira",
+    "developer/developer/jquery",
+    "developer/developer/jslint",
+    "developer/developer/json",
+    "developer/developer/k6",
+    "developer/developer/kafka",
+    "developer/developer/kibana",
+    "developer/developer/kotlin",
+    "developer/developer/kubernetes",
+    "developer/developer/laravel",
+    "developer/developer/lerna",
+    "developer/developer/less",
+    "developer/developer/lightroom",
+    "developer/developer/linkedin",
+    "developer/developer/linux",
+    "developer/developer/lit",
+    "developer/developer/liveblocks",
+    "developer/developer/logrocket",
+    "developer/developer/lokalise",
+    "developer/developer/lua",
+    "developer/developer/lunacy",
+    "developer/developer/mariadb",
+    "developer/developer/marionette",
+    "developer/developer/markdown",
+    "developer/developer/mastodon",
+    "developer/developer/materialui",
+    "developer/developer/messenger",
+    "developer/developer/meta",
+    "developer/developer/microsoft",
+    "developer/developer/microsoft-sql-server",
+    "developer/developer/miro",
+    "developer/developer/mochajs",
+    "developer/developer/mongodb",
+    "developer/developer/mozilla",
+    "developer/developer/mysql",
+    "developer/developer/neovim",
+    "developer/developer/nestjs",
+    "developer/developer/netlify",
+    "developer/developer/netlify2",
+    "developer/developer/nextjs",
+    "developer/developer/nim",
+    "developer/developer/nodejs",
+    "developer/developer/notion",
+    "developer/developer/npm",
+    "developer/developer/numpy",
+    "developer/developer/nuxtjs",
+    "developer/developer/nx",
+    "developer/developer/ocaml",
+    "developer/developer/onedrive",
+    "developer/developer/openai",
+    "developer/developer/opera",
+    "developer/developer/oracle",
+    "developer/developer/outlook",
+    "developer/developer/pandacss",
+    "developer/developer/photoshop",
+    "developer/developer/php",
+    "developer/developer/pinia",
+    "developer/developer/pinterest",
+    "developer/developer/pixijs",
+    "developer/developer/playwright",
+    "developer/developer/pnpm",
+    "developer/developer/postgresql",
+    "developer/developer/postman",
+    "developer/developer/powershell",
+    "developer/developer/preact",
+    "developer/developer/presto",
+    "developer/developer/prettier",
+    "developer/developer/prisma",
+    "developer/developer/pugjs",
+    "developer/developer/pulumi",
+    "developer/developer/pwa",
+    "developer/developer/python",
+    "developer/developer/pytorch",
+    "developer/developer/pytorch3d",
+    "developer/developer/qwik",
+    "developer/developer/r",
+    "developer/developer/radixui",
+    "developer/developer/rails",
+    "developer/developer/railway",
+    "developer/developer/react-query",
+    "developer/developer/reactjs",
+    "developer/developer/reactrouter",
+    "developer/developer/reddit",
+    "developer/developer/redhat",
+    "developer/developer/redis",
+    "developer/developer/redux",
+    "developer/developer/redux-saga",
+    "developer/developer/remix",
+    "developer/developer/render",
+    "developer/developer/resend",
+    "developer/developer/rollup",
+    "developer/developer/ruby",
+    "developer/developer/rust",
+    "developer/developer/safari",
+    "developer/developer/sass",
+    "developer/developer/scala",
+    "developer/developer/semanticui",
+    "developer/developer/serverless",
+    "developer/developer/shadcnui",
+    "developer/developer/shopware",
+    "developer/developer/sketch",
+    "developer/developer/sketch2",
+    "developer/developer/skype",
+    "developer/developer/slack",
+    "developer/developer/solidity",
+    "developer/developer/solidjs",
+    "developer/developer/spring",
+    "developer/developer/storyblok",
+    "developer/developer/storybook",
+    "developer/developer/stream",
+    "developer/developer/stylelint",
+    "developer/developer/sublime",
+    "developer/developer/supabase",
+    "developer/developer/sveltejs",
+    "developer/developer/swagger",
+    "developer/developer/swift",
+    "developer/developer/symfony",
+    "developer/developer/trpc",
+    "developer/developer/tailwindcss",
+    "developer/developer/telegram",
+    "developer/developer/tensorflow",
+    "developer/developer/terraform",
+    "developer/developer/threads",
+    "developer/developer/threejs",
+    "developer/developer/tiktok",
+    "developer/developer/tinyhttp",
+    "developer/developer/tor",
+    "developer/developer/twitter",
+    "developer/developer/typescript",
+    "developer/developer/ubuntu",
+    "developer/developer/unjs",
+    "developer/developer/upwork",
+    "developer/developer/vagrant",
+    "developer/developer/vercel",
+    "developer/developer/vim",
+    "developer/developer/visualbasic",
+    "developer/developer/vitejs",
+    "developer/developer/vitest",
+    "developer/developer/vivaldi",
+    "developer/developer/vk",
+    "developer/developer/vscode",
+    "developer/developer/vuejs",
+    "developer/developer/webassembly",
+    "developer/developer/webpack",
+    "developer/developer/webrtc",
+    "developer/developer/whatsapp",
+    "developer/developer/wordpress",
+    "developer/developer/x",
+    "developer/developer/xamarin",
+    "developer/developer/xd",
+    "developer/developer/yoga",
+    "developer/developer/youtube",
+    "developer/developer/zen",
+    "developer/developer/zod"
   ],
   "devfile": [
     "cncf/cncf/devfile"
@@ -7927,7 +8616,8 @@
     "azure/iot/digital-twins"
   ],
   "digitalocean": [
-    "devicon/devicon/digitalocean"
+    "devicon/devicon/digitalocean",
+    "developer/developer/digitalocean"
   ],
   "direct": [
     "aws/networking-content-delivery/direct-connect",
@@ -7955,6 +8645,9 @@
   ],
   "discloud": [
     "devicon/devicon/discloud"
+  ],
+  "discord": [
+    "developer/developer/discord"
   ],
   "discordjs": [
     "devicon/devicon/discordjs"
@@ -8003,10 +8696,14 @@
     "aws/management-tools/distro-for-opentelemetry"
   ],
   "django": [
-    "devicon/devicon/django"
+    "devicon/devicon/django",
+    "developer/developer/django"
   ],
   "djangorest": [
     "devicon/devicon/djangorest"
+  ],
+  "dlang": [
+    "developer/developer/dlang"
   ],
   "dns": [
     "aws/networking-content-delivery/route-53",
@@ -8018,10 +8715,12 @@
     "gcp/networking/cloud-dns"
   ],
   "docker": [
-    "devicon/devicon/docker"
+    "devicon/devicon/docker",
+    "developer/developer/docker"
   ],
   "doctrine": [
-    "devicon/devicon/doctrine"
+    "devicon/devicon/doctrine",
+    "developer/developer/doctrine"
   ],
   "document": [
     "aws/databases/dynamodb",
@@ -8071,6 +8770,9 @@
     "aws/analytics/cloudsearch-search-documents",
     "aws/management-governance/systems-manager-documents"
   ],
+  "docusaurus": [
+    "developer/developer/docusaurus"
+  ],
   "domain": [
     "azure/identity/entra-domain-services"
   ],
@@ -8102,6 +8804,9 @@
   ],
   "dovecot": [
     "devicon/devicon/dovecot"
+  ],
+  "dovetail": [
+    "developer/developer/dovetail"
   ],
   "down": [
     "microsoft/fabric/arrow-down-double",
@@ -8238,7 +8943,8 @@
     "aws/compute/ec2-instance",
     "aws/compute/ec2-instances",
     "aws/compute/ec2-rescue",
-    "aws/compute/ec2-spot-instance"
+    "aws/compute/ec2-spot-instance",
+    "developer/developer/ec2"
   ],
   "echo": [
     "aws/iot/iot-echo"
@@ -8274,7 +8980,8 @@
     "azure/storage/azure-stack-edge",
     "gcp/networking/cloud-media-edge",
     "gcp/iot/iot-edge",
-    "cncf/cncf/wasm-edge-runtime"
+    "cncf/cncf/wasm-edge-runtime",
+    "developer/developer/edge"
   ],
   "edit": [
     "microsoft/fabric/branch-edit",
@@ -8351,7 +9058,8 @@
     "aws/storage/elastic-file-system-file-system",
     "azure/databases/elastic-job-agents",
     "azure/databases/sql-elastic-pools",
-    "azure/other/elastic-san"
+    "azure/other/elastic-san",
+    "developer/developer/elastic"
   ],
   "elasticache": [
     "aws/databases/elasticache",
@@ -8364,7 +9072,8 @@
     "devicon/devicon/elasticsearch"
   ],
   "electron": [
-    "devicon/devicon/electron"
+    "devicon/devicon/electron",
+    "developer/developer/electron"
   ],
   "elemental": [
     "aws/artificial-intelligence/elemental-inference",
@@ -8382,11 +9091,15 @@
     "aws/media-services/elemental-server",
     "aws/media-services/elemental-mediaconnect-mediaconnect-gateway"
   ],
+  "elementui": [
+    "developer/developer/elementui"
+  ],
   "eleventy": [
     "devicon/devicon/eleventy"
   ],
   "elixir": [
-    "devicon/devicon/elixir"
+    "devicon/devicon/elixir",
+    "developer/developer/elixir"
   ],
   "ellipse": [
     "microsoft/fabric/shape-ellipse"
@@ -8410,7 +9123,8 @@
     "devicon/devicon/embeddedc"
   ],
   "ember": [
-    "devicon/devicon/ember"
+    "devicon/devicon/ember",
+    "developer/developer/ember"
   ],
   "emergency": [
     "aws/iot/iot-thing-medical-emergency",
@@ -8576,7 +9290,8 @@
     "cncf/cncf/eraser"
   ],
   "erlang": [
-    "devicon/devicon/erlang"
+    "devicon/devicon/erlang",
+    "developer/developer/erlang"
   ],
   "error": [
     "azure/general/error",
@@ -8585,8 +9300,12 @@
     "microsoft/microsoft-365/mail-error",
     "microsoft/microsoft-365/shield-error"
   ],
+  "esbuild": [
+    "developer/developer/esbuild"
+  ],
   "eslint": [
-    "devicon/devicon/eslint"
+    "devicon/devicon/eslint",
+    "developer/developer/eslint"
   ],
   "etcd": [
     "cncf/cncf/etcd"
@@ -8686,7 +9405,8 @@
     "azure/general/resource-explorer",
     "azure/general/process-explorer",
     "azure/management-and-governance/resource-graph-explorer",
-    "azure/storage/storage-explorer"
+    "azure/storage/storage-explorer",
+    "developer/developer/internet-explorer"
   ],
   "expo": [
     "devicon/devicon/expo"
@@ -8702,6 +9422,9 @@
     "aws/storage/simple-storage-service-s3-express-one-zone",
     "azure/other/express-route-traffic-collector",
     "devicon/devicon/express"
+  ],
+  "expressjs": [
+    "developer/developer/expressjs"
   ],
   "expresslink": [
     "aws/internet-of-things/iot-expresslink"
@@ -9120,10 +9843,12 @@
     "microsoft/fabric/window-tree-arrow-diagonal-up-right"
   ],
   "face": [
-    "azure/ai-and-machine-learning/face-apis"
+    "azure/ai-and-machine-learning/face-apis",
+    "developer/developer/hugging-face"
   ],
   "facebook": [
-    "devicon/devicon/facebook"
+    "devicon/devicon/facebook",
+    "developer/developer/facebook"
   ],
   "factor": [
     "azure/identity/multi-factor-authentication"
@@ -9156,6 +9881,9 @@
     "aws/front-end-web-mobile/device-farm",
     "azure/general/server-farm"
   ],
+  "fast": [
+    "developer/developer/fast-api"
+  ],
   "fastapi": [
     "devicon/devicon/fastapi"
   ],
@@ -9167,7 +9895,8 @@
     "aws/management-governance/trusted-advisor-checklist-fault-tolerant"
   ],
   "faunadb": [
-    "devicon/devicon/faunadb"
+    "devicon/devicon/faunadb",
+    "developer/developer/faunadb"
   ],
   "feathersjs": [
     "devicon/devicon/feathersjs"
@@ -9195,7 +9924,8 @@
     "microsoft/dynamics-365/fieldservice-scalable"
   ],
   "figma": [
-    "devicon/devicon/figma"
+    "devicon/devicon/figma",
+    "developer/developer/figma"
   ],
   "fiji": [
     "azure/other/fiji"
@@ -9280,13 +10010,15 @@
     "aws/iot/iot-fire-tv"
   ],
   "firebase": [
-    "devicon/devicon/firebase"
+    "devicon/devicon/firebase",
+    "developer/developer/firebase"
   ],
   "firebird": [
     "devicon/devicon/firebird"
   ],
   "firefox": [
-    "devicon/devicon/firefox"
+    "devicon/devicon/firefox",
+    "developer/developer/firefox"
   ],
   "firehose": [
     "aws/analytics/data-firehose"
@@ -9321,7 +10053,8 @@
     "microsoft/fabric/code-text-flash"
   ],
   "flask": [
-    "devicon/devicon/flask"
+    "devicon/devicon/flask",
+    "developer/developer/flask"
   ],
   "flatcar": [
     "cncf/cncf/flatcar"
@@ -9357,10 +10090,14 @@
     "cncf/cncf/fluid"
   ],
   "flutter": [
-    "devicon/devicon/flutter"
+    "devicon/devicon/flutter",
+    "developer/developer/flutter"
   ],
   "flux": [
     "cncf/cncf/flux"
+  ],
+  "flyio": [
+    "developer/developer/flyio"
   ],
   "folder": [
     "azure/general/folder-blank",
@@ -9449,6 +10186,9 @@
     "azure/new-icons/network-foundation-hub",
     "devicon/devicon/foundation"
   ],
+  "framer": [
+    "developer/developer/framer"
+  ],
   "framermotion": [
     "devicon/devicon/framermotion"
   ],
@@ -9471,6 +10211,9 @@
   ],
   "freezer": [
     "azure/other/defender-freezer-monitor"
+  ],
+  "fresh": [
+    "developer/developer/deno-fresh"
   ],
   "front": [
     "aws/front-end-web-mobile/amplify",
@@ -9627,7 +10370,8 @@
     "devicon/devicon/gatling"
   ],
   "gatsby": [
-    "devicon/devicon/gatsby"
+    "devicon/devicon/gatsby",
+    "developer/developer/gatsby"
   ],
   "gauge": [
     "microsoft/fabric/gauge-kql",
@@ -10056,13 +10800,16 @@
     "devicon/devicon/gimp"
   ],
   "git": [
-    "devicon/devicon/git"
+    "devicon/devicon/git",
+    "developer/developer/git"
   ],
   "gitbook": [
     "devicon/devicon/gitbook"
   ],
   "github": [
-    "devicon/devicon/github"
+    "devicon/devicon/github",
+    "developer/developer/github",
+    "developer/developer/github-copilot"
   ],
   "githubactions": [
     "devicon/devicon/githubactions"
@@ -10074,7 +10821,8 @@
     "devicon/devicon/gitkraken"
   ],
   "gitlab": [
-    "devicon/devicon/gitlab"
+    "devicon/devicon/gitlab",
+    "developer/developer/gitlab"
   ],
   "gitpod": [
     "devicon/devicon/gitpod"
@@ -10124,8 +10872,12 @@
     "aws/analytics/glue-data-catalog",
     "aws/analytics/glue-data-quality"
   ],
+  "gmail": [
+    "developer/developer/gmail"
+  ],
   "go": [
-    "devicon/devicon/go"
+    "devicon/devicon/go",
+    "developer/developer/go"
   ],
   "godot": [
     "devicon/devicon/godot"
@@ -10138,7 +10890,9 @@
     "gcp/marketplace/google-cloud-marketplace",
     "gcp/containers/google-kubernetes-engine",
     "gcp/industry-solutions/google-maps-platform",
-    "devicon/devicon/google"
+    "devicon/devicon/google",
+    "developer/developer/google",
+    "developer/developer/google-cloud"
   ],
   "googlecloud": [
     "devicon/devicon/googlecloud"
@@ -10240,7 +10994,11 @@
   "grafana": [
     "aws/management-tools/managed-grafana",
     "azure/other/azure-managed-grafana",
-    "devicon/devicon/grafana"
+    "devicon/devicon/grafana",
+    "developer/developer/grafana"
+  ],
+  "grafbase": [
+    "developer/developer/grafbase"
   ],
   "grails": [
     "devicon/devicon/grails"
@@ -10252,8 +11010,12 @@
     "microsoft/fabric/graph-model-instance",
     "microsoft/fabric/graph-model-instance-queryset"
   ],
+  "graphite": [
+    "developer/developer/graphite"
+  ],
   "graphql": [
-    "devicon/devicon/graphql"
+    "devicon/devicon/graphql",
+    "developer/developer/graphql"
   ],
   "gray": [
     "microsoft/microsoft-365/building-people-blue-gray",
@@ -10304,6 +11066,9 @@
     "microsoft/fabric/hint-grid",
     "microsoft/microsoft-365/grid-circles"
   ],
+  "gridsome": [
+    "developer/developer/gridsome"
+  ],
   "groovy": [
     "devicon/devicon/groovy"
   ],
@@ -10351,6 +11116,9 @@
   "grunt": [
     "devicon/devicon/grunt"
   ],
+  "gruntjs": [
+    "developer/developer/gruntjs"
+  ],
   "guard": [
     "azure/other/resource-guard"
   ],
@@ -10364,7 +11132,8 @@
     "azure/other/defender-web-guiding-system"
   ],
   "gulp": [
-    "devicon/devicon/gulp"
+    "devicon/devicon/gulp",
+    "developer/developer/gulp"
   ],
   "guru": [
     "aws/artificial-intelligence/devops-guru",
@@ -10396,8 +11165,12 @@
   "harvester": [
     "devicon/devicon/harvester"
   ],
+  "hashnode": [
+    "developer/developer/hashnode"
+  ],
   "haskell": [
-    "devicon/devicon/haskell"
+    "devicon/devicon/haskell",
+    "developer/developer/haskell"
   ],
   "hat": [
     "aws/containers/red-hat-openshift-service-on-aws",
@@ -10430,6 +11203,9 @@
   ],
   "headlamp": [
     "cncf/cncf/headlamp"
+  ],
+  "headlessui": [
+    "developer/developer/headlessui"
   ],
   "headset": [
     "microsoft/microsoft-365/headset"
@@ -10473,7 +11249,8 @@
     "azure/general/help-and-support"
   ],
   "heroku": [
-    "devicon/devicon/heroku"
+    "devicon/devicon/heroku",
+    "developer/developer/heroku"
   ],
   "hexa": [
     "cncf/cncf/hexa"
@@ -10481,6 +11258,12 @@
   "hexagon": [
     "microsoft/fabric/hexagon-three-rotated",
     "microsoft/fabric/hexagon-three-rotated-add"
+  ],
+  "hexo": [
+    "developer/developer/hexo"
+  ],
+  "hhvm": [
+    "developer/developer/hhvm"
   ],
   "hibernate": [
     "devicon/devicon/hibernate"
@@ -10522,7 +11305,8 @@
     "microsoft/fabric/home-waves"
   ],
   "homebrew": [
-    "devicon/devicon/homebrew"
+    "devicon/devicon/homebrew",
+    "developer/developer/homebrew"
   ],
   "hoppscotch": [
     "devicon/devicon/hoppscotch"
@@ -10542,6 +11326,9 @@
   "hosts": [
     "azure/compute/hosts"
   ],
+  "hotjar": [
+    "developer/developer/hotjar"
+  ],
   "house": [
     "aws/iot/iot-thing-house",
     "microsoft/fabric/event-house"
@@ -10554,7 +11341,8 @@
     "gcp/security-identity/cloud-hsm"
   ],
   "html5": [
-    "devicon/devicon/html5"
+    "devicon/devicon/html5",
+    "developer/developer/html5"
   ],
   "htmx": [
     "devicon/devicon/htmx"
@@ -10601,6 +11389,9 @@
     "azure/iot/notification-hubs",
     "azure/mobile/notification-hubs",
     "azure/new-icons/storage-hubs"
+  ],
+  "hugging": [
+    "developer/developer/hugging-face"
   ],
   "hugo": [
     "devicon/devicon/hugo"
@@ -10654,6 +11445,9 @@
   "hybridmulticloud": [
     "gcp/hybrid-and-multicloud/hybridmulticloud"
   ],
+  "hyper2": [
+    "developer/developer/hyper2"
+  ],
   "hyperdisk": [
     "gcp/storage/hyperdisk"
   ],
@@ -10662,6 +11456,9 @@
   ],
   "hyperv": [
     "devicon/devicon/hyperv"
+  ],
+  "i18next": [
+    "developer/developer/i18next"
   ],
   "ia": [
     "aws/storage/simple-storage-service-s3-one-zone-ia",
@@ -10728,7 +11525,8 @@
     "azure/new-icons/azure-managed-redis",
     "azure/new-icons/ai-at-edge",
     "azure/new-icons/vpnclientwindows",
-    "azure/new-icons/planetary-computer-pro"
+    "azure/new-icons/planetary-computer-pro",
+    "developer/developer/developer-icons"
   ],
   "id": [
     "azure/identity/entra-verified-id",
@@ -10935,6 +11733,9 @@
   "inclavare": [
     "cncf/cncf/inclavare"
   ],
+  "indesign": [
+    "developer/developer/indesign"
+  ],
   "index": [
     "aws/analytics/opensearch-service-index",
     "aws/databases/dynamodb-global-secondary-index"
@@ -11047,7 +11848,8 @@
     "gcp/ai-machine-learning/real-world-insights"
   ],
   "insomnia": [
-    "devicon/devicon/insomnia"
+    "devicon/devicon/insomnia",
+    "developer/developer/insomnia"
   ],
   "inspection": [
     "gcp/ai-machine-learning/visual-inspection"
@@ -11058,6 +11860,9 @@
   ],
   "inspektor": [
     "cncf/cncf/inspektor-gadget"
+  ],
+  "instagram": [
+    "developer/developer/instagram"
   ],
   "installer": [
     "azure/other/wac-installer"
@@ -11300,7 +12105,8 @@
     "aws/networking-content-delivery/vpc-internet-gateway",
     "azure/identity/entra-internet-access",
     "azure/other/internet-analyzer-profiles",
-    "microsoft/entra/microsoft-entra-internet-access-color-icon"
+    "microsoft/entra/microsoft-entra-internet-access-color-icon",
+    "developer/developer/internet-explorer"
   ],
   "internet-of-things": [
     "aws/internet-of-things/iot-core",
@@ -11344,6 +12150,9 @@
     "gcp/management-tools/cloud-asset-inventory",
     "gcp/management-tools/os-inventory-management"
   ],
+  "invision": [
+    "developer/developer/invision"
+  ],
   "invitations": [
     "azure/storage/data-share-invitations"
   ],
@@ -11351,7 +12160,8 @@
     "cncf/cncf/metal3-io"
   ],
   "ionic": [
-    "devicon/devicon/ionic"
+    "devicon/devicon/ionic",
+    "developer/developer/ionic"
   ],
   "iot": [
     "aws/group/iot-greengrass-deployment",
@@ -11511,16 +12321,19 @@
     "devicon/devicon/jaegertracing"
   ],
   "jamstack": [
-    "devicon/devicon/jamstack"
+    "devicon/devicon/jamstack",
+    "developer/developer/jamstack"
   ],
   "jasmine": [
     "devicon/devicon/jasmine"
   ],
   "java": [
-    "devicon/devicon/java"
+    "devicon/devicon/java",
+    "developer/developer/java"
   ],
   "javascript": [
-    "devicon/devicon/javascript"
+    "devicon/devicon/javascript",
+    "developer/developer/javascript"
   ],
   "jeet": [
     "devicon/devicon/jeet"
@@ -11529,10 +12342,12 @@
     "devicon/devicon/jekyll"
   ],
   "jenkins": [
-    "devicon/devicon/jenkins"
+    "devicon/devicon/jenkins",
+    "developer/developer/jenkins"
   ],
   "jest": [
-    "devicon/devicon/jest"
+    "devicon/devicon/jest",
+    "developer/developer/jest"
   ],
   "jetbrains": [
     "devicon/devicon/jetbrains"
@@ -11544,7 +12359,8 @@
     "devicon/devicon/jhipster"
   ],
   "jira": [
-    "devicon/devicon/jira"
+    "devicon/devicon/jira",
+    "developer/developer/jira"
   ],
   "jiraalign": [
     "devicon/devicon/jiraalign"
@@ -11569,10 +12385,15 @@
     "azure/general/journey-hub"
   ],
   "jquery": [
-    "devicon/devicon/jquery"
+    "devicon/devicon/jquery",
+    "developer/developer/jquery"
+  ],
+  "jslint": [
+    "developer/developer/jslint"
   ],
   "json": [
-    "devicon/devicon/json"
+    "devicon/devicon/json",
+    "developer/developer/json"
   ],
   "jule": [
     "devicon/devicon/jule"
@@ -11600,7 +12421,8 @@
     "devicon/devicon/k3s"
   ],
   "k6": [
-    "devicon/devicon/k6"
+    "devicon/devicon/k6",
+    "developer/developer/k6"
   ],
   "k8gb": [
     "cncf/cncf/k8gb"
@@ -11617,7 +12439,8 @@
     "cncf/cncf/k8up"
   ],
   "kafka": [
-    "aws/analytics/managed-streaming-for-apache-kafka"
+    "aws/analytics/managed-streaming-for-apache-kafka",
+    "developer/developer/kafka"
   ],
   "kagent": [
     "cncf/cncf/kagent"
@@ -11704,7 +12527,8 @@
     "cncf/cncf/kgateway"
   ],
   "kibana": [
-    "devicon/devicon/kibana"
+    "devicon/devicon/kibana",
+    "developer/developer/kibana"
   ],
   "kinesis": [
     "aws/analytics/kinesis-data-streams",
@@ -11740,7 +12564,8 @@
     "cncf/cncf/koordinator"
   ],
   "kotlin": [
-    "devicon/devicon/kotlin"
+    "devicon/devicon/kotlin",
+    "developer/developer/kotlin"
   ],
   "kpt": [
     "cncf/cncf/kpt"
@@ -11832,7 +12657,8 @@
     "cncf/cncf/kubernetes",
     "cncf/cncf/ovn-kubernetes",
     "cncf/cncf/vs-code-kubernetes-tools",
-    "devicon/devicon/kubernetes"
+    "devicon/devicon/kubernetes",
+    "developer/developer/kubernetes"
   ],
   "kuberun": [
     "gcp/serverless-computing/kuberun"
@@ -11931,7 +12757,8 @@
     "microsoft/microsoft-365/tablet-laptop"
   ],
   "laravel": [
-    "devicon/devicon/laravel"
+    "devicon/devicon/laravel",
+    "developer/developer/laravel"
   ],
   "laraveljetstream": [
     "devicon/devicon/laraveljetstream"
@@ -12066,8 +12893,12 @@
   "lens": [
     "aws/storage/simple-storage-service-s3-storage-lens"
   ],
+  "lerna": [
+    "developer/developer/lerna"
+  ],
   "less": [
-    "devicon/devicon/less"
+    "devicon/devicon/less",
+    "developer/developer/less"
   ],
   "lex": [
     "aws/artificial-intelligence/lex"
@@ -12140,6 +12971,9 @@
     "microsoft/fabric/shapes-lightning",
     "microsoft/fabric/table-lightning-link"
   ],
+  "lightroom": [
+    "developer/developer/lightroom"
+  ],
   "lightsail": [
     "aws/compute/lightsail-for-research",
     "aws/compute/lightsail"
@@ -12179,7 +13013,8 @@
     "azure/general/resource-linked"
   ],
   "linkedin": [
-    "devicon/devicon/linkedin"
+    "devicon/devicon/linkedin",
+    "developer/developer/linkedin"
   ],
   "linkerd": [
     "cncf/cncf/linkerd"
@@ -12189,7 +13024,8 @@
   ],
   "linux": [
     "azure/new-icons/azure-linux",
-    "devicon/devicon/linux"
+    "devicon/devicon/linux",
+    "developer/developer/linux"
   ],
   "linuxmint": [
     "devicon/devicon/linuxmint"
@@ -12229,11 +13065,17 @@
     "microsoft/microsoft-365/text-bullet-list-square-gray",
     "microsoft/microsoft-365/text-bullet-list-square-light"
   ],
+  "lit": [
+    "developer/developer/lit"
+  ],
   "litmus": [
     "cncf/cncf/litmus"
   ],
   "live": [
     "aws/media-services/elemental-live"
+  ],
+  "liveblocks": [
+    "developer/developer/liveblocks"
   ],
   "livewire": [
     "devicon/devicon/livewire"
@@ -12334,6 +13176,9 @@
   "logo": [
     "aws/group/cloud-logo"
   ],
+  "logrocket": [
+    "developer/developer/logrocket"
+  ],
   "logs": [
     "aws/management-governance/cloudwatch-logs",
     "aws/networking-content-delivery/vpc-flow-logs",
@@ -12341,6 +13186,9 @@
   ],
   "logstash": [
     "devicon/devicon/logstash"
+  ],
+  "lokalise": [
+    "developer/developer/lokalise"
   ],
   "long": [
     "aws/security-identity/identity-access-management-long-term-security-credential",
@@ -12401,10 +13249,14 @@
     "microsoft/microsoft-365/task-list-ltr-light"
   ],
   "lua": [
-    "devicon/devicon/lua"
+    "devicon/devicon/lua",
+    "developer/developer/lua"
   ],
   "lumen": [
     "devicon/devicon/lumen"
+  ],
+  "lunacy": [
+    "developer/developer/lunacy"
   ],
   "lustre": [
     "aws/storage/fsx-for-lustre"
@@ -12962,10 +13814,15 @@
     "aws/databases/aurora-mariadb-instance-alternate",
     "aws/databases/aurora-mariadb-instance",
     "azure/databases/azure-database-mariadb-server",
-    "devicon/devicon/mariadb"
+    "devicon/devicon/mariadb",
+    "developer/developer/mariadb"
+  ],
+  "marionette": [
+    "developer/developer/marionette"
   ],
   "markdown": [
-    "devicon/devicon/markdown"
+    "devicon/devicon/markdown",
+    "developer/developer/markdown"
   ],
   "marketing": [
     "gcp/industry-solutions/cloud-for-marketing"
@@ -12987,6 +13844,9 @@
   "marquee": [
     "azure/other/defender-marquee"
   ],
+  "mastodon": [
+    "developer/developer/mastodon"
+  ],
   "match": [
     "microsoft/fabric/match-category"
   ],
@@ -12994,7 +13854,8 @@
     "devicon/devicon/materializecss"
   ],
   "materialui": [
-    "devicon/devicon/materialui"
+    "devicon/devicon/materialui",
+    "developer/developer/materialui"
   ],
   "math": [
     "microsoft/fabric/window-math-formula"
@@ -13153,6 +14014,12 @@
   ],
   "messaging": [
     "aws/business-applications/end-user-messaging"
+  ],
+  "messenger": [
+    "developer/developer/messenger"
+  ],
+  "meta": [
+    "developer/developer/meta"
   ],
   "metal": [
     "azure/other/bare-metal-infrastructure",
@@ -13811,7 +14678,9 @@
     "microsoft/microsoft-365/data-trending-2",
     "microsoft/microsoft-365/building-people-teams-dark",
     "microsoft/microsoft-365/building-people-teams-gray",
-    "microsoft/microsoft-365/building-people-teams-light"
+    "microsoft/microsoft-365/building-people-teams-light",
+    "developer/developer/microsoft",
+    "developer/developer/microsoft-sql-server"
   ],
   "microsoft-365": [
     "microsoft/microsoft-365/apps-list-detail",
@@ -14111,6 +14980,9 @@
   "minitab": [
     "devicon/devicon/minitab"
   ],
+  "miro": [
+    "developer/developer/miro"
+  ],
   "mirrored": [
     "microsoft/fabric/mirrored-generic-database"
   ],
@@ -14166,6 +15038,9 @@
   ],
   "mocha": [
     "devicon/devicon/mocha"
+  ],
+  "mochajs": [
+    "developer/developer/mochajs"
   ],
   "model": [
     "aws/artificial-intelligence/sagemaker-ai-model",
@@ -14244,7 +15119,8 @@
     "microsoft/fabric/database-money"
   ],
   "mongodb": [
-    "devicon/devicon/mongodb"
+    "devicon/devicon/mongodb",
+    "developer/developer/mongodb"
   ],
   "mongoose": [
     "devicon/devicon/mongoose"
@@ -14306,6 +15182,9 @@
   "mover": [
     "azure/other/resource-mover",
     "azure/other/azure-storage-mover"
+  ],
+  "mozilla": [
+    "developer/developer/mozilla"
   ],
   "mq": [
     "aws/application-integration/mq",
@@ -14404,7 +15283,8 @@
     "aws/databases/aurora-mysql-instance-alternate",
     "aws/databases/aurora-mysql-instance",
     "azure/databases/azure-database-mysql-server",
-    "devicon/devicon/mysql"
+    "devicon/devicon/mysql",
+    "developer/developer/mysql"
   ],
   "namespace": [
     "aws/networking-content-delivery/cloud-map-namespace",
@@ -14662,13 +15542,15 @@
     "devicon/devicon/neo4j"
   ],
   "neovim": [
-    "devicon/devicon/neovim"
+    "devicon/devicon/neovim",
+    "developer/developer/neovim"
   ],
   "neptune": [
     "aws/databases/neptune"
   ],
   "nestjs": [
-    "devicon/devicon/nestjs"
+    "devicon/devicon/nestjs",
+    "developer/developer/nestjs"
   ],
   "net": [
     "devicon/devicon/dot-net"
@@ -14685,7 +15567,11 @@
     "devicon/devicon/netbox"
   ],
   "netlify": [
-    "devicon/devicon/netlify"
+    "devicon/devicon/netlify",
+    "developer/developer/netlify"
+  ],
+  "netlify2": [
+    "developer/developer/netlify2"
   ],
   "network": [
     "aws/group/virtual-private-cloud-vpc",
@@ -15049,7 +15935,8 @@
     "devicon/devicon/newrelic"
   ],
   "nextjs": [
-    "devicon/devicon/nextjs"
+    "devicon/devicon/nextjs",
+    "developer/developer/nextjs"
   ],
   "nexus": [
     "azure/hybrid-and-multicloud/azure-operator-nexus"
@@ -15071,7 +15958,8 @@
     "devicon/devicon/nhibernate"
   ],
   "nim": [
-    "devicon/devicon/nim"
+    "devicon/devicon/nim",
+    "developer/developer/nim"
   ],
   "nimble": [
     "devicon/devicon/nimble"
@@ -15102,7 +15990,8 @@
     "aws/networking-content-delivery/app-mesh-virtual-node"
   ],
   "nodejs": [
-    "devicon/devicon/nodejs"
+    "devicon/devicon/nodejs",
+    "developer/developer/nodejs"
   ],
   "nodemon": [
     "devicon/devicon/nodemon"
@@ -15176,13 +16065,15 @@
     "aws/management-tools/user-notifications"
   ],
   "notion": [
-    "devicon/devicon/notion"
+    "devicon/devicon/notion",
+    "developer/developer/notion"
   ],
   "nova": [
     "aws/artificial-intelligence/nova"
   ],
   "npm": [
-    "devicon/devicon/npm"
+    "devicon/devicon/npm",
+    "developer/developer/npm"
   ],
   "npss": [
     "devicon/devicon/npss"
@@ -15213,13 +16104,18 @@
     "microsoft/microsoft-365/text-number-list"
   ],
   "numpy": [
-    "devicon/devicon/numpy"
+    "devicon/devicon/numpy",
+    "developer/developer/numpy"
   ],
   "nuxt": [
     "devicon/devicon/nuxt"
   ],
   "nuxtjs": [
-    "devicon/devicon/nuxtjs"
+    "devicon/devicon/nuxtjs",
+    "developer/developer/nuxtjs"
+  ],
+  "nx": [
+    "developer/developer/nx"
   ],
   "oauth": [
     "devicon/devicon/oauth"
@@ -15258,7 +16154,8 @@
     "gcp/observability/observability"
   ],
   "ocaml": [
-    "devicon/devicon/ocaml"
+    "devicon/devicon/ocaml",
+    "developer/developer/ocaml"
   ],
   "odata": [
     "microsoft/fabric/odata"
@@ -15316,6 +16213,9 @@
     "microsoft/fabric/one-lake",
     "microsoft/microsoft-365/document-one-page"
   ],
+  "onedrive": [
+    "developer/developer/onedrive"
+  ],
   "ontap": [
     "aws/storage/fsx-for-netapp-ontap",
     "aws/storage/backup-aws-backup-support-for-amazon-fsx-for-netapp-ontap"
@@ -15347,7 +16247,8 @@
     "gcp/containers/gke"
   ],
   "openai": [
-    "azure/ai-and-machine-learning/azure-openai"
+    "azure/ai-and-machine-learning/azure-openai",
+    "developer/developer/openai"
   ],
   "openal": [
     "devicon/devicon/openal"
@@ -15427,7 +16328,8 @@
     "aws/storage/fsx-for-openzfs"
   ],
   "opera": [
-    "devicon/devicon/opera"
+    "devicon/devicon/opera",
+    "developer/developer/opera"
   ],
   "operation": [
     "azure/management-and-governance/operation-log-classic",
@@ -15478,7 +16380,8 @@
     "aws/databases/aurora-oracle-instance-alternate",
     "aws/databases/aurora-oracle-instance",
     "azure/databases/oracle-database",
-    "devicon/devicon/oracle"
+    "devicon/devicon/oracle",
+    "developer/developer/oracle"
   ],
   "oras": [
     "cncf/cncf/oras"
@@ -15669,6 +16572,9 @@
   "outbound": [
     "azure/blockchain/outbound-connection"
   ],
+  "outlook": [
+    "developer/developer/outlook"
+  ],
   "outposts": [
     "aws/compute/outposts-family",
     "aws/compute/outposts-rack",
@@ -15716,6 +16622,9 @@
   ],
   "paginated": [
     "microsoft/fabric/paginated-report"
+  ],
+  "pandacss": [
+    "developer/developer/pandacss"
   ],
   "pandas": [
     "devicon/devicon/pandas"
@@ -15861,10 +16770,12 @@
     "devicon/devicon/photonengine"
   ],
   "photoshop": [
-    "devicon/devicon/photoshop"
+    "devicon/devicon/photoshop",
+    "developer/developer/photoshop"
   ],
   "php": [
-    "devicon/devicon/php"
+    "devicon/devicon/php",
+    "developer/developer/php"
   ],
   "phpstorm": [
     "devicon/devicon/phpstorm"
@@ -15873,10 +16784,16 @@
     "microsoft/fabric/pie-double",
     "microsoft/microsoft-365/data-pie"
   ],
+  "pinia": [
+    "developer/developer/pinia"
+  ],
   "pinpoint": [
     "aws/business-applications/pinpoint-apis",
     "aws/business-applications/pinpoint",
     "aws/business-applications/pinpoint-journey"
+  ],
+  "pinterest": [
+    "developer/developer/pinterest"
   ],
   "piops": [
     "aws/databases/aurora-piops-instance"
@@ -15903,7 +16820,8 @@
     "cncf/cncf/pixie"
   ],
   "pixijs": [
-    "devicon/devicon/pixijs"
+    "devicon/devicon/pixijs",
+    "developer/developer/pixijs"
   ],
   "place": [
     "aws/front-end-web-mobile/location-service-place"
@@ -16330,7 +17248,8 @@
     "microsoft/microsoft-365/filmstrip-play"
   ],
   "playwright": [
-    "devicon/devicon/playwright"
+    "devicon/devicon/playwright",
+    "developer/developer/playwright"
   ],
   "plc": [
     "aws/iot/iot-thing-plc",
@@ -16339,6 +17258,9 @@
   "plotly": [
     "devicon/devicon/plotly"
   ],
+  "plus": [
+    "developer/developer/c-plus-plus"
+  ],
   "pm2": [
     "devicon/devicon/pm2"
   ],
@@ -16346,7 +17268,8 @@
     "azure/other/defender-pneumatic-device"
   ],
   "pnpm": [
-    "devicon/devicon/pnpm"
+    "devicon/devicon/pnpm",
+    "developer/developer/pnpm"
   ],
   "podman": [
     "cncf/cncf/podman-container-tools",
@@ -16434,10 +17357,12 @@
     "azure/databases/azure-database-postgresql-server-group",
     "azure/databases/azure-database-postgresql-server",
     "azure/other/arc-postgresql",
-    "devicon/devicon/postgresql"
+    "devicon/devicon/postgresql",
+    "developer/developer/postgresql"
   ],
   "postman": [
-    "devicon/devicon/postman"
+    "devicon/devicon/postman",
+    "developer/developer/postman"
   ],
   "pot": [
     "aws/iot/iot-thing-coffee-pot"
@@ -16486,10 +17411,14 @@
   "powershell": [
     "azure/general/powershell",
     "gcp/developer-tools/tools-for-powershell",
-    "devicon/devicon/powershell"
+    "devicon/devicon/powershell",
+    "developer/developer/powershell"
   ],
   "pq": [
     "microsoft/fabric/document-pq"
+  ],
+  "preact": [
+    "developer/developer/preact"
   ],
   "preferences": [
     "gcp/products/user-preferences"
@@ -16518,6 +17447,12 @@
   "presenter": [
     "microsoft/microsoft-365/presenter"
   ],
+  "presto": [
+    "developer/developer/presto"
+  ],
+  "prettier": [
+    "developer/developer/prettier"
+  ],
   "prevention": [
     "gcp/security-identity/data-loss-prevention-api"
   ],
@@ -16537,7 +17472,8 @@
     "azure/other/defender-industrial-printer"
   ],
   "prisma": [
-    "devicon/devicon/prisma"
+    "devicon/devicon/prisma",
+    "developer/developer/prisma"
   ],
   "privacy": [
     "azure/management-and-governance/user-privacy"
@@ -16935,6 +17871,9 @@
   "pug": [
     "devicon/devicon/pug"
   ],
+  "pugjs": [
+    "developer/developer/pugjs"
+  ],
   "pulsar": [
     "devicon/devicon/pulsar"
   ],
@@ -16950,7 +17889,8 @@
     "microsoft/microsoft-365/heart-pulse"
   ],
   "pulumi": [
-    "devicon/devicon/pulumi"
+    "devicon/devicon/pulumi",
+    "developer/developer/pulumi"
   ],
   "puppeteer": [
     "devicon/devicon/puppeteer"
@@ -16963,6 +17903,9 @@
   ],
   "putty": [
     "devicon/devicon/putty"
+  ],
+  "pwa": [
+    "developer/developer/pwa"
   ],
   "py": [
     "microsoft/fabric/text-py"
@@ -16980,11 +17923,16 @@
     "devicon/devicon/pytest"
   ],
   "python": [
-    "devicon/devicon/python"
+    "devicon/devicon/python",
+    "developer/developer/python"
   ],
   "pytorch": [
     "aws/artificial-intelligence/pytorch-on-aws",
-    "devicon/devicon/pytorch"
+    "devicon/devicon/pytorch",
+    "developer/developer/pytorch"
+  ],
+  "pytorch3d": [
+    "developer/developer/pytorch3d"
   ],
   "qa": [
     "azure/new-icons/frd-qa"
@@ -17051,7 +17999,8 @@
   "query": [
     "aws/analytics/redshift-query-editor-v2",
     "aws/networking-content-delivery/route-53-resolver-query-logging",
-    "azure/other/log-analytics-query-pack"
+    "azure/other/log-analytics-query-pack",
+    "developer/developer/react-query"
   ],
   "queryset": [
     "microsoft/fabric/graph-model-instance-queryset",
@@ -17081,7 +18030,8 @@
     "gcp/management-tools/quotas"
   ],
   "qwik": [
-    "devicon/devicon/qwik"
+    "devicon/devicon/qwik",
+    "developer/developer/qwik"
   ],
   "ra3": [
     "aws/analytics/redshift-ra3"
@@ -17102,14 +18052,19 @@
   "radius": [
     "cncf/cncf/radius"
   ],
+  "radixui": [
+    "developer/developer/radixui"
+  ],
   "radstudio": [
     "devicon/devicon/radstudio"
   ],
   "rails": [
-    "devicon/devicon/rails"
+    "devicon/devicon/rails",
+    "developer/developer/rails"
   ],
   "railway": [
-    "devicon/devicon/railway"
+    "devicon/devicon/railway",
+    "developer/developer/railway"
   ],
   "rancher": [
     "devicon/devicon/rancher"
@@ -17147,10 +18102,14 @@
     "aws/networking-content-delivery/vpc-reachability-analyzer"
   ],
   "react": [
-    "devicon/devicon/react"
+    "devicon/devicon/react",
+    "developer/developer/react-query"
   ],
   "reactbootstrap": [
     "devicon/devicon/reactbootstrap"
+  ],
+  "reactjs": [
+    "developer/developer/reactjs"
   ],
   "reactnative": [
     "devicon/devicon/reactnative"
@@ -17159,7 +18118,8 @@
     "devicon/devicon/reactnavigation"
   ],
   "reactrouter": [
-    "devicon/devicon/reactrouter"
+    "devicon/devicon/reactrouter",
+    "developer/developer/reactrouter"
   ],
   "read": [
     "microsoft/microsoft-365/mail-read"
@@ -17246,14 +18206,19 @@
     "aws/containers/red-hat-openshift-service-on-aws",
     "azure/containers/azure-red-hat-openshift"
   ],
+  "reddit": [
+    "developer/developer/reddit"
+  ],
   "redhat": [
-    "devicon/devicon/redhat"
+    "devicon/devicon/redhat",
+    "developer/developer/redhat"
   ],
   "redis": [
     "aws/databases/elasticache-elasticache-for-redis",
     "azure/databases/cache-redis",
     "azure/new-icons/azure-managed-redis",
-    "devicon/devicon/redis"
+    "devicon/devicon/redis",
+    "developer/developer/redis"
   ],
   "redshift": [
     "aws/analytics/redshift",
@@ -17267,7 +18232,9 @@
     "aws/analytics/redshift-streaming-ingestion"
   ],
   "redux": [
-    "devicon/devicon/redux"
+    "devicon/devicon/redux",
+    "developer/developer/redux",
+    "developer/developer/redux-saga"
   ],
   "refactor": [
     "aws/migration-modernization/migration-hub-refactor-spaces-applications",
@@ -17343,10 +18310,14 @@
     "gcp/products/release-notes"
   ],
   "remix": [
-    "devicon/devicon/remix"
+    "devicon/devicon/remix",
+    "developer/developer/remix"
   ],
   "remote": [
     "azure/mixed-reality/remote-rendering"
+  ],
+  "render": [
+    "developer/developer/render"
   ],
   "rendering": [
     "azure/mixed-reality/remote-rendering"
@@ -17391,6 +18362,9 @@
   ],
   "research": [
     "aws/compute/lightsail-for-research"
+  ],
+  "resend": [
+    "developer/developer/resend"
   ],
   "reservation": [
     "azure/other/capacity-reservation-groups"
@@ -17940,7 +18914,8 @@
     "azure/intune/entra-identity-roles-and-administrators"
   ],
   "rollup": [
-    "devicon/devicon/rollup"
+    "devicon/devicon/rollup",
+    "developer/developer/rollup"
   ],
   "rook": [
     "cncf/cncf/rook"
@@ -18008,7 +18983,8 @@
     "azure/other/defender-rtu"
   ],
   "ruby": [
-    "devicon/devicon/ruby"
+    "devicon/devicon/ruby",
+    "developer/developer/ruby"
   ],
   "rubymine": [
     "devicon/devicon/rubymine"
@@ -18046,7 +19022,8 @@
     "cncf/cncf/wasm-edge-runtime"
   ],
   "rust": [
-    "devicon/devicon/rust"
+    "devicon/devicon/rust",
+    "developer/developer/rust"
   ],
   "rxjs": [
     "devicon/devicon/rxjs"
@@ -18083,10 +19060,14 @@
     "aws/application-integration/eventbridge-saas-partner-event"
   ],
   "safari": [
-    "devicon/devicon/safari"
+    "devicon/devicon/safari",
+    "developer/developer/safari"
   ],
   "safety": [
     "azure/ai-and-machine-learning/content-safety"
+  ],
+  "saga": [
+    "developer/developer/redux-saga"
   ],
   "sagemaker": [
     "aws/analytics/sagemaker",
@@ -18129,7 +19110,8 @@
     "azure/other/database-instance-for-sap"
   ],
   "sass": [
-    "devicon/devicon/sass"
+    "devicon/devicon/sass",
+    "developer/developer/sass"
   ],
   "satellite": [
     "aws/satellite/ground-station",
@@ -18143,7 +19125,8 @@
     "azure/other/savings-plans"
   ],
   "scala": [
-    "devicon/devicon/scala"
+    "devicon/devicon/scala",
+    "developer/developer/scala"
   ],
   "scalable": [
     "microsoft/dynamics-365/businesscentral-scalable",
@@ -18533,6 +19516,9 @@
     "microsoft/fabric/shared-semantic-model",
     "microsoft/fabric/streaming-semantic-model"
   ],
+  "semanticui": [
+    "developer/developer/semanticui"
+  ],
   "send": [
     "microsoft/fabric/send-circle"
   ],
@@ -18586,7 +19572,8 @@
     "azure/databases/sql-server-registries",
     "azure/general/server-farm",
     "azure/integration/azure-sql-server-stretch-databases",
-    "azure/other/arc-sql-server"
+    "azure/other/arc-sql-server",
+    "developer/developer/microsoft-sql-server"
   ],
   "serverless": [
     "aws/application-integration/step-functions",
@@ -18607,7 +19594,8 @@
     "gcp/serverless-computing/eventarc",
     "gcp/serverless-computing/kuberun",
     "gcp/serverless-computing/workflows",
-    "cncf/cncf/serverless-devs"
+    "cncf/cncf/serverless-devs",
+    "developer/developer/serverless"
   ],
   "serverless-computing": [
     "gcp/serverless-computing/serverlesscomputing",
@@ -18898,6 +19886,9 @@
   "sftp": [
     "aws/migration-modernization/transfer-family-aws-sftp"
   ],
+  "shadcnui": [
+    "developer/developer/shadcnui"
+  ],
   "shadow": [
     "aws/artificial-intelligence/sagemaker-ai-shadow-testing",
     "aws/iot/iot-shadow"
@@ -18932,6 +19923,9 @@
   "sharing": [
     "aws/analytics/redshift-data-sharing-governance"
   ],
+  "sharp": [
+    "developer/developer/c-sharp"
+  ],
   "shell": [
     "azure/other/azure-cloud-shell",
     "gcp/developer-tools/cloud-shell"
@@ -18957,7 +19951,8 @@
     "microsoft/microsoft-365/shopping-bag"
   ],
   "shopware": [
-    "devicon/devicon/shopware"
+    "devicon/devicon/shopware",
+    "developer/developer/shopware"
   ],
   "short": [
     "microsoft/fabric/datatype-short"
@@ -19059,13 +20054,21 @@
     "azure/iot/azure-stack-hci-sizer"
   ],
   "sketch": [
-    "devicon/devicon/sketch"
+    "devicon/devicon/sketch",
+    "developer/developer/sketch"
+  ],
+  "sketch2": [
+    "developer/developer/sketch2"
   ],
   "skill": [
     "aws/iot/iot-alexa-skill"
   ],
+  "skype": [
+    "developer/developer/skype"
+  ],
   "slack": [
-    "devicon/devicon/slack"
+    "devicon/devicon/slack",
+    "developer/developer/slack"
   ],
   "slide": [
     "microsoft/fabric/slide-text-accept-dismiss",
@@ -19105,10 +20108,12 @@
     "azure/intune/software-updates"
   ],
   "solidity": [
-    "devicon/devicon/solidity"
+    "devicon/devicon/solidity",
+    "developer/developer/solidity"
   ],
   "solidjs": [
-    "devicon/devicon/solidjs"
+    "devicon/devicon/solidjs",
+    "developer/developer/solidjs"
   ],
   "solution": [
     "azure/other/azure-vmware-solution"
@@ -19233,7 +20238,8 @@
   "spring": [
     "azure/compute/azure-spring-apps",
     "azure/web/azure-spring-apps",
-    "devicon/devicon/spring"
+    "devicon/devicon/spring",
+    "developer/developer/spring"
   ],
   "spss": [
     "devicon/devicon/spss"
@@ -19265,7 +20271,8 @@
     "microsoft/fabric/document-sql",
     "microsoft/fabric/list-sql",
     "microsoft/fabric/lock-closed-sql",
-    "microsoft/fabric/sql-database"
+    "microsoft/fabric/sql-database",
+    "developer/developer/microsoft-sql-server"
   ],
   "sqlalchemy": [
     "devicon/devicon/sqlalchemy"
@@ -19542,8 +20549,12 @@
     "azure/storage/storsimple-device-managers",
     "azure/storage/storsimple-data-managers"
   ],
+  "storyblok": [
+    "developer/developer/storyblok"
+  ],
   "storybook": [
-    "devicon/devicon/storybook"
+    "devicon/devicon/storybook",
+    "developer/developer/storybook"
   ],
   "stream": [
     "aws/databases/dynamodb-stream",
@@ -19554,7 +20565,8 @@
     "microsoft/fabric/stream-bracket",
     "microsoft/fabric/stream-search",
     "microsoft/fabric/stream-settings",
-    "microsoft/fabric/stream-settings-bracket"
+    "microsoft/fabric/stream-settings-bracket",
+    "developer/developer/stream"
   ],
   "streaming": [
     "aws/analytics/kinesis",
@@ -19611,8 +20623,14 @@
   "styledcomponents": [
     "devicon/devicon/styledcomponents"
   ],
+  "stylelint": [
+    "developer/developer/stylelint"
+  ],
   "stylus": [
     "devicon/devicon/stylus"
+  ],
+  "sublime": [
+    "developer/developer/sublime"
   ],
   "submariner": [
     "cncf/cncf/submariner"
@@ -19641,7 +20659,8 @@
     "devicon/devicon/sulu"
   ],
   "supabase": [
-    "devicon/devicon/supabase"
+    "devicon/devicon/supabase",
+    "developer/developer/supabase"
   ],
   "supply": [
     "aws/business-applications/supply-chain",
@@ -19671,17 +20690,22 @@
   "svelte": [
     "devicon/devicon/svelte"
   ],
+  "sveltejs": [
+    "developer/developer/sveltejs"
+  ],
   "svgo": [
     "devicon/devicon/svgo"
   ],
   "swagger": [
-    "devicon/devicon/swagger"
+    "devicon/devicon/swagger",
+    "developer/developer/swagger"
   ],
   "swap": [
     "microsoft/fabric/database-swap"
   ],
   "swift": [
-    "devicon/devicon/swift"
+    "devicon/devicon/swift",
+    "developer/developer/swift"
   ],
   "swiper": [
     "devicon/devicon/swiper"
@@ -19692,7 +20716,8 @@
     "microsoft/fabric/calculator-number-symbol"
   ],
   "symfony": [
-    "devicon/devicon/symfony"
+    "devicon/devicon/symfony",
+    "developer/developer/symfony"
   ],
   "synapse": [
     "azure/analytics/azure-synapse-analytics",
@@ -19790,7 +20815,8 @@
     "azure/general/tags"
   ],
   "tailwindcss": [
-    "devicon/devicon/tailwindcss"
+    "devicon/devicon/tailwindcss",
+    "developer/developer/tailwindcss"
   ],
   "talk": [
     "azure/general/biz-talk"
@@ -20442,6 +21468,9 @@
   "telco": [
     "aws/management-tools/telco-network-builder"
   ],
+  "telegram": [
+    "developer/developer/telegram"
+  ],
   "teleport": [
     "devicon/devicon/teleport"
   ],
@@ -20478,7 +21507,8 @@
   "tensorflow": [
     "aws/artificial-intelligence/tensorflow-on-aws",
     "gcp/ai-machine-learning/tensorflow-enterprise",
-    "devicon/devicon/tensorflow"
+    "devicon/devicon/tensorflow",
+    "developer/developer/tensorflow"
   ],
   "term": [
     "aws/security-identity/identity-access-management-long-term-security-credential"
@@ -20487,7 +21517,8 @@
     "aws/migration-modernization/data-transfer-terminal"
   ],
   "terraform": [
-    "devicon/devicon/terraform"
+    "devicon/devicon/terraform",
+    "developer/developer/terraform"
   ],
   "terramate": [
     "devicon/devicon/terramate"
@@ -20609,6 +21640,9 @@
     "aws/media-services/thinkbox-stoke",
     "aws/media-services/thinkbox-xmesh"
   ],
+  "threads": [
+    "developer/developer/threads"
+  ],
   "threatintelligence": [
     "gcp/security-identity/threatintelligence"
   ],
@@ -20624,7 +21658,8 @@
     "devicon/devicon/threedsmax"
   ],
   "threejs": [
-    "devicon/devicon/threejs"
+    "devicon/devicon/threejs",
+    "developer/developer/threejs"
   ],
   "throughput": [
     "aws/storage/elastic-file-system-elastic-throughput"
@@ -20642,6 +21677,9 @@
   ],
   "tiers": [
     "gcp/networking/network-tiers"
+  ],
+  "tiktok": [
+    "developer/developer/tiktok"
   ],
   "tikv": [
     "cncf/cncf/tikv"
@@ -20666,6 +21704,9 @@
   ],
   "tinkerbell": [
     "cncf/cncf/tinkerbell"
+  ],
+  "tinyhttp": [
+    "developer/developer/tinyhttp"
   ],
   "titaniumsdk": [
     "devicon/devicon/titaniumsdk"
@@ -20810,6 +21851,9 @@
   "topology": [
     "gcp/networking/network-topology"
   ],
+  "tor": [
+    "developer/developer/tor"
+  ],
   "tortoisegit": [
     "devicon/devicon/tortoisegit"
   ],
@@ -20943,7 +21987,8 @@
     "azure/other/icm-troubleshooting"
   ],
   "trpc": [
-    "devicon/devicon/trpc"
+    "devicon/devicon/trpc",
+    "developer/developer/trpc"
   ],
   "trusted": [
     "aws/management-tools/trusted-advisor",
@@ -20981,16 +22026,19 @@
     "azure/iot/digital-twins"
   ],
   "twitter": [
-    "devicon/devicon/twitter"
+    "devicon/devicon/twitter",
+    "developer/developer/twitter"
   ],
   "typescript": [
-    "devicon/devicon/typescript"
+    "devicon/devicon/typescript",
+    "developer/developer/typescript"
   ],
   "typo3": [
     "devicon/devicon/typo3"
   ],
   "ubuntu": [
-    "devicon/devicon/ubuntu"
+    "devicon/devicon/ubuntu",
+    "developer/developer/ubuntu"
   ],
   "ultrawarm": [
     "aws/analytics/opensearch-service-ultrawarm-node"
@@ -21026,6 +22074,9 @@
   "unix": [
     "devicon/devicon/unix"
   ],
+  "unjs": [
+    "developer/developer/unjs"
+  ],
   "unrealengine": [
     "devicon/devicon/unrealengine"
   ],
@@ -21060,6 +22111,9 @@
   ],
   "upload": [
     "microsoft/microsoft-365/arrow-upload"
+  ],
+  "upwork": [
+    "developer/developer/upwork"
   ],
   "urunc": [
     "cncf/cncf/urunc"
@@ -21100,7 +22154,8 @@
     "devicon/devicon/vaadin"
   ],
   "vagrant": [
-    "devicon/devicon/vagrant"
+    "devicon/devicon/vagrant",
+    "developer/developer/vagrant"
   ],
   "vala": [
     "devicon/devicon/vala"
@@ -21144,7 +22199,8 @@
     "cncf/cncf/velero"
   ],
   "vercel": [
-    "devicon/devicon/vercel"
+    "devicon/devicon/vercel",
+    "developer/developer/vercel"
   ],
   "verifiable": [
     "azure/identity/verifiable-credentials"
@@ -21206,7 +22262,8 @@
     "microsoft/microsoft-365/video"
   ],
   "vim": [
-    "devicon/devicon/vim"
+    "devicon/devicon/vim",
+    "developer/developer/vim"
   ],
   "vineyard": [
     "cncf/cncf/vineyard"
@@ -21269,7 +22326,8 @@
     "gcp/ai-machine-learning/visual-inspection"
   ],
   "visualbasic": [
-    "devicon/devicon/visualbasic"
+    "devicon/devicon/visualbasic",
+    "developer/developer/visualbasic"
   ],
   "visualstudio": [
     "devicon/devicon/visualstudio"
@@ -21278,14 +22336,22 @@
     "devicon/devicon/vite"
   ],
   "vitejs": [
-    "devicon/devicon/vitejs"
+    "devicon/devicon/vitejs",
+    "developer/developer/vitejs"
   ],
   "vitess": [
     "cncf/cncf/vitess",
     "devicon/devicon/vitess"
   ],
   "vitest": [
-    "devicon/devicon/vitest"
+    "devicon/devicon/vitest",
+    "developer/developer/vitest"
+  ],
+  "vivaldi": [
+    "developer/developer/vivaldi"
+  ],
+  "vk": [
+    "developer/developer/vk"
   ],
   "vm": [
     "aws/compute/ec2",
@@ -21366,7 +22432,8 @@
     "cncf/cncf/vs-code-kubernetes-tools"
   ],
   "vscode": [
-    "devicon/devicon/vscode"
+    "devicon/devicon/vscode",
+    "developer/developer/vscode"
   ],
   "vscodium": [
     "devicon/devicon/vscodium"
@@ -21375,7 +22442,8 @@
     "devicon/devicon/vsphere"
   ],
   "vuejs": [
-    "devicon/devicon/vuejs"
+    "devicon/devicon/vuejs",
+    "developer/developer/vuejs"
   ],
   "vuestorefront": [
     "devicon/devicon/vuestorefront"
@@ -21511,6 +22579,9 @@
   "web3js": [
     "devicon/devicon/web3js"
   ],
+  "webassembly": [
+    "developer/developer/webassembly"
+  ],
   "webflow": [
     "devicon/devicon/webflow"
   ],
@@ -21524,7 +22595,11 @@
     "gcp/web-and-mobile/webmobile"
   ],
   "webpack": [
-    "devicon/devicon/webpack"
+    "devicon/devicon/webpack",
+    "developer/developer/webpack"
+  ],
+  "webrtc": [
+    "developer/developer/webrtc"
   ],
   "website": [
     "azure/general/folder-website",
@@ -21542,6 +22617,9 @@
   ],
   "wfs": [
     "aws/storage/fsx-for-wfs"
+  ],
+  "whatsapp": [
+    "developer/developer/whatsapp"
   ],
   "wickr": [
     "aws/business-applications/wickr"
@@ -21601,7 +22679,8 @@
     "devicon/devicon/woocommerce"
   ],
   "wordpress": [
-    "devicon/devicon/wordpress"
+    "devicon/devicon/wordpress",
+    "developer/developer/wordpress"
   ],
   "workbenches": [
     "azure/other/azure-hpc-workbenches"
@@ -21669,13 +22748,15 @@
     "aws/databases/rds-optimized-writes"
   ],
   "xamarin": [
-    "devicon/devicon/xamarin"
+    "devicon/devicon/xamarin",
+    "developer/developer/xamarin"
   ],
   "xcode": [
     "devicon/devicon/xcode"
   ],
   "xd": [
-    "devicon/devicon/xd"
+    "devicon/devicon/xd",
+    "developer/developer/xd"
   ],
   "xmesh": [
     "aws/media-services/thinkbox-xmesh"
@@ -21695,8 +22776,14 @@
   "yii": [
     "devicon/devicon/yii"
   ],
+  "yoga": [
+    "developer/developer/yoga"
+  ],
   "youki": [
     "cncf/cncf/youki"
+  ],
+  "youtube": [
+    "developer/developer/youtube"
   ],
   "yugabytedb": [
     "devicon/devicon/yugabytedb"
@@ -21704,11 +22791,17 @@
   "yunohost": [
     "devicon/devicon/yunohost"
   ],
+  "zen": [
+    "developer/developer/zen"
+  ],
   "zend": [
     "devicon/devicon/zend"
   ],
   "zig": [
     "devicon/devicon/zig"
+  ],
+  "zod": [
+    "developer/developer/zod"
   ],
   "zone": [
     "aws/networking-content-delivery/route-53-hosted-zone",

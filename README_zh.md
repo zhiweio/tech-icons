@@ -2,7 +2,7 @@
 <!-- mcp-name: tech-icons -->
 # tech-icons
 
-[English](docs/README.md) | **中文**
+[English](./README.md) | **中文**
 
 <p align="center">
   <img src="./docs/images/brand-logo.jpg" alt="tech-icons" width="150 onerror="this.style.display='none'">
@@ -76,6 +76,7 @@
     - [运行测试](#运行测试)
     - [开发工具](#开发工具)
   - [❓ 常见问题](#-常见问题)
+  - [🏅 图标来源与归属](#-图标来源与归属)
   - [📄 许可证](#-许可证)
 
 ## 🚀 快速上手
@@ -494,6 +495,28 @@ A: 可以。将 SVG 文件放在 `assets/your-vendor-*` 下，在 `tech_icons/no
 **Q: 支持什么 MCP 协议版本？**
 A: FastMCP 3.4 支持 MCP 协议版本 `2025-03-26`。所有传输方式（stdio、Streamable HTTP）均使用此协议。
 
+## 🏅 图标来源与归属
+
+tech-icons **聚合**了以下来源的图标。项目本身（服务器、搜索引擎、工具链）采用 MIT 协议开源，但打包的图标文件保留其原始许可和条款。在重新分发或修改图标之前，请查阅每个来源的许可。
+
+| 来源 | 厂商 | 许可 / 条款 | 备注 |
+|------|------|-------------|------|
+| [AWS Architecture Icons](https://aws.amazon.com/architecture/icons/) | `aws` | AWS [服务条款](https://aws.amazon.com/architecture/icons/) | 可用于架构图绘制。 |
+| [Azure Architecture Icons](https://learn.microsoft.com/en-us/azure/architecture/icons/) | `azure` | [Microsoft 条款](https://learn.microsoft.com/en-us/azure/architecture/icons/) | 可用于架构图绘制。 |
+| [Google Cloud Icons](https://cloud.google.com/icons) | `gcp` | Google Cloud [品牌指南](https://cloud.google.com/icons) | 可用于架构图绘制。 |
+| [Microsoft 365 架构图标](https://learn.microsoft.com/en-us/previous-versions/microsoft-365/solutions/architecture-icons-templates) | `microsoft` (365) | [Microsoft 条款](https://learn.microsoft.com/en-us/previous-versions/microsoft-365/solutions/architecture-icons-templates) | |
+| [Dynamics 365 图标](https://learn.microsoft.com/en-us/dynamics365/get-started/icons) | `microsoft` (dynamics-365) | [Microsoft 条款](https://learn.microsoft.com/en-us/dynamics365/get-started/icons) | |
+| [Microsoft Entra 架构图标](https://learn.microsoft.com/en-us/entra/architecture/architecture-icons) | `microsoft` (entra) | [Microsoft 条款](https://learn.microsoft.com/en-us/entra/architecture/architecture-icons) | |
+| [Microsoft Fabric 图标](https://learn.microsoft.com/en-us/fabric/fundamentals/icons) | `microsoft` (fabric) | [Microsoft 条款](https://learn.microsoft.com/en-us/fabric/fundamentals/icons) | |
+| [Power Platform 图标](https://learn.microsoft.com/en-us/power-platform/guidance/icons) | `microsoft` (power-platform) | [Microsoft 条款](https://learn.microsoft.com/en-us/power-platform/guidance/icons) | |
+| [CNCF Artwork](https://github.com/cncf/artwork) | `cncf` | CNCF [商标与徽标指南](https://github.com/cncf/artwork) | 商标归 CNCF 及各自项目所有。 |
+| [Devicon](https://github.com/devicons/devicon) | `devicon` | [MIT 协议](https://github.com/devicons/devicon/blob/master/LICENSE) | 软件技术图标字体与 SVG。 |
+| [Developer Icons](https://github.com/xandemon/developer-icons) | `developer` | [MIT 协议](https://github.com/xandemon/developer-icons) | 扁平化彩色技术图标。 |
+
+> **注意**：本项目**不**对任何打包的图标文件声称所有权。图标均按其上游原始状态提供，方便 AI 辅助绘图工作流使用。本项目的 MIT 协议仅适用于服务器代码、搜索引擎、工具链和文档——**不**适用于第三方图标资源。
+
 ## 📄 许可证
 
-MIT © [zhiweio](https://github.com/zhiweio)
+**项目代码**（服务器、搜索引擎、工具链、文档）：MIT © [zhiweio](https://github.com/zhiweio)
+
+**打包图标**：每套图标保留其原始许可和条款，详见[图标来源与归属](#-图标来源与归属)。
