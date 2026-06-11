@@ -1,0 +1,52 @@
+# ---------------------------------------------------------------------------
+# Docker Compose — tech-icons
+#
+# Profiles:
+#   docker compose --profile mcp up    → MCP Streamable HTTP server (default)
+#   docker compose --profile web up    → FastAPI web UI
+#   docker compose up                  → both profiles (MCP + Web on different ports)
+#
+# Claude Desktop config (connect to containerized MCP):
+#   {
+#     "mcpServers": {
+#       "tech-icons": {
+#         "type": "streamableHttp",
+#         "url": "http://localhost:8765/mcp"
+#       }
+#     }
+#   }
+# ---------------------------------------------------------------------------
+services:
+  tech-icons-mcp:
+    build: .
+    image: tech-icons:latest
+    container_name: tech-icons-mcp
+    profiles: [mcp]
+    ports:
+      - "8765:8765"
+    environment:
+      - SERVER_MODE=http
+      - HOST=0.0.0.0
+      - PORT=8765
+      - LOG_LEVEL=info
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-sf", "http://localhost:8765/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  tech-icons-web:
+    build: .
+    image: tech-icons:latest
+    container_name: tech-icons-web
+    profiles: [web]
+    ports:
+      - "8766:8765"
+    environment:
+      - SERVER_MODE=web
+      - HOST=0.0.0.0
+      - PORT=8765
+      - LOG_LEVEL=info
+    restart: unless-stopped

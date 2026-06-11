@@ -1,0 +1,54 @@
+# Git
+.git/
+.gitattributes
+.gitignore
+
+# Python bytecode / cache
+__pycache__/
+*.py[codz]
+*$py.class
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.dmypy.json
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+*.egg
+MANIFEST
+.pypirc
+
+# Tests (not needed at runtime)
+tests/
+.pytest_cache/
+
+# Development tooling
+scripts/
+Makefile
+.claude/
+.codebuddy/
+
+# Documentation
+docs/
+*.md
+!README.md
+
+# Misc
+assets/
+.mcp.json
+.python-version
+requirements.txt

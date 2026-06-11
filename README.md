@@ -58,6 +58,11 @@ The missing icon layer for AI-assisted architecture diagramming. Give your LLMs 
     - [With semantic search](#with-semantic-search)
     - [Streamable HTTP (remote / self-hosted)](#streamable-http-remote--self-hosted)
     - [Cursor / Windsurf / other MCP-compatible editors](#cursor--windsurf--other-mcp-compatible-editors)
+  - [🐳 Docker](#-docker)
+    - [Quick Start](#quick-start-1)
+    - [docker-compose](#docker-compose)
+    - [Environment Variables](#environment-variables)
+    - [Claude Desktop Configuration (Docker)](#claude-desktop-configuration-docker)
   - [🛠️ Tools \& API Reference](#️-tools--api-reference)
     - [Tools](#tools)
     - [Resource](#resource)
@@ -252,6 +257,59 @@ uvx tech-icons --ppt-master aws --symlink
 ### Cursor / Windsurf / other MCP-compatible editors
 
 Use the same `stdio` configuration as Claude Desktop above. For HTTP transport, check your editor's MCP documentation for HTTP endpoint support.
+
+## 🐳 Docker
+
+Pre-built Docker image with both MCP server and Web UI modes. Choose via the `SERVER_MODE` environment variable.
+
+### Quick Start
+
+```bash
+# Build the image
+docker build -t tech-icons .
+
+# Run as MCP Streamable HTTP server (default)
+docker run -p 8765:8765 tech-icons
+
+# Run as Web UI (icon browser)
+docker run -p 8765:8765 -e SERVER_MODE=web tech-icons
+```
+
+### docker-compose
+
+```bash
+# MCP server mode
+docker compose --profile mcp up -d
+
+# Web UI mode
+docker compose --profile web up -d
+```
+
+### Environment Variables
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `SERVER_MODE` | `http` | `http` = MCP Streamable HTTP server, `web` = FastAPI web UI |
+| `HOST` | `0.0.0.0` | Bind address (always `0.0.0.0` inside the container) |
+| `PORT` | `8765` | Listen port |
+| `LOG_LEVEL` | `info` | Python log level |
+
+### Claude Desktop Configuration (Docker)
+
+Connect Claude Desktop to a containerized tech-icons via Streamable HTTP:
+
+```json
+{
+  "mcpServers": {
+    "tech-icons": {
+      "type": "streamableHttp",
+      "url": "http://localhost:8765/mcp"
+    }
+  }
+}
+```
+
+> **Note**: The container binds `0.0.0.0:8765`. If running the container on a remote host, replace `localhost` with the host's IP address.
 
 ## 🛠️ Tools & API Reference
 

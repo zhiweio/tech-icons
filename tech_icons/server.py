@@ -52,6 +52,19 @@ TRANSPORT_OPTIONS = Literal["stdio", "http", "dual"]
 
 
 # ---------------------------------------------------------------------------
+# Health check (for Docker / cloud deployments)
+# ---------------------------------------------------------------------------
+
+
+@mcp.custom_route("/health", methods=["GET"])
+async def health_check(_request) -> dict:
+    """Lightweight health-check endpoint for Docker HEALTHCHECK and load balancers."""
+    from starlette.responses import JSONResponse
+
+    return JSONResponse({"status": "ok", "icons": len(engine.catalog)})
+
+
+# ---------------------------------------------------------------------------
 # Tools
 # ---------------------------------------------------------------------------
 

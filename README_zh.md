@@ -58,6 +58,11 @@
     - [启用语义搜索](#启用语义搜索)
     - [Streamable HTTP（远程 / 自部署）](#streamable-http远程--自部署)
     - [Cursor / Windsurf / 其他 MCP 兼容编辑器](#cursor--windsurf--其他-mcp-兼容编辑器)
+  - [🐳 Docker](#-docker)
+    - [快速上手](#快速上手-1)
+    - [docker-compose](#docker-compose)
+    - [环境变量](#环境变量)
+    - [Claude Desktop 配置 (Docker)](#claude-desktop-配置-docker)
   - [🛠️ 工具与 API 参考](#️-工具与-api-参考)
     - [工具](#工具)
     - [资源](#资源)
@@ -252,6 +257,59 @@ uvx tech-icons --ppt-master aws --symlink
 ### Cursor / Windsurf / 其他 MCP 兼容编辑器
 
 使用与上述 Claude Desktop 相同的 `stdio` 配置。对于 HTTP 传输方式，请查阅编辑器的 MCP 文档了解 HTTP 端点支持。
+
+## 🐳 Docker
+
+提供预构建的 Docker 镜像，支持 MCP 服务器和 Web 界面两种模式。通过 `SERVER_MODE` 环境变量切换。
+
+### 快速上手
+
+```bash
+# 构建镜像
+docker build -t tech-icons .
+
+# 以 MCP Streamable HTTP 服务器模式运行（默认）
+docker run -p 8765:8765 tech-icons
+
+# 以 Web 界面模式运行
+docker run -p 8765:8765 -e SERVER_MODE=web tech-icons
+```
+
+### docker-compose
+
+```bash
+# MCP 服务器模式
+docker compose --profile mcp up -d
+
+# Web 界面模式
+docker compose --profile web up -d
+```
+
+### 环境变量
+
+| 变量 | 默认值 | 说明 |
+|------|-------|------|
+| `SERVER_MODE` | `http` | `http` = MCP Streamable HTTP 服务器，`web` = FastAPI Web 界面 |
+| `HOST` | `0.0.0.0` | 绑定地址（容器内始终为 `0.0.0.0`） |
+| `PORT` | `8765` | 监听端口 |
+| `LOG_LEVEL` | `info` | Python 日志级别 |
+
+### Claude Desktop 配置 (Docker)
+
+通过 Streamable HTTP 连接容器化的 tech-icons：
+
+```json
+{
+  "mcpServers": {
+    "tech-icons": {
+      "type": "streamableHttp",
+      "url": "http://localhost:8765/mcp"
+    }
+  }
+}
+```
+
+> **注意**：容器绑定 `0.0.0.0:8765`。如果容器运行在远程主机上，需将 `localhost` 替换为主机 IP 地址。
 
 ## 🛠️ 工具与 API 参考
 
