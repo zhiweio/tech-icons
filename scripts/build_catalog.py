@@ -30,9 +30,12 @@ from tech_icons.normalize import (
     collect_all_icons,
     collect_aws_icons,
     collect_azure_icons,
+    collect_cncf_icons,
     collect_developer_icons,
+    collect_devicon_icons,
     collect_gcp_icons,
     collect_microsoft_icons,
+    collect_mingrammer_icons,
     deduplicate_entries,
 )
 
@@ -51,11 +54,17 @@ def compute_assets_hash(assets_root: Path) -> str:
     """Compute a hash of the assets directory structure for change detection."""
     hasher = hashlib.sha256()
 
-    # Hash directory listing (sorted for determinism)
+    # Hash SVG listings
     for svg_file in sorted(assets_root.rglob("*.svg")):
         rel = svg_file.relative_to(assets_root)
         hasher.update(str(rel).encode())
         hasher.update(str(svg_file.stat().st_size).encode())
+
+    # Hash PNG listings (mingrammer + any others)
+    for png_file in sorted(assets_root.rglob("*.png")):
+        rel = png_file.relative_to(assets_root)
+        hasher.update(str(rel).encode())
+        hasher.update(str(png_file.stat().st_size).encode())
 
     return hasher.hexdigest()[:16]
 
@@ -116,7 +125,12 @@ def build_reverse_enrichment_map(enrichments: dict) -> dict[str, dict]:
 
 
 def entry_to_catalog_record(entry: IconEntry, enrichment_map: dict) -> dict:
-    """Convert an IconEntry to a catalog JSON record."""
+    """Convert an IconEntry to a catalog JSON record.
+
+    Emits a ``formats`` dict mapping image type to relative path.
+    Dual-format entries (with ``png_source_path``) get both ``"svg"``
+    and ``"png"`` keys; single-format entries get just one.
+    """
     enrichment = enrichment_map.get(entry.id, {"aliases": [], "tags": []})
 
     # Merge enrichment aliases with any existing aliases
@@ -131,13 +145,22 @@ def entry_to_catalog_record(entry: IconEntry, enrichment_map: dict) -> dict:
     # Build description
     description = entry.description or f"{entry.name} - {entry.vendor} {entry.category} service"
 
+    # Build formats dict
+    formats: dict[str, str] = {}
+    ext = entry.filename.rsplit(".", 1)[-1]
+    formats[ext] = str(entry.dest_path)
+    # If a PNG variant exists, add it under the "png" key
+    if entry.png_source_path and ext == "svg":
+        png_path = str(entry.dest_path).replace(".svg", ".png")
+        formats["png"] = png_path
+
     return {
         "id": entry.id,
         "vendor": entry.vendor,
         "category": entry.category,
         "name": entry.name,
         "filename": entry.filename,
-        "path": str(entry.dest_path),
+        "formats": formats,
         "aliases": sorted(all_aliases),
         "tags": sorted(all_tags),
         "description": description,
@@ -256,7 +279,7 @@ def main() -> None:
     )
     parser.add_argument(
         "--vendor",
-        choices=["aws", "azure", "gcp", "microsoft", "developer"],
+        choices=["aws", "azure", "gcp", "microsoft", "developer", "cncf", "devicon", "mingrammer"],
         help="Process only a specific vendor",
     )
     parser.add_argument(
@@ -300,12 +323,14 @@ def main() -> None:
             "gcp": collect_gcp_icons,
             "microsoft": collect_microsoft_icons,
             "developer": collect_developer_icons,
+            "cncf": collect_cncf_icons,
+            "devicon": collect_devicon_icons,
+            "mingrammer": collect_mingrammer_icons,
         }
         entries = collector_map[args.vendor](assets_root)
+        entries = deduplicate_entries(entries)
     else:
         entries = collect_all_icons(assets_root)
-
-    entries = deduplicate_entries(entries)
     logger.info(f"Collected {len(entries)} unique icons")
 
     # Vendor breakdown

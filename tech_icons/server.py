@@ -9,7 +9,7 @@ Tools:
   - get_icon: get full icon details
   - list_categories: list available categories
   - list_vendors: list vendors with counts
-  - get_icon_svg: return SVG in chosen format
+  - get_icon_image: return image in chosen format (SVG or PNG)
   - list_concepts / compare_icons: cross-vendor concept lookup
 
 Resources:
@@ -37,7 +37,7 @@ from fastmcp import FastMCP
 from fastmcp.utilities.types import Image
 
 from tech_icons._paths import icon_path
-from tech_icons.formats import IconNotFoundError, format_icon
+from tech_icons.formats import IconNotFoundError, format_icon, get_mime_type, resolve_image_path
 from tech_icons.search import SearchEngine
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
@@ -48,6 +48,7 @@ engine = SearchEngine()
 
 VENDOR_OPTIONS = Literal["aws", "azure", "gcp", "microsoft", "cncf", "devicon", "developer"]
 FORMAT_OPTIONS = Literal["raw", "path", "base64", "data_uri", "ppt_master", "inline_group"]
+IMAGE_TYPE_OPTIONS = Literal["svg", "png"]
 TRANSPORT_OPTIONS = Literal["stdio", "http", "dual"]
 
 
@@ -132,31 +133,41 @@ def compare_icons(
 
 
 @mcp.tool
-def get_icon_svg(
+def get_icon_image(
     id: Annotated[str, "Icon ID (e.g., aws/compute/lambda)"],  # noqa: A002
     format: Annotated[  # noqa: A002
         FORMAT_OPTIONS | Literal["download"] | None,
         "Output format",
     ] = "raw",
+    image_type: Annotated[
+        IMAGE_TYPE_OPTIONS | None,
+        "Image format to serve (svg or png, default: svg). Falls back to available format.",
+    ] = "svg",
 ) -> str | list[str | Image]:
-    """Get icon SVG content in a specified format."""
+    """Get icon image content in a specified format and image type (SVG or PNG)."""
     entry = engine.get_icon(id)
     if not entry:
         return json.dumps({"error": f"Icon not found: {id}"})
 
-    path = icon_path(entry["path"])
+    # Resolve which image file to serve
+    formats = entry.get("formats", {})
+    actual_type, path_str = resolve_image_path(formats, image_type or "svg")
+    path = icon_path(path_str)
     fmt = format or "raw"
 
     try:
         if fmt == "download":
-            svg_bytes = path.read_bytes()
-            size_kb = len(svg_bytes) / 1024
+            content = path.read_bytes()
+            size_kb = len(content) / 1024
+            mime = get_mime_type(actual_type).split("/")[-1]  # "svg+xml" or "png"
             return [
-                f"Icon: {id} ({size_kb:.1f} KB SVG) — see attached image.",
-                Image(data=svg_bytes, format="svg+xml"),
+                f"Icon: {id} ({size_kb:.1f} KB {actual_type.upper()}) — see attached image.",
+                Image(data=content, format=mime),
             ]
-        return format_icon(path, id, fmt=fmt)
+        return format_icon(path, id, fmt=fmt, image_type=actual_type)
     except IconNotFoundError as e:
+        return json.dumps({"error": str(e)})
+    except ValueError as e:
         return json.dumps({"error": str(e)})
 
 

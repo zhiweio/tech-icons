@@ -153,11 +153,11 @@ Best for pure SVG diagrams where icons are composed directly into the SVG canvas
 </html>
 ```
 
-Replace `DATA_URI_FOR_{id}` with the output of `get_icon_svg(id="{id}", format="data_uri")`.
+Replace `DATA_URI_FOR_{id}` with the output of `get_icon_image(id="{id}", format="data_uri")`.
 
 ## Workflow
 
 1. Use `search_icons` to find icons by name or category
-2. Use `get_icon_svg` with `format="data_uri"` for HTML diagrams or `format="inline_group"` for SVG composition
+2. Use `get_icon_image` with `format="data_uri"` for HTML diagrams or `format="inline_group"` for SVG composition
 3. Apply CSS classes for consistent sizing
 4. Wrap vendor-specific groups in styled containers

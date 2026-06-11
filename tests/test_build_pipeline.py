@@ -164,7 +164,7 @@ class TestCatalogGeneration:
         assert record["category"] == "compute"
         assert record["name"] == "AWS Lambda"
         assert record["filename"] == "lambda.svg"
-        assert record["path"] == "icons/aws/compute/lambda.svg"
+        assert record["formats"] == {"svg": "icons/aws/compute/lambda.svg"}
         assert "serverless" in record["aliases"]
         assert "aws" in record["tags"]
 
@@ -219,7 +219,7 @@ class TestCatalogGeneration:
             "category",
             "name",
             "filename",
-            "path",
+            "formats",
             "aliases",
             "tags",
             "description",

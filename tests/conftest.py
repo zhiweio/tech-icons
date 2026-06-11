@@ -18,6 +18,13 @@ MINIMAL_SVG_WITH_GROUP = (
     "</svg>"
 )
 
+# A 1x1 red PNG (valid minimal PNG binary)
+MINIMAL_PNG = bytes.fromhex(
+    "89504e470d0a1a0a0000000d4948445200000001000000010802000000"
+    "907753de0000000c4944415408d763f8cf00010001010500100ade8951"
+    "0000000049454e44ae426082"
+)
+
 
 @pytest.fixture
 def sample_svg_content() -> str:
@@ -26,8 +33,14 @@ def sample_svg_content() -> str:
 
 
 @pytest.fixture
+def sample_png_content() -> bytes:
+    """Valid minimal PNG bytes (1x1 red pixel)."""
+    return MINIMAL_PNG
+
+
+@pytest.fixture
 def sample_catalog() -> list[dict]:
-    """Sample catalog with 15 icon entries covering all vendors."""
+    """Sample catalog with 18 icon entries covering all vendors, using formats dict."""
     return [
         {
             "id": "aws/compute/lambda",
@@ -35,7 +48,7 @@ def sample_catalog() -> list[dict]:
             "category": "compute",
             "name": "AWS Lambda",
             "filename": "lambda.svg",
-            "path": "icons/aws/compute/lambda.svg",
+            "formats": {"svg": "icons/aws/compute/lambda.svg", "png": "icons/aws/compute/lambda.png"},
             "aliases": ["serverless", "faas", "function-as-a-service", "lambda"],
             "tags": ["aws", "compute", "serverless"],
             "description": "AWS Lambda - AWS compute service",
@@ -46,7 +59,7 @@ def sample_catalog() -> list[dict]:
             "category": "compute",
             "name": "AWS EC2",
             "filename": "ec2.svg",
-            "path": "icons/aws/compute/ec2.svg",
+            "formats": {"svg": "icons/aws/compute/ec2.svg"},
             "aliases": ["virtual-machine", "vm", "elastic-compute", "ec2"],
             "tags": ["aws", "compute", "vm"],
             "description": "AWS EC2 - AWS compute service",
@@ -57,7 +70,7 @@ def sample_catalog() -> list[dict]:
             "category": "databases",
             "name": "AWS DynamoDB",
             "filename": "dynamodb.svg",
-            "path": "icons/aws/databases/dynamodb.svg",
+            "formats": {"svg": "icons/aws/databases/dynamodb.svg"},
             "aliases": ["nosql", "dynamo", "dynamodb"],
             "tags": ["aws", "databases", "nosql"],
             "description": "AWS DynamoDB - AWS databases service",
@@ -68,7 +81,7 @@ def sample_catalog() -> list[dict]:
             "category": "networking",
             "name": "AWS Elastic Load Balancing",
             "filename": "elastic-load-balancing.svg",
-            "path": "icons/aws/networking/elastic-load-balancing.svg",
+            "formats": {"svg": "icons/aws/networking/elastic-load-balancing.svg"},
             "aliases": ["load-balancer", "elb", "alb", "nlb"],
             "tags": ["aws", "networking", "load-balancer"],
             "description": "AWS Elastic Load Balancing - networking service",
@@ -79,7 +92,7 @@ def sample_catalog() -> list[dict]:
             "category": "compute",
             "name": "Azure Virtual Machines",
             "filename": "virtual-machines.svg",
-            "path": "icons/azure/compute/virtual-machines.svg",
+            "formats": {"svg": "icons/azure/compute/virtual-machines.svg"},
             "aliases": ["virtual-machine", "vm", "virtual-machines"],
             "tags": ["azure", "compute", "vm"],
             "description": "Azure Virtual Machines - Azure compute service",
@@ -90,7 +103,7 @@ def sample_catalog() -> list[dict]:
             "category": "compute",
             "name": "Azure Function Apps",
             "filename": "function-apps.svg",
-            "path": "icons/azure/compute/function-apps.svg",
+            "formats": {"svg": "icons/azure/compute/function-apps.svg"},
             "aliases": ["serverless", "faas", "functions", "function-apps"],
             "tags": ["azure", "compute", "serverless"],
             "description": "Azure Function Apps - Azure compute service",
@@ -101,7 +114,7 @@ def sample_catalog() -> list[dict]:
             "category": "networking",
             "name": "Azure Load Balancer",
             "filename": "load-balancer.svg",
-            "path": "icons/azure/networking/load-balancer.svg",
+            "formats": {"svg": "icons/azure/networking/load-balancer.svg"},
             "aliases": ["load-balancer", "lb"],
             "tags": ["azure", "networking", "load-balancer"],
             "description": "Azure Load Balancer - networking service",
@@ -112,7 +125,7 @@ def sample_catalog() -> list[dict]:
             "category": "compute",
             "name": "GCP Compute Engine",
             "filename": "compute-engine.svg",
-            "path": "icons/gcp/compute/compute-engine.svg",
+            "formats": {"svg": "icons/gcp/compute/compute-engine.svg"},
             "aliases": ["virtual-machine", "vm", "compute-engine"],
             "tags": ["gcp", "compute", "vm"],
             "description": "GCP Compute Engine - GCP compute service",
@@ -123,7 +136,7 @@ def sample_catalog() -> list[dict]:
             "category": "serverless-computing",
             "name": "GCP Cloud Functions",
             "filename": "cloud-functions.svg",
-            "path": "icons/gcp/serverless-computing/cloud-functions.svg",
+            "formats": {"svg": "icons/gcp/serverless-computing/cloud-functions.svg"},
             "aliases": ["serverless", "faas", "cloud-functions"],
             "tags": ["gcp", "serverless-computing", "serverless"],
             "description": "GCP Cloud Functions - serverless computing service",
@@ -134,7 +147,7 @@ def sample_catalog() -> list[dict]:
             "category": "networking",
             "name": "GCP Cloud Load Balancing",
             "filename": "cloud-load-balancing.svg",
-            "path": "icons/gcp/networking/cloud-load-balancing.svg",
+            "formats": {"svg": "icons/gcp/networking/cloud-load-balancing.svg"},
             "aliases": ["load-balancer", "cloud-load-balancing"],
             "tags": ["gcp", "networking", "load-balancer"],
             "description": "GCP Cloud Load Balancing - networking service",
@@ -145,7 +158,7 @@ def sample_catalog() -> list[dict]:
             "category": "dynamics-365",
             "name": "Microsoft Sales",
             "filename": "sales.svg",
-            "path": "icons/microsoft/dynamics-365/sales.svg",
+            "formats": {"svg": "icons/microsoft/dynamics-365/sales.svg"},
             "aliases": ["dynamics-sales", "crm", "sales"],
             "tags": ["microsoft", "dynamics-365", "business-applications"],
             "description": "Microsoft Sales - Dynamics 365 service",
@@ -156,7 +169,7 @@ def sample_catalog() -> list[dict]:
             "category": "fabric",
             "name": "Microsoft Data Warehouse",
             "filename": "data-warehouse.svg",
-            "path": "icons/microsoft/fabric/data-warehouse.svg",
+            "formats": {"svg": "icons/microsoft/fabric/data-warehouse.svg"},
             "aliases": ["data-warehouse", "synapse", "fabric"],
             "tags": ["microsoft", "fabric", "data-platform"],
             "description": "Microsoft Data Warehouse - Fabric service",
@@ -167,7 +180,7 @@ def sample_catalog() -> list[dict]:
             "category": "power-platform",
             "name": "Microsoft Power Automate",
             "filename": "power-automate.svg",
-            "path": "icons/microsoft/power-platform/power-automate.svg",
+            "formats": {"svg": "icons/microsoft/power-platform/power-automate.svg"},
             "aliases": ["flow", "automation", "power-automate"],
             "tags": ["microsoft", "power-platform", "low-code"],
             "description": "Microsoft Power Automate - Power Platform service",
@@ -178,7 +191,7 @@ def sample_catalog() -> list[dict]:
             "category": "entra",
             "name": "Microsoft Conditional Access",
             "filename": "conditional-access.svg",
-            "path": "icons/microsoft/entra/conditional-access.svg",
+            "formats": {"svg": "icons/microsoft/entra/conditional-access.svg"},
             "aliases": ["conditional-access", "mfa", "identity"],
             "tags": ["microsoft", "entra", "identity", "security"],
             "description": "Microsoft Conditional Access - Entra identity service",
@@ -189,10 +202,44 @@ def sample_catalog() -> list[dict]:
             "category": "microsoft-365",
             "name": "Microsoft Teams",
             "filename": "teams.svg",
-            "path": "icons/microsoft/microsoft-365/teams.svg",
+            "formats": {"svg": "icons/microsoft/microsoft-365/teams.svg"},
             "aliases": ["teams", "collaboration", "chat"],
             "tags": ["microsoft", "microsoft-365", "productivity"],
             "description": "Microsoft Teams - Microsoft 365 collaboration",
+        },
+        # PNG-only entries (from mingrammer/diagrams)
+        {
+            "id": "alibabacloud/general/alibabacloud",
+            "vendor": "alibabacloud",
+            "category": "general",
+            "name": "Alibaba Cloud Alibabacloud",
+            "filename": "alibabacloud.png",
+            "formats": {"png": "icons/alibabacloud/general/alibabacloud.png"},
+            "aliases": ["alibabacloud"],
+            "tags": ["alibabacloud", "general"],
+            "description": "Alibaba Cloud Alibabacloud - alibabacloud general service",
+        },
+        {
+            "id": "kubernetes/clusterconfig/kubeconfig",
+            "vendor": "kubernetes",
+            "category": "clusterconfig",
+            "name": "Kubernetes Kubeconfig",
+            "filename": "kubeconfig.png",
+            "formats": {"png": "icons/kubernetes/clusterconfig/kubeconfig.png"},
+            "aliases": ["kubeconfig", "kube-config"],
+            "tags": ["kubernetes", "clusterconfig"],
+            "description": "Kubernetes Kubeconfig - kubernetes clusterconfig service",
+        },
+        {
+            "id": "programming/language/python",
+            "vendor": "programming",
+            "category": "language",
+            "name": "Programming Python",
+            "filename": "python.png",
+            "formats": {"png": "icons/programming/language/python.png"},
+            "aliases": ["python", "language"],
+            "tags": ["programming", "language"],
+            "description": "Programming Python - programming language icon",
         },
     ]
 
@@ -276,7 +323,7 @@ def sample_enrichments() -> dict:
 
 @pytest.fixture
 def tmp_icons_dir(tmp_path: Path) -> Path:
-    """Temp directory with a few actual SVG files for format testing."""
+    """Temp directory with SVG and PNG files for format testing."""
     icons = tmp_path / "icons"
     icons.mkdir()
 
@@ -284,6 +331,7 @@ def tmp_icons_dir(tmp_path: Path) -> Path:
     aws_compute = icons / "aws" / "compute"
     aws_compute.mkdir(parents=True)
     (aws_compute / "lambda.svg").write_text(MINIMAL_SVG)
+    (aws_compute / "lambda.png").write_bytes(MINIMAL_PNG)
     (aws_compute / "ec2.svg").write_text(MINIMAL_SVG_WITH_GROUP)
 
     azure_compute = icons / "azure" / "compute"
@@ -297,6 +345,11 @@ def tmp_icons_dir(tmp_path: Path) -> Path:
     ms_fabric = icons / "microsoft" / "fabric"
     ms_fabric.mkdir(parents=True)
     (ms_fabric / "data-warehouse.svg").write_text(MINIMAL_SVG)
+
+    # PNG-only vendor dir
+    alibaba_general = icons / "alibabacloud" / "general"
+    alibaba_general.mkdir(parents=True)
+    (alibaba_general / "alibabacloud.png").write_bytes(MINIMAL_PNG)
 
     return icons
 

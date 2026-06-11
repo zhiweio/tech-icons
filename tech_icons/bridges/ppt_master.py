@@ -70,7 +70,14 @@ def export_icons(
             logger.warning(f"Icon not found: {icon_id}, skipping")
             continue
 
-        source = icon_path(entry["path"])
+        # ppt-master uses SVG placeholders — prefer SVG format
+        formats = entry.get("formats", {})
+        svg_path_str = formats.get("svg")
+        if not svg_path_str:
+            logger.warning(f"No SVG format available for: {icon_id}, skipping")
+            continue
+
+        source = icon_path(svg_path_str)
         if not source.exists():
             logger.warning(f"SVG file missing: {source}, skipping")
             continue

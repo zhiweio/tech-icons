@@ -19,7 +19,7 @@ from fastapi.responses import FileResponse, JSONResponse, Response
 from fastapi.staticfiles import StaticFiles
 
 from tech_icons._paths import icon_path
-from tech_icons.formats import IconNotFoundError, format_icon
+from tech_icons.formats import IconNotFoundError, format_icon, get_mime_type, resolve_image_path
 from tech_icons.normalize import VENDOR_SOURCES
 from tech_icons.search import SearchEngine
 
@@ -43,8 +43,8 @@ async def lifespan(_app: FastAPI) -> AsyncIterator[None]:
 
 app = FastAPI(
     title="tech-icons",
-    description="HTTP API for browsing 3100+ cloud tech icons",
-    version="0.2.0",
+    description="HTTP API for browsing 5100+ cloud tech icons (SVG + PNG)",
+    version="0.3.0",
     lifespan=lifespan,
 )
 
@@ -117,12 +117,14 @@ def list_icons(
     return {"total": total, "offset": offset, "limit": limit, "items": window}
 
 
-@app.get("/api/svg/{icon_id:path}")
-def get_icon_svg(
+@app.get("/api/icon/{icon_id:path}")
+def get_icon_content(
     icon_id: str,
     format: str = Query(default="raw"),  # noqa: A002 - HTTP query name
+    image_type: str = Query(default="svg"),
     download: bool = Query(default=False),
 ) -> Response:
+    """Serve icon content (SVG or PNG) in the requested format."""
     if format not in VALID_FORMATS:
         raise HTTPException(
             status_code=400,
@@ -132,19 +134,31 @@ def get_icon_svg(
     if not entry:
         raise HTTPException(status_code=404, detail=f"Icon not found: {icon_id}")
 
-    path = icon_path(entry["path"])
+    # Resolve which image file to serve
+    formats = entry.get("formats", {})
     try:
-        # Map "download" format to raw SVG content served as attachment
+        actual_type, path_str = resolve_image_path(formats, image_type)
+    except Exception as e:
+        raise HTTPException(status_code=404, detail=f"No icon file available for: {icon_id}") from e
+
+    path = icon_path(path_str)
+    try:
+        # Map "download" format to raw content served as attachment
         output_fmt = "raw" if format == "download" else format
-        content = format_icon(path, icon_id, fmt=output_fmt)
+        content = format_icon(path, icon_id, fmt=output_fmt, image_type=actual_type)
     except IconNotFoundError as e:
         raise HTTPException(status_code=404, detail=str(e)) from e
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e)) from e
 
-    media_type = "image/svg+xml" if format in ("raw", "download") else "text/plain"
+    mime = get_mime_type(actual_type)
+    media_type = mime if format in ("raw", "download") else "text/plain"
 
     if download or format == "download":
-        filename = entry.get("filename") or f"{icon_id.rsplit('/', 1)[-1]}.svg"
+        ext = actual_type
+        filename = f"{icon_id.rsplit('/', 1)[-1]}.{ext}" if "/" in icon_id else f"{icon_id}.{ext}"
         headers = {"Content-Disposition": f'attachment; filename="{filename}"'}
+        # Must convert bytes to string for content if it's text, but Response handles both
         return Response(content=content, media_type=media_type, headers=headers)
 
     return Response(content=content, media_type=media_type)

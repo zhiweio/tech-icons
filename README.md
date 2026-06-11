@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <strong>3,100+ Cloud Tech Icons · Searchable MCP Server · Architecture Diagrams</strong>
+  <strong>5,200+ Cloud Tech Icons (SVG+PNG) · Searchable MCP Server · Architecture Diagrams</strong>
 </p>
 
 <p align="center">
@@ -24,13 +24,13 @@
   <img src="docs/images/banner.png" alt="tech-icons" />
 </p>
 
-The missing icon layer for AI-assisted architecture diagramming. Give your LLMs the power to *see* and *place* cloud icons across AWS, Azure, GCP, and Microsoft—directly, without switching tabs or hunting through vendor docs.
+The missing icon layer for AI-assisted architecture diagramming. Give your LLMs the power to *see* and *place* cloud icons across AWS, Azure, GCP, Kubernetes, on-prem infrastructure, and 20+ other vendors — directly, without switching tabs or hunting through vendor docs.
 
 ## ✨ Features
 
 - 🔍 **Multi-Tier Search** — Exact ID → Keyword → Fuzzy → Semantic embedding search, layered for precision and recall
-- 🎨 **6 Output Formats** — Raw SVG, Base64, Data URI, Inline `<g>`, File path, ppt-master placeholder—pick what fits
-- 🔗 **Cross-Vendor Concepts** — `compare_icons("kubernetes")` returns the K8s icon from AWS, Azure, *and* GCP in one call
+- 🎨 **Dual Format Support** — SVG and PNG icons across 21 vendors. Parameterized: `image_type="svg"` (default) or `image_type="png"`, with automatic fallback
+- 🔗 **Cross-Vendor Concepts** — `compare_icons("kubernetes")` returns the K8s icon from AWS, Azure, GCP, *and* Kubernetes vendor in one call
 - 🌐 **Streamable HTTP + stdio** — Run locally (`stdio`) or as a web service (`--transport http`), or both (`--transport dual`)
 - 🖥️ **Built-in Web UI** — `--web` launches a local icon browser (FastAPI + SPA) for visual exploration
 - 📦 **Zero Build, Works Everywhere** — Icons are bundled in the wheel; no local build step, works with `uvx` directly
@@ -321,9 +321,9 @@ Connect Claude Desktop to a containerized tech-icons via Streamable HTTP:
 |------|-----------|---------|-------------|
 | `search_icons` | `query` (required), `vendor`, `category`, `limit` | `list[dict]` | Multi-tier search: exact ID → keyword → fuzzy → semantic |
 | `get_icon` | `id` (e.g., `aws/compute/lambda`) | `dict` | Full metadata: vendor, category, name, aliases, tags, description, path |
-| `get_icon_svg` | `id`, `format` (default: `raw`) | `str` or `list` | SVG content in chosen format; `download` returns `Image` attachment |
+| `get_icon_image` | `id`, `format` (default: `raw`), `image_type` (default: `svg`) | `str` or `list` | Icon content in chosen format and image type (SVG or PNG); `download` returns `Image` attachment |
 | `list_categories` | `vendor` (optional) | `list[str]` | All icon categories, optionally filtered by vendor |
-| `list_vendors` | *none* | `dict[str, int]` | Vendor name → icon count mapping |
+| `list_vendors` | *none* | `dict[str, int]` | Vendor name → icon count mapping (21 vendors) |
 | `list_concepts` | *none* | `list[str]` | Cross-vendor concept names (e.g., `kubernetes`, `serverless`) |
 | `compare_icons` | `concept` (e.g., `kubernetes`) | `dict` | Icons from all vendors for a concept, grouped by vendor |
 
@@ -333,7 +333,7 @@ All parameters with `Annotated[type, "description"]` type hints auto-generate JS
 
 | URI | MIME Type | Content |
 |-----|-----------|---------|
-| `icon://catalog` | `application/json` | Full 3,140+ entry icon catalog with all metadata |
+| `icon://catalog` | `application/json` | Full 5,200+ entry icon catalog with all metadata |
 
 ### LLM Usage Examples
 
@@ -349,7 +349,12 @@ compare_icons(concept="kubernetes")
 
 **Get a data URI for embedding in an HTML architecture diagram:**
 ```
-get_icon_svg(id="gcp/compute/cloud-run", format="data_uri")
+get_icon_image(id="gcp/compute/cloud-run", format="data_uri")
+```
+
+**Get a PNG icon for a Kubernetes component:**
+```
+get_icon_image(id="kubernetes/compute/pod", image_type="png", format="data_uri")
 ```
 
 **List all Azure database services:**
@@ -570,6 +575,7 @@ tech-icons **aggregates** icons from the following sources. The project itself (
 | [CNCF Artwork](https://github.com/cncf/artwork) | `cncf` | CNCF [Trademark & Logo Guidelines](https://github.com/cncf/artwork) | Trademarks owned by CNCF and respective projects. |
 | [Devicon](https://github.com/devicons/devicon) | `devicon` | [MIT License](https://github.com/devicons/devicon/blob/master/LICENSE) | Icon fonts and SVGs for software technologies. |
 | [Developer Icons](https://github.com/xandemon/developer-icons) | `developer` | [MIT License](https://github.com/xandemon/developer-icons) | Flat, colored technology icons. |
+| [mingrammer/diagrams](https://github.com/mingrammer/diagrams) | `alibabacloud`, `digitalocean`, `elastic`, `firebase`, `generic`, `gis`, `ibm`, `kubernetes`, `oci`, `onprem`, `openstack`, `outscale`, `programming`, `saas` | [MIT License](https://github.com/mingrammer/diagrams) | PNG icons from the Python diagrams library (also supplements `aws`, `azure`, `gcp` with PNG variants). |
 
 > **Note**: This project does **not** claim ownership of any bundled icon files. The icons are provided as-is from their respective upstream sources for convenience in AI-assisted diagramming workflows. The MIT license of this project applies to the server code, search engine, tooling, and documentation — **not** to the third-party icon assets.
 

@@ -28,6 +28,21 @@
     microsoft: { badge: "badge-secondary", label: "Microsoft" },
     cncf: { badge: "badge-primary", label: "CNCF" },
     devicon: { badge: "badge-accent", label: "Devicon" },
+    developer: { badge: "badge-neutral", label: "Developer" },
+    alibabacloud: { badge: "badge-warning", label: "Alibaba Cloud" },
+    digitalocean: { badge: "badge-info", label: "DigitalOcean" },
+    elastic: { badge: "badge-accent", label: "Elastic" },
+    firebase: { badge: "badge-warning", label: "Firebase" },
+    generic: { badge: "badge-ghost", label: "Generic" },
+    gis: { badge: "badge-neutral", label: "GIS" },
+    ibm: { badge: "badge-primary", label: "IBM" },
+    kubernetes: { badge: "badge-info", label: "Kubernetes" },
+    oci: { badge: "badge-error", label: "OCI" },
+    onprem: { badge: "badge-ghost", label: "On-Prem" },
+    openstack: { badge: "badge-error", label: "OpenStack" },
+    outscale: { badge: "badge-neutral", label: "Outscale" },
+    programming: { badge: "badge-success", label: "Programming" },
+    saas: { badge: "badge-accent", label: "SaaS" },
   };
 
   function vendorBadgeClass(v) {
@@ -71,7 +86,7 @@
       <div class="card card-compact bg-base-100 hover:shadow-md cursor-pointer border border-base-300 transition" data-id="${safeId}">
         <div class="card-body items-center text-center !p-3">
           <div class="icon-card-preview">
-            <img src="/api/svg/${encodeURI(id)}"
+            <img src="/api/icon/${encodeURI(id)}"
                  alt="${name}"
                  loading="lazy"
                  onerror="this.style.opacity='0.2'" />
@@ -242,7 +257,7 @@
                     (entry) => `
                   <div class="flex items-center gap-3 p-2 rounded hover:bg-base-200 cursor-pointer" data-id="${escapeHtml(entry.id)}">
                     <div class="w-10 h-10 flex-none flex items-center justify-center">
-                      <img src="/api/svg/${encodeURI(entry.id)}" class="w-full h-full" alt="${escapeHtml(entry.name)}" />
+                      <img src="/api/icon/${encodeURI(entry.id)}" class="w-full h-full" alt="${escapeHtml(entry.name)}" />
                     </div>
                     <div class="text-xs min-w-0">
                       <div class="font-medium truncate">${escapeHtml(entry.name)}</div>
@@ -294,11 +309,20 @@
       const entry = await api(`/api/icons/${encodeURI(id)}`);
       state.currentIcon = entry;
 
-      const svgRaw = await api(`/api/svg/${encodeURI(id)}?format=raw`);
+      // Check available formats for preview rendering
+      const hasSvg = entry.formats && entry.formats.svg;
+      const hasPng = entry.formats && entry.formats.png;
+
+      if (hasSvg) {
+        const svgRaw = await api(`/api/icon/${encodeURI(id)}?format=raw&image_type=svg`);
+        $("#detail-preview").innerHTML = ensureSvgViewBox(svgRaw);
+      } else if (hasPng) {
+        $("#detail-preview").innerHTML = `<img src="/api/icon/${encodeURI(id)}?image_type=png" class="max-w-full max-h-64 object-contain" alt="${escapeHtml(entry.name)}" />`;
+      } else {
+        $("#detail-preview").innerHTML = `<div class="text-error">No preview available</div>`;
+      }
 
       $("#detail-name").textContent = entry.name;
-      $("#detail-description").textContent = entry.description || "";
-      $("#detail-preview").innerHTML = ensureSvgViewBox(svgRaw);
       $("#detail-badges").innerHTML = `
         <span class="badge ${vendorBadgeClass(entry.vendor)}">${vendorLabel(entry.vendor)}</span>
         <span class="badge badge-outline">${escapeHtml(entry.category)}</span>
@@ -316,7 +340,13 @@
       $("#meta-concepts").innerHTML = (entry.related_concepts || [])
         .map((c) => `<a class="badge badge-sm badge-primary mr-1 cursor-pointer" data-concept="${escapeHtml(c)}">${escapeHtml(c)}</a>`)
         .join("") || `<span class="opacity-50 text-xs">none</span>`;
-      $("#meta-svg").textContent = svgRaw;
+      // Show raw SVG source only when SVG format is available
+      if (hasSvg) {
+        const svgRaw = await api(`/api/icon/${encodeURI(id)}?format=raw&image_type=svg`);
+        $("#meta-svg").textContent = svgRaw;
+      } else {
+        $("#meta-svg").textContent = `(PNG-only icon — no SVG source available)`;
+      }
 
       // Wire concept badge clicks → switch to compare view
       $$("#meta-concepts [data-concept]").forEach((el) => {
@@ -340,7 +370,7 @@
     try {
       let text;
       if (kind === "id") text = id;
-      else text = await api(`/api/svg/${encodeURI(id)}?format=${kind}`);
+      else text = await api(`/api/icon/${encodeURI(id)}?format=${kind}`);
       await navigator.clipboard.writeText(text);
       toast(`Copied: ${kind}`);
     } catch (e) {

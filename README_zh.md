@@ -321,7 +321,7 @@ docker compose --profile web up -d
 |------|------|------|------|
 | `search_icons` | `query`（必填）、`vendor`、`category`、`limit` | `list[dict]` | 四级搜索：精确 ID → 关键词 → 模糊 → 语义 |
 | `get_icon` | `id`（如 `aws/compute/lambda`） | `dict` | 完整元数据：厂商、分类、名称、别名、标签、描述、路径 |
-| `get_icon_svg` | `id`、`format`（默认 `raw`） | `str` 或 `list` | SVG 内容，指定格式；`download` 返回图片附件 |
+| `get_icon_image` | `id`、`format`（默认 `raw`） | `str` 或 `list` | SVG 内容，指定格式；`download` 返回图片附件 |
 | `list_categories` | `vendor`（可选） | `list[str]` | 列出所有分类，可按厂商过滤 |
 | `list_vendors` | *无* | `dict[str, int]` | 厂商名 → 图标数量映射 |
 | `list_concepts` | *无* | `list[str]` | 跨厂商概念名（如 `kubernetes`、`serverless`） |
@@ -349,7 +349,7 @@ compare_icons(concept="kubernetes")
 
 **获取用于 HTML 架构图的 Data URI：**
 ```
-get_icon_svg(id="gcp/compute/cloud-run", format="data_uri")
+get_icon_image(id="gcp/compute/cloud-run", format="data_uri")
 ```
 
 **列出所有 Azure 数据库服务：**

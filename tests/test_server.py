@@ -161,7 +161,7 @@ class TestListVendors:
 
         with patch("tech_icons.server.engine", mock_engine):
             data = list_vendors()
-            # Sample catalog: 4 aws, 3 azure, 3 gcp, 5 microsoft
+            # Sample catalog: 4 aws, 3 azure, 3 gcp, 5 microsoft (+ 3 PNG-only)
             assert data["aws"] == 4
             assert data["azure"] == 3
             assert data["gcp"] == 3
@@ -169,15 +169,15 @@ class TestListVendors:
 
 
 # ---------------------------------------------------------------------------
-# get_icon_svg
+# get_icon_image
 # ---------------------------------------------------------------------------
 
 
 class TestGetIconSvg:
-    """Test get_icon_svg tool function."""
+    """Test get_icon_image tool function."""
 
     def test_get_svg_raw(self, mock_engine: SearchEngine, tmp_path):
-        from tech_icons.server import get_icon_svg
+        from tech_icons.server import get_icon_image
 
         svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M0 0"/></svg>'
         icon_dir = tmp_path / "icons" / "aws" / "compute"
@@ -185,12 +185,12 @@ class TestGetIconSvg:
         (icon_dir / "lambda.svg").write_text(svg)
 
         with patch("tech_icons.server.engine", mock_engine), patch("tech_icons._paths.package_root", lambda: tmp_path):
-            text = get_icon_svg(id="aws/compute/lambda", format="raw")
+            text = get_icon_image(id="aws/compute/lambda", format="raw")
             assert isinstance(text, str)
             assert "<svg" in text
 
     def test_get_svg_ppt_master(self, mock_engine: SearchEngine, tmp_path):
-        from tech_icons.server import get_icon_svg
+        from tech_icons.server import get_icon_image
 
         svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M0 0"/></svg>'
         icon_dir = tmp_path / "icons" / "aws" / "compute"
@@ -198,13 +198,13 @@ class TestGetIconSvg:
         (icon_dir / "lambda.svg").write_text(svg)
 
         with patch("tech_icons.server.engine", mock_engine), patch("tech_icons._paths.package_root", lambda: tmp_path):
-            text = get_icon_svg(id="aws/compute/lambda", format="ppt_master")
+            text = get_icon_image(id="aws/compute/lambda", format="ppt_master")
             assert isinstance(text, str)
             assert "tech-icons/aws/compute/lambda" in text
             assert "xlink:href" not in text
 
     def test_get_svg_base64(self, mock_engine: SearchEngine, tmp_path):
-        from tech_icons.server import get_icon_svg
+        from tech_icons.server import get_icon_image
 
         svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M0 0"/></svg>'
         icon_dir = tmp_path / "icons" / "aws" / "compute"
@@ -212,14 +212,14 @@ class TestGetIconSvg:
         (icon_dir / "lambda.svg").write_text(svg)
 
         with patch("tech_icons.server.engine", mock_engine), patch("tech_icons._paths.package_root", lambda: tmp_path):
-            text = get_icon_svg(id="aws/compute/lambda", format="base64")
+            text = get_icon_image(id="aws/compute/lambda", format="base64")
             import base64
 
             decoded = base64.b64decode(text)
             assert b"<svg" in decoded
 
     def test_get_svg_data_uri(self, mock_engine: SearchEngine, tmp_path):
-        from tech_icons.server import get_icon_svg
+        from tech_icons.server import get_icon_image
 
         svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M0 0"/></svg>'
         icon_dir = tmp_path / "icons" / "aws" / "compute"
@@ -227,19 +227,19 @@ class TestGetIconSvg:
         (icon_dir / "lambda.svg").write_text(svg)
 
         with patch("tech_icons.server.engine", mock_engine), patch("tech_icons._paths.package_root", lambda: tmp_path):
-            text = get_icon_svg(id="aws/compute/lambda", format="data_uri")
+            text = get_icon_image(id="aws/compute/lambda", format="data_uri")
             assert text.startswith("data:image/svg+xml;base64,")
 
     def test_get_svg_invalid_id(self, mock_engine: SearchEngine):
-        from tech_icons.server import get_icon_svg
+        from tech_icons.server import get_icon_image
 
         with patch("tech_icons.server.engine", mock_engine):
-            text = get_icon_svg(id="nonexistent/icon")
+            text = get_icon_image(id="nonexistent/icon")
             data = json.loads(text)
             assert "error" in data
 
     def test_get_svg_default_format_is_raw(self, mock_engine: SearchEngine, tmp_path):
-        from tech_icons.server import get_icon_svg
+        from tech_icons.server import get_icon_image
 
         svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M0 0"/></svg>'
         icon_dir = tmp_path / "icons" / "aws" / "compute"
@@ -247,14 +247,14 @@ class TestGetIconSvg:
         (icon_dir / "lambda.svg").write_text(svg)
 
         with patch("tech_icons.server.engine", mock_engine), patch("tech_icons._paths.package_root", lambda: tmp_path):
-            text = get_icon_svg(id="aws/compute/lambda")
+            text = get_icon_image(id="aws/compute/lambda")
             assert isinstance(text, str)
             assert "<svg" in text
 
     def test_get_svg_download(self, mock_engine: SearchEngine, tmp_path):
         from fastmcp.utilities.types import Image
 
-        from tech_icons.server import get_icon_svg
+        from tech_icons.server import get_icon_image
 
         svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M0 0"/></svg>'
         icon_dir = tmp_path / "icons" / "aws" / "compute"
@@ -262,7 +262,7 @@ class TestGetIconSvg:
         (icon_dir / "lambda.svg").write_text(svg)
 
         with patch("tech_icons.server.engine", mock_engine), patch("tech_icons._paths.package_root", lambda: tmp_path):
-            result = get_icon_svg(id="aws/compute/lambda", format="download")
+            result = get_icon_image(id="aws/compute/lambda", format="download")
             assert isinstance(result, list)
             assert len(result) == 2
 
@@ -275,6 +275,43 @@ class TestGetIconSvg:
             # Second item: Image object
             image_item = result[1]
             assert isinstance(image_item, Image)
+
+    def test_get_png_raw(self, mock_engine: SearchEngine, tmp_path):
+        """get_icon_image with image_type='png' returns PNG bytes."""
+        from tech_icons.server import get_icon_image
+
+        png = bytes.fromhex(
+            "89504e470d0a1a0a0000000d4948445200000001000000010802000000"
+            "907753de0000000c4944415408d763f8cf00010001010500100ade8951"
+            "0000000049454e44ae426082"
+        )
+        icon_dir = tmp_path / "icons" / "aws" / "compute"
+        icon_dir.mkdir(parents=True)
+        (icon_dir / "lambda.png").write_bytes(png)
+
+        with patch("tech_icons.server.engine", mock_engine), patch("tech_icons._paths.package_root", lambda: tmp_path):
+            result = get_icon_image(id="aws/compute/lambda", image_type="png", format="raw")
+            assert isinstance(result, bytes)
+            assert result[:4] == b"\x89PNG"
+
+    def test_get_png_fallback(self, mock_engine: SearchEngine, tmp_path):
+        """SVG request for PNG-only icon falls back to PNG."""
+        from tech_icons.server import get_icon_image
+
+        png = bytes.fromhex(
+            "89504e470d0a1a0a0000000d4948445200000001000000010802000000"
+            "907753de0000000c4944415408d763f8cf00010001010500100ade8951"
+            "0000000049454e44ae426082"
+        )
+        icon_dir = tmp_path / "icons" / "alibabacloud" / "general"
+        icon_dir.mkdir(parents=True)
+        (icon_dir / "alibabacloud.png").write_bytes(png)
+
+        with patch("tech_icons.server.engine", mock_engine), patch("tech_icons._paths.package_root", lambda: tmp_path):
+            # Request SVG but only PNG exists → falls back to PNG
+            result = get_icon_image(id="alibabacloud/general/alibabacloud", image_type="svg", format="raw")
+            assert isinstance(result, bytes)
+            assert result[:4] == b"\x89PNG"
 
 
 # ---------------------------------------------------------------------------
@@ -321,7 +358,7 @@ class TestResource:
         with patch("tech_icons.server.engine", mock_engine):
             data = json.loads(icon_catalog())
             assert isinstance(data, list)
-            assert len(data) == 15
+            assert len(data) == 18  # updated (15 original + 3 PNG-only)
 
 
 # ---------------------------------------------------------------------------

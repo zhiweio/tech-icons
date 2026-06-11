@@ -28,8 +28,10 @@ uv run tech-icons --ppt-master aws --target ./templates/icons/
 
 ## Architecture
 
-- **Package**: `tech_icons` (MCP server + FastAPI web UI for 3100+ cloud tech icons)
+- **Package**: `tech_icons` (MCP server + FastAPI web UI for 5200+ cloud tech icons, SVG + PNG)
 - **Entry point**: `tech-icons` → `tech_icons.server:main`
 - **Build system**: hatchling (pyproject.toml)
 - **Python**: >=3.10
 - **Key deps**: mcp, pyyaml, rapidfuzz; optional: fastapi+uvicorn (web), sentence-transformers+numpy (semantic)
+- **Icon formats**: SVG (default) and PNG, selected via `image_type` parameter; `formats` dict in catalog entries
+- **21 vendors**: aws, azure, gcp, microsoft, cncf, devicon, developer, alibabacloud, digitalocean, elastic, firebase, generic, gis, ibm, kubernetes, oci, onprem, openstack, outscale, programming, saas

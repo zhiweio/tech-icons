@@ -1,63 +1,93 @@
 # Enrichments: Manual alias and tag mappings for cross-vendor icon search
 #
-# Maps common technology terms to icon IDs across all cloud providers.
+# Maps common technology terms to icon IDs across ALL vendors (cloud + on-prem + open source).
 # Used by the build pipeline to augment the keyword index with semantic aliases.
+#
+# Each alias key is a concept group name; compare_icons(concept) returns all vendor icons.
 
 aliases:
-  # Compute - Serverless
+  # --- Compute - Serverless ---
   serverless:
     - aws/compute/lambda
     - azure/compute/function-apps
     - gcp/serverless-computing/cloud-functions
     - gcp/serverless-computing/cloud-run
+    - alibabacloud/compute/function-compute
 
   faas:
     - aws/compute/lambda
     - azure/compute/function-apps
     - gcp/serverless-computing/cloud-functions
+    - alibabacloud/compute/function-compute
 
   function-as-a-service:
     - aws/compute/lambda
     - azure/compute/function-apps
     - gcp/serverless-computing/cloud-functions
+    - alibabacloud/compute/function-compute
 
-  # Compute - VMs
+  # --- Compute - VMs ---
   virtual-machine:
     - aws/compute/ec2
     - azure/compute/virtual-machine
     - gcp/compute/compute-engine
+    - alibabacloud/compute/elastic-compute-service
+    - digitalocean/compute/droplet
+    - openstack/compute/nova
+    - oci/compute/vm-white
+    - ibm/compute/bare-metal-server
 
   vm:
     - aws/compute/ec2
     - azure/compute/virtual-machine
     - gcp/compute/compute-engine
+    - alibabacloud/compute/elastic-compute-service
+    - digitalocean/compute/droplet
 
-  # Containers
+  # --- Containers ---
   kubernetes:
     - aws/containers/elastic-kubernetes-service
     - azure/containers/kubernetes-services
     - gcp/containers/gke
+    - kubernetes/general/k8s
+    - oci/compute/container-white
+    - alibabacloud/compute/container-service
+    - digitalocean/compute/k8s-cluster
 
   k8s:
     - aws/containers/elastic-kubernetes-service
     - azure/containers/kubernetes-services
     - gcp/containers/gke
+    - kubernetes/general/k8s
+    - alibabacloud/compute/container-service
+    - digitalocean/compute/k8s-cluster
 
   container-orchestration:
     - aws/containers/elastic-kubernetes-service
     - azure/containers/kubernetes-services
     - gcp/containers/gke
+    - kubernetes/general/k8s
 
   container-registry:
     - aws/containers/elastic-container-registry
     - azure/containers/container-registries
     - gcp/containers/artifact-registry
+    - alibabacloud/compute/container-registry
 
-  # Storage - Object Storage
+  docker:
+    - devicon/devicon/docker
+    - developer/developer/docker
+    - digitalocean/compute/docker
+    - onprem/container/docker
+
+  # --- Storage - Object Storage ---
   object-storage:
     - aws/storage/simple-storage-service
     - azure/storage/storage-accounts
     - gcp/storage/cloud-storage
+    - alibabacloud/storage/object-storage-service
+    - ibm/storage/object-storage
+    - oci/storage/object-storage-white
 
   blob-storage:
     - aws/storage/simple-storage-service
@@ -67,7 +97,7 @@ aliases:
   s3:
     - aws/storage/simple-storage-service
 
-  # Databases - Relational
+  # --- Databases - Relational ---
   database:
     - aws/databases/rds
     - aws/databases/aurora
@@ -76,6 +106,8 @@ aliases:
     - gcp/databases/cloud-sql
     - gcp/databases/cloud-spanner
     - gcp/databases/alloydb
+    - alibabacloud/database/relational-database-service
+    - oci/database/autonomous-white
 
   relational-database:
     - aws/databases/rds
@@ -83,6 +115,8 @@ aliases:
     - azure/databases/sql-database
     - gcp/databases/cloud-sql
     - gcp/databases/cloud-spanner
+    - alibabacloud/database/relational-database-service
+    - alibabacloud/database/relational-database-service
 
   sql:
     - aws/databases/rds
@@ -94,51 +128,112 @@ aliases:
     - azure/databases/azure-database-postgresql-server
     - gcp/databases/cloud-sql
     - gcp/databases/alloydb
+    - devicon/devicon/postgresql
+    - onprem/database/postgresql
 
-  # Databases - NoSQL
+  postgresql:
+    - aws/databases/aurora
+    - azure/databases/azure-database-postgresql-server
+    - gcp/databases/alloydb
+    - devicon/devicon/postgresql
+    - developer/developer/postgresql
+    - alibabacloud/database/apsaradb-postgresql
+    - onprem/database/postgresql
+
+  mysql:
+    - devicon/devicon/mysql
+    - developer/developer/mysql
+    - alibabacloud/database/hybriddb-for-mysql
+    - onprem/database/mysql
+
+  mariadb:
+    - azure/databases/azure-database-mariadb-server
+    - devicon/devicon/mariadb
+    - developer/developer/mariadb
+    - onprem/database/mariadb
+
+  # --- Databases - NoSQL ---
   nosql:
     - aws/databases/dynamodb
     - azure/databases/azure-cosmos-db
     - gcp/databases/firestore
     - gcp/databases/bigtable
+    - alibabacloud/database/apsaradb-memcache
+
+  redis:
+    - devicon/devicon/redis
+    - developer/developer/redis
+    - alibabacloud/database/apsaradb-redis
+    - onprem/inmemory/redis
+    - aws/databases/elasticache-elasticache-for-redis
+
+  mongodb:
+    - devicon/devicon/mongodb
+    - developer/developer/mongodb
+    - alibabacloud/database/apsaradb-mongodb
+    - onprem/database/mongodb
+
+  elasticsearch:
+    - devicon/devicon/elasticsearch
+    - elastic/elasticsearch/elasticsearch
+    - alibabacloud/compute/elastic-search
 
   document-database:
     - aws/databases/dynamodb
     - azure/databases/azure-cosmos-db
     - gcp/databases/firestore
+    - devicon/devicon/mongodb
+    - onprem/database/mongodb
 
-  # Networking
+  # --- Networking ---
   load-balancer:
     - aws/networking-content-delivery/elastic-load-balancing
     - azure/networking/load-balancers
     - gcp/networking/cloud-load-balancing
+    - alibabacloud/network/server-load-balancer
+    - ibm/network/load-balancer
+    - oci/network/load-balancer-white
 
   cdn:
     - aws/networking-content-delivery/cloudfront
     - azure/networking/front-door-and-cdn-profiles
     - gcp/networking/cloud-cdn
+    - alibabacloud/network/cdn
+    - oci/connectivity/cdn-white
 
   content-delivery-network:
     - aws/networking-content-delivery/cloudfront
     - azure/networking/front-door-and-cdn-profiles
     - gcp/networking/cloud-cdn
+    - alibabacloud/network/cdn
 
   dns:
     - aws/networking-content-delivery/route-53
     - azure/networking/dns-zones
     - gcp/networking/cloud-dns
+    - alibabacloud/web/dns
+    - oci/connectivity/dns-white
 
   vpn:
     - aws/networking-content-delivery/site-to-site-vpn
     - azure/networking/virtual-network-gateways
     - gcp/networking/cloud-vpn
+    - alibabacloud/network/vpn-gateway
 
   virtual-network:
     - aws/group/virtual-private-cloud-vpc
     - azure/networking/virtual-networks
     - gcp/networking/virtual-private-cloud
+    - alibabacloud/network/virtual-private-cloud
+    - ibm/network/direct-link
 
-  # AI & Machine Learning
+  vpc:
+    - aws/group/virtual-private-cloud-vpc
+    - gcp/networking/virtual-private-cloud
+    - alibabacloud/network/virtual-private-cloud
+    - digitalocean/network/vpc
+
+  # --- AI & Machine Learning ---
   machine-learning:
     - aws/artificial-intelligence/sagemaker-ai
     - azure/ai-and-machine-learning/machine-learning
@@ -159,7 +254,7 @@ aliases:
     - azure/ai-and-machine-learning/azure-openai
     - gcp/ai-machine-learning/vertexai
 
-  # Data Analytics
+  # --- Data Analytics ---
   data-warehouse:
     - aws/analytics/redshift
     - azure/databases/azure-synapse-analytics
@@ -171,6 +266,7 @@ aliases:
     - azure/databases/azure-synapse-analytics
     - gcp/data-analytics/bigquery
     - gcp/data-analytics/looker
+    - ibm/analytics/analytics
 
   data-lake:
     - aws/analytics/lake-formation
@@ -183,11 +279,12 @@ aliases:
     - gcp/data-analytics/dataflow
     - gcp/data-analytics/pubsub
 
-  # Messaging & Integration
+  # --- Messaging & Integration ---
   message-queue:
     - aws/application-integration/simple-queue-service
     - azure/integration/azure-service-bus
     - gcp/data-analytics/pubsub
+    - alibabacloud/application/message-notification-service
 
   event-bus:
     - aws/application-integration/eventbridge
@@ -198,18 +295,31 @@ aliases:
     - aws/networking-content-delivery/api-gateway
     - azure/integration/api-management-services
     - gcp/integration-services/apigee
+    - alibabacloud/application/api-gateway
 
-  # Security & Identity
+  kafka:
+    - aws/analytics/managed-streaming-for-apache-kafka
+    - devicon/devicon/apachekafka
+    - developer/developer/kafka
+    - onprem/queue/kafka
+
+  rabbitmq:
+    - devicon/devicon/rabbitmq
+    - onprem/queue/rabbitmq
+
+  # --- Security & Identity ---
   identity:
     - aws/security-identity/identity-and-access-management
     - azure/identity/entra-identity-roles-and-administrators
     - gcp/security-identity/identity-and-access-management
     - microsoft/entra/microsoft-entra-id-color-icon
+    - ibm/security/identity-access-management
 
   iam:
     - aws/security-identity/identity-and-access-management
     - azure/identity/entra-identity-roles-and-administrators
     - gcp/security-identity/identity-and-access-management
+    - ibm/security/identity-access-management
 
   secrets-manager:
     - aws/security-identity/secrets-manager
@@ -220,30 +330,129 @@ aliases:
     - aws/security-identity/waf
     - azure/networking/firewalls
     - gcp/security-identity/cloud-armor
+    - alibabacloud/security/cloud-firewall
+    - ibm/security/firewall
 
-  # Monitoring & Observability
+  # --- Monitoring & Observability ---
   monitoring:
     - aws/management-tools/cloudwatch
     - azure/management-and-governance/monitor
     - gcp/management-tools/cloud-monitoring
+    - ibm/general/monitoring
 
   logging:
     - aws/management-tools/cloudwatch
     - azure/management-and-governance/log-analytics-workspaces
     - gcp/management-tools/cloud-logging
 
-  # DevOps & CI/CD
+  grafana:
+    - aws/management-tools/managed-grafana
+    - azure/other/azure-managed-grafana
+    - devicon/devicon/grafana
+    - developer/developer/grafana
+    - onprem/monitoring/grafana
+
+  prometheus:
+    - aws/management-tools/managed-service-for-prometheus
+    - cncf/cncf/prometheus
+    - devicon/devicon/prometheus
+    - onprem/monitoring/prometheus-operator
+    - onprem/monitoring/prometheus
+
+  # --- DevOps & CI/CD ---
   ci-cd:
     - aws/developer-tools/codepipeline
     - azure/devops/azure-devops
     - gcp/containers/cloud-build
+    - onprem/ci/jenkins
+
+  jenkins:
+    - devicon/devicon/jenkins
+    - developer/developer/jenkins
+    - onprem/ci/jenkins
 
   infrastructure-as-code:
     - aws/management-tools/cloudformation
     - azure/general/templates
     - gcp/management-tools/cloud-deployment-manager
+    - devicon/devicon/terraform
+    - developer/developer/terraform
+    - onprem/iac/terraform
 
-  # Microsoft-specific
+  terraform:
+    - devicon/devicon/terraform
+    - developer/developer/terraform
+    - onprem/iac/terraform
+
+  ansible:
+    - devicon/devicon/ansible
+    - developer/developer/ansible
+    - onprem/iac/ansible
+    - openstack/deployment/ansible
+
+  nginx:
+    - devicon/devicon/nginx
+    - onprem/network/nginx
+    - cncf/cncf/emissary-ingress
+
+  # --- Programming Languages ---
+  python:
+    - devicon/devicon/python
+    - developer/developer/python
+    - programming/language/python
+
+  go:
+    - devicon/devicon/go
+    - developer/developer/go
+    - programming/language/go
+
+  golang:
+    - devicon/devicon/go
+    - developer/developer/go
+    - programming/language/go
+
+  rust:
+    - devicon/devicon/rust
+    - developer/developer/rust
+    - programming/language/rust
+
+  java:
+    - devicon/devicon/java
+    - developer/developer/java
+    - programming/language/java
+
+  nodejs:
+    - devicon/devicon/nodejs
+    - developer/developer/nodejs
+    - programming/language/nodejs
+
+  javascript:
+    - devicon/devicon/javascript
+    - developer/developer/javascript
+    - programming/language/javascript
+
+  typescript:
+    - devicon/devicon/typescript
+    - developer/developer/typescript
+    - programming/language/typescript
+
+  # --- Frontend Frameworks ---
+  react:
+    - devicon/devicon/react
+    - developer/developer/reactjs
+    - programming/framework/react
+
+  angular:
+    - devicon/devicon/angular
+    - developer/developer/angular
+    - programming/framework/angular
+
+  vue:
+    - devicon/devicon/vuejs
+    - developer/developer/vuejs
+    - programming/framework/vue
+
+  # --- Microsoft-specific ---
   power-platform:
     - microsoft/power-platform/powerapps-scalable
     - microsoft/power-platform/powerautomate-scalable
@@ -266,6 +475,7 @@ tags:
     - gcp/serverless-computing/cloud-run
     - aws/application-integration/step-functions
     - aws/application-integration/eventbridge
+    - alibabacloud/compute/function-compute
 
   managed-service:
     - aws/databases/rds
@@ -273,6 +483,8 @@ tags:
     - azure/databases/sql-database
     - gcp/databases/cloud-sql
     - gcp/databases/cloud-spanner
+    - alibabacloud/database/relational-database-service
+    - oci/database/autonomous-white
 
   open-source:
     - aws/containers/elastic-kubernetes-service
@@ -280,6 +492,19 @@ tags:
     - gcp/containers/gke
     - aws/databases/aurora
     - gcp/databases/alloydb
+    - kubernetes/general/k8s
+    - onprem/database/postgresql
+    - onprem/database/mysql
+    - onprem/database/mongodb
+    - onprem/queue/kafka
+    - onprem/monitoring/prometheus
+    - onprem/monitoring/grafana
+    - onprem/ci/jenkins
+    - onprem/iac/terraform
+    - cncf/cncf/prometheus
+    - cncf/cncf/kubernetes
+    - devicon/devicon/docker
+    - devicon/devicon/terraform
 
   event-driven:
     - aws/compute/lambda
@@ -294,3 +519,15 @@ tags:
     - azure/analytics/stream-analytics-jobs
     - gcp/data-analytics/dataflow
     - gcp/data-analytics/pubsub
+    - alibabacloud/application/message-notification-service
+
+  cloud-native:
+    - kubernetes/general/k8s
+    - cncf/cncf/kubernetes
+    - cncf/cncf/prometheus
+    - cncf/cncf/argo
+    - cncf/cncf/fluentd
+    - cncf/cncf/linkerd
+    - cncf/cncf/envoy
+    - onprem/monitoring/prometheus
+    - onprem/gitops/argocd

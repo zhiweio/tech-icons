@@ -29,6 +29,7 @@ Each icon set retains its original license and terms.
   * CNCF Artwork              — https://github.com/cncf/artwork
   * Devicon                   — https://github.com/devicons/devicon
   * Developer Icons           — https://github.com/xandemon/developer-icons
+  * mingrammer/diagrams       — https://github.com/mingrammer/diagrams
 
 Please review each source's license before redistributing or modifying the bundled icons.
 """
@@ -63,6 +64,21 @@ VENDOR_SOURCES: dict[str, str] = {
     "fabric": "https://learn.microsoft.com/en-us/fabric/fundamentals/icons",
     "power-platform": "https://learn.microsoft.com/en-us/power-platform/guidance/icons",
     "microsoft": "https://learn.microsoft.com/en-us/azure/architecture/icons/",  # generic fallback
+    # mingrammer/diagrams contributors
+    "alibabacloud": "https://github.com/mingrammer/diagrams",
+    "digitalocean": "https://github.com/mingrammer/diagrams",
+    "elastic": "https://github.com/mingrammer/diagrams",
+    "firebase": "https://github.com/mingrammer/diagrams",
+    "generic": "https://github.com/mingrammer/diagrams",
+    "gis": "https://github.com/mingrammer/diagrams",
+    "ibm": "https://github.com/mingrammer/diagrams",
+    "kubernetes": "https://github.com/mingrammer/diagrams",
+    "oci": "https://github.com/mingrammer/diagrams",
+    "onprem": "https://github.com/mingrammer/diagrams",
+    "openstack": "https://github.com/mingrammer/diagrams",
+    "outscale": "https://github.com/mingrammer/diagrams",
+    "programming": "https://github.com/mingrammer/diagrams",
+    "saas": "https://github.com/mingrammer/diagrams",
 }
 
 # Directory names that carry no category information — skipped when walking up
@@ -101,6 +117,7 @@ class IconEntry:
     aliases: list[str] = field(default_factory=list)
     tags: list[str] = field(default_factory=list)
     description: str = ""
+    png_source_path: Path | None = None  # Set when a PNG variant exists for this icon
 
 
 # ---------------------------------------------------------------------------
@@ -180,11 +197,21 @@ def _path_contains_png_only(svg: Path, package_root: Path) -> bool:
     return False
 
 
-def _iter_svgs(package_root: Path) -> list[Path]:
-    """rglob all .svg files under `package_root`, sorted for determinism."""
+def _iter_files(package_root: Path, ext: str) -> list[Path]:
+    """rglob all files matching ``ext`` (e.g. ``.svg``, ``.png``) under `package_root`, sorted for determinism."""
     if not package_root.exists():
         return []
-    return sorted(package_root.rglob("*.svg"))
+    return sorted(package_root.rglob(f"*{ext}"))
+
+
+def _iter_svgs(package_root: Path) -> list[Path]:
+    """Convenience wrapper — rglob all .svg files."""
+    return _iter_files(package_root, ".svg")
+
+
+def _iter_pngs(package_root: Path) -> list[Path]:
+    """Convenience wrapper — rglob all .png files."""
+    return _iter_files(package_root, ".png")
 
 
 # ---------------------------------------------------------------------------
@@ -889,6 +916,20 @@ _VENDOR_DISPLAY = {
     "cncf": "CNCF",
     "devicon": "Devicon",
     "developer": "Developer",
+    "alibabacloud": "Alibaba Cloud",
+    "digitalocean": "DigitalOcean",
+    "elastic": "Elastic",
+    "firebase": "Firebase",
+    "generic": "Generic",
+    "gis": "GIS",
+    "ibm": "IBM",
+    "kubernetes": "Kubernetes",
+    "oci": "OCI",
+    "onprem": "On-Prem",
+    "openstack": "OpenStack",
+    "outscale": "Outscale",
+    "programming": "Programming",
+    "saas": "SaaS",
 }
 
 
@@ -1170,6 +1211,92 @@ def _infer_gcp_extended_category(product_dir: str) -> str:
 
 
 # ---------------------------------------------------------------------------
+# mingrammer Diagrams Icon Package Handler (PNG)
+# ---------------------------------------------------------------------------
+# Package: `mingrammer-diagrams-icon-package/` — part of the Python
+# `diagrams <https://github.com/mingrammer/diagrams>`_ project.
+# Contains 2,458 PNG icons across 17 vendors. Some vendors (aws, azure, gcp)
+# overlap with the existing SVG-based packages — those are merged by canonical ID.
+#
+# Layout: ``{vendor}/{category-or-root}/{name}.png`` plus one ``{vendor}.png``
+# root logo per vendor → category ``general``.
+
+_MINGRAMMER_PKG = "mingrammer-diagrams-icon-package"
+
+# mingrammer dir name → canonical vendor key (k8s → kubernetes)
+_MINGRAMMER_VENDOR_MAP: dict[str, str] = {
+    "k8s": "kubernetes",
+}
+
+
+def _mingrammer_vendor(dirname: str) -> str:
+    """Map a mingrammer top-level dir name to canonical vendor key."""
+    return _MINGRAMMER_VENDOR_MAP.get(dirname, dirname)
+
+
+def collect_mingrammer_icons(assets_root: Path) -> list[IconEntry]:
+    """Collect all PNG icons from the mingrammer/diagrams icon package.
+
+    Skips the three stray SVG files under ``gis/georchestra/`` (handled as PNG).
+    """
+    pkg_root = assets_root / _MINGRAMMER_PKG
+    if not pkg_root.exists():
+        logger.warning(f"mingrammer package not found: {pkg_root}")
+        return []
+
+    entries: list[IconEntry] = []
+    for png_file in _iter_pngs(pkg_root):
+        try:
+            rel = png_file.relative_to(pkg_root)
+        except ValueError:
+            continue
+
+        if len(rel.parts) == 1:
+            # Top-level file unexpected — skip
+            continue
+
+        vendor_dir = rel.parts[0]
+        vendor = _mingrammer_vendor(vendor_dir)
+
+        if len(rel.parts) == 2:
+            # Either ``{vendor}.png`` (root logo) or ``{category}/{name}.png``
+            if rel.parts[1].startswith("."):
+                continue
+            # Root logo: the file name equals the vendor dir name
+            if rel.parts[1] == f"{vendor_dir}.png":
+                category = "general"
+                name = clean_name(rel.parts[1])
+            else:
+                # Shouldn't happen with this layout, but be defensive
+                category = "general"
+                name = clean_name(rel.parts[1])
+        else:
+            # ``{vendor}/{category}/{name}.png``
+            category = sanitize_category(rel.parts[1])
+            name = clean_name(rel.parts[-1])
+
+        if not name:
+            continue
+
+        icon_id = generate_canonical_id(vendor, category, name)
+        dest = ICONS_DIR / vendor / category / f"{name}.png"
+        entries.append(
+            IconEntry(
+                id=icon_id,
+                vendor=vendor,
+                category=category,
+                name=_format_display_name(vendor, name),
+                filename=f"{name}.png",
+                source_path=png_file,
+                dest_path=dest,
+                tags=[vendor, category, *name.split("-")[:3]],
+            )
+        )
+
+    return entries
+
+
+# ---------------------------------------------------------------------------
 # Deduplication / aggregation
 # ---------------------------------------------------------------------------
 
@@ -1187,8 +1314,33 @@ def deduplicate_entries(entries: list[IconEntry]) -> list[IconEntry]:
     return deduped
 
 
+def merge_dual_format(svg_entries: list[IconEntry], png_entries: list[IconEntry]) -> list[IconEntry]:
+    """Merge PNG entries into SVG entries by canonical ID.
+
+    When the same canonical ID appears in both sets, the SVG entry is
+    augmented with ``png_source_path`` (so both formats are available).
+    PNG-only entries (no matching SVG) are appended as-is.
+    """
+    by_id: dict[str, int] = {e.id: idx for idx, e in enumerate(svg_entries)}
+
+    for png_entry in png_entries:
+        if png_entry.id in by_id:
+            # Overlap — augment the existing SVG entry
+            existing = svg_entries[by_id[png_entry.id]]
+            existing.png_source_path = png_entry.source_path
+        else:
+            # PNG-only entry — append
+            svg_entries.append(png_entry)
+
+    return svg_entries
+
+
 def collect_all_icons(assets_root: Path) -> list[IconEntry]:
-    """Collect and deduplicate icons from every vendor."""
+    """Collect and deduplicate icons from every vendor.
+
+    SVG packages are collected first, then mingrammer PNG icons are merged in
+    by canonical ID (augmenting overlapping entries with a PNG source path).
+    """
     entries: list[IconEntry] = []
     entries.extend(collect_aws_icons(assets_root))
     entries.extend(collect_azure_icons(assets_root))
@@ -1197,4 +1349,13 @@ def collect_all_icons(assets_root: Path) -> list[IconEntry]:
     entries.extend(collect_cncf_icons(assets_root))
     entries.extend(collect_devicon_icons(assets_root))
     entries.extend(collect_developer_icons(assets_root))
-    return deduplicate_entries(entries)
+
+    # Deduplicate SVG-first entries
+    entries = deduplicate_entries(entries)
+
+    # Collect and merge mingrammer PNG icons
+    mingrammer_entries = collect_mingrammer_icons(assets_root)
+    logger.info(f"mingrammer PNG icons collected: {len(mingrammer_entries)} (before merge)")
+    entries = merge_dual_format(entries, mingrammer_entries)
+
+    return entries

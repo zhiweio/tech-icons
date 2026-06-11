@@ -28,6 +28,7 @@ from tech_icons.normalize import (
     collect_devicon_icons,
     collect_gcp_icons,
     collect_microsoft_icons,
+    collect_mingrammer_icons,
     deduplicate_entries,
 )
 
@@ -154,8 +155,35 @@ def main() -> None:
         entries = normalize_vendor(vendor, assets_root, output_dir, dry_run=args.dry_run)
         all_entries.extend(entries)
 
+    # Also normalize mingrammer PNG icons
+    if not args.vendor or args.vendor in (
+        "mingrammer",
+        "all",
+        "alibabacloud",
+        "digitalocean",
+        "elastic",
+        "firebase",
+        "generic",
+        "gis",
+        "ibm",
+        "kubernetes",
+        "oci",
+        "onprem",
+        "openstack",
+        "outscale",
+        "programming",
+        "saas",
+    ):
+        logger.info("Processing mingrammer PNG icons...")
+        mingrammer = collect_mingrammer_icons(assets_root)
+        for entry in mingrammer:
+            if copy_icon(entry, output_dir, dry_run=args.dry_run):
+                pass  # count tracked in copy_icon
+        all_entries.extend(mingrammer)
+        logger.info(f"  mingrammer: found {len(mingrammer)} PNGs")
+
     total = len(all_entries)
-    logger.info(f"Total: {total} icons normalized across {len(vendors)} vendor(s)")
+    logger.info(f"Total: {total} icons normalized across vendors")
 
     # Summary by vendor
     vendor_counts = {}
