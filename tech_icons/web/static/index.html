@@ -3,149 +3,194 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>tech-icons browser</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctext y='20' font-size='20'%3E%E2%9C%A8%3C/text%3E%3C/svg%3E" />
+  <title>tech-icons — Cloud Tech Icon Browser</title>
+  <meta name="description" content="Searchable catalog of 5,200+ cloud tech icons (SVG + PNG) across 21 vendors. Built for AI-assisted architecture diagramming." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='28' font-size='28'%3E%E2%9C%A8%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="/static/style.css" />
 </head>
-<body class="min-h-screen bg-base-200">
+<body>
 
-  <!-- Navbar -->
-  <header class="navbar bg-base-100 border-b border-base-300 sticky top-0 z-30 shadow-sm gap-2 px-4">
-    <div class="flex-1 gap-3 min-w-0">
-      <span class="text-lg font-semibold whitespace-nowrap">✨ tech-icons</span>
-      <span id="catalog-meta" class="badge badge-ghost badge-sm hidden md:inline-flex">loading…</span>
-    </div>
+  <!-- ==========================================================
+       HEADER
+       ========================================================== -->
+  <header class="app-header">
+    <div class="header-inner">
+      <!-- Logo -->
+      <a href="/" class="header-logo" title="tech-icons home">✦ tech-icons</a>
 
-    <div class="flex-none flex items-center gap-2">
-      <!-- Search input -->
-      <div class="form-control">
-        <input
-          id="search-input"
-          type="search"
-          placeholder="Search icons… (e.g., lambda, serverless, k8s)"
-          class="input input-bordered input-sm w-64 md:w-96"
-          autocomplete="off"
-          spellcheck="false"
-        />
+      <!-- Nav tabs -->
+      <nav class="nav-tabs" role="tablist" aria-label="View mode">
+        <button id="tab-browse" class="nav-tab active" role="tab" aria-selected="true">Browse</button>
+        <button id="tab-compare" class="nav-tab" role="tab" aria-selected="false">Compare</button>
+      </nav>
+
+      <!-- Right-side actions -->
+      <div class="header-actions">
+        <!-- Search -->
+        <div class="search-wrap">
+          <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
+          </svg>
+          <input
+            id="search-input"
+            type="search"
+            class="search-input"
+            placeholder="Search icons…"
+            autocomplete="off"
+            spellcheck="false"
+          />
+        </div>
+
+        <!-- Theme toggle -->
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme" title="Toggle light/dark theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <!-- GitHub link -->
+        <a href="https://github.com/zhiweio/tech-icons"
+           class="gh-link"
+           target="_blank"
+           rel="noopener noreferrer"
+           title="View on GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+          <span class="gh-text">GitHub</span>
+        </a>
       </div>
-
-      <!-- Theme toggle (daisyUI swap) -->
-      <label class="swap swap-rotate btn btn-ghost btn-circle btn-sm">
-        <input type="checkbox" id="theme-toggle" />
-        <svg class="swap-on h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/></svg>
-        <svg class="swap-off h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/></svg>
-      </label>
     </div>
   </header>
 
-  <!-- Filter chips bar -->
-  <div class="bg-base-100 border-b border-base-300 px-4 py-2 sticky top-16 z-20">
-    <div class="flex flex-wrap items-center gap-2">
-      <div role="tablist" class="tabs tabs-boxed tabs-sm">
-        <a id="tab-browse" role="tab" class="tab tab-active">Browse</a>
-        <a id="tab-compare" role="tab" class="tab">Compare</a>
+  <!-- ==========================================================
+       MAIN
+       ========================================================== -->
+  <main class="app-main">
+
+    <!-- Filter bar (browse only) -->
+    <section id="filter-bar" class="filter-bar">
+      <div id="vendor-filters" class="filter-chips">
+        <!-- JS injects vendor chips here -->
       </div>
+      <span id="result-count" class="result-count">—</span>
+    </section>
 
-      <div class="divider divider-horizontal mx-0"></div>
-
-      <div id="vendor-filters" class="flex flex-wrap gap-1">
-        <!-- vendor chips injected here -->
-      </div>
-
-      <div class="ml-auto text-xs opacity-60" id="result-count">—</div>
-    </div>
-  </div>
-
-  <!-- Main content -->
-  <main class="container mx-auto px-4 py-6">
     <!-- Browse view -->
     <section id="browse-view">
-      <div id="icon-grid" class="grid gap-3" style="grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));">
-        <!-- icon cards injected here -->
+      <div id="icon-grid" class="icon-grid">
+        <!-- JS injects icon cards here -->
       </div>
 
-      <div id="empty-state" class="hidden text-center py-20 opacity-50">
-        No icons match your search.
+      <div id="empty-state" class="empty-state hidden">
+        <p>No icons match your search.</p>
       </div>
 
-      <div id="load-more-wrap" class="mt-6 flex justify-center hidden">
-        <button id="load-more" class="btn btn-sm btn-outline">Load more</button>
+      <div id="load-more-wrap" class="load-more-wrap hidden">
+        <button id="load-more" class="load-more-btn">Load more</button>
       </div>
     </section>
 
     <!-- Compare view -->
     <section id="compare-view" class="hidden">
-      <div class="form-control max-w-md mb-6">
-        <label class="label"><span class="label-text">Pick a concept to compare across vendors</span></label>
-        <select id="concept-select" class="select select-bordered">
+      <div class="compare-controls">
+        <label for="concept-select" class="compare-label">Pick a concept to compare across vendors</label>
+        <select id="concept-select" class="concept-select">
           <option value="">— select concept —</option>
         </select>
       </div>
-
-      <div id="concept-result"></div>
+      <div id="concept-result" class="compare-results"></div>
     </section>
+
   </main>
 
-  <!-- Detail modal -->
-  <dialog id="detail-modal" class="modal">
-    <div class="modal-box max-w-3xl">
-      <form method="dialog">
-        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-      </form>
+  <!-- ==========================================================
+       FOOTER
+       ========================================================== -->
+  <footer class="app-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4 class="footer-heading">✦ tech-icons</h4>
+        <p>A searchable catalog of <strong>5,200+ cloud tech icons</strong> (SVG + PNG) across <strong>21 vendors</strong>. Built for AI-assisted architecture diagramming, technical documentation, and developer tooling.</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Links</h4>
+        <a href="https://github.com/zhiweio/tech-icons" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+        <a href="https://pypi.org/project/tech-icons/" target="_blank" rel="noopener noreferrer">PyPI Package</a>
+        <a href="/api/health">API Health</a>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Stats</h4>
+        <span id="footer-icon-count">5,200+ icons</span>
+        <span id="footer-vendor-count">21 vendors</span>
+        <span>MIT License</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Made with ❤️ by the community &middot; tech-icons</p>
+    </div>
+  </footer>
 
-      <div class="flex items-start gap-4 mb-4">
-        <div id="detail-preview" class="w-24 h-24 rounded-lg bg-base-200 flex items-center justify-center p-3 flex-none"></div>
-        <div class="flex-1 min-w-0">
-          <h3 id="detail-name" class="font-bold text-lg truncate">—</h3>
-          <p id="detail-description" class="text-sm opacity-70 mt-1">—</p>
-          <div class="flex flex-wrap gap-1 mt-2" id="detail-badges"></div>
+  <!-- ==========================================================
+       DETAIL MODAL
+       ========================================================== -->
+  <dialog id="detail-modal" class="cosmic-modal">
+    <div style="position: relative;">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-inner">
+        <!-- Header: preview + title -->
+        <div class="modal-header">
+          <div id="detail-preview"></div>
+          <div class="modal-title-area">
+            <h3 id="detail-name">—</h3>
+            <div class="modal-badges" id="detail-badges"></div>
+          </div>
         </div>
-      </div>
 
-      <!-- Copy actions -->
-      <div class="flex flex-wrap gap-2 mb-4">
-        <button class="btn btn-sm" data-copy="id">Copy ID</button>
-        <button class="btn btn-sm" data-copy="path">Copy path</button>
-        <button class="btn btn-sm" data-copy="data_uri">Copy data URI</button>
-        <button class="btn btn-sm" data-copy="raw">Copy SVG</button>
-        <button class="btn btn-sm" data-copy="ppt_master">Copy ppt-master placeholder</button>
-      </div>
+        <!-- Copy actions -->
+        <div class="copy-actions">
+          <button class="action-btn" data-copy="id">Copy ID</button>
+          <button class="action-btn" data-copy="path">Copy path</button>
+          <button class="action-btn" data-copy="data_uri">Copy data URI</button>
+          <button class="action-btn" data-copy="raw">Copy SVG</button>
+          <button class="action-btn" data-copy="ppt_master">Copy ppt-master placeholder</button>
+        </div>
 
-      <!-- Metadata table -->
-      <div class="overflow-x-auto">
-        <table class="table table-sm">
+        <!-- Metadata table -->
+        <table class="meta-table">
           <tbody>
-            <tr><th class="w-32">ID</th><td><code id="meta-id" class="text-xs"></code></td></tr>
+            <tr><th>ID</th><td><code id="meta-id"></code></td></tr>
             <tr><th>Vendor</th><td id="meta-vendor"></td></tr>
             <tr><th>Category</th><td id="meta-category"></td></tr>
-            <tr><th>Tags</th><td id="meta-tags"></td></tr>
-            <tr><th>Aliases</th><td id="meta-aliases"></td></tr>
-            <tr><th>Concepts</th><td id="meta-concepts"></td></tr>
+            <tr><th>Tags</th><td class="meta-chips" id="meta-tags"></td></tr>
+            <tr><th>Aliases</th><td class="meta-chips" id="meta-aliases"></td></tr>
+            <tr><th>Concepts</th><td class="meta-chips" id="meta-concepts"></td></tr>
           </tbody>
         </table>
-      </div>
 
-      <!-- SVG source -->
-      <div class="collapse collapse-arrow bg-base-200 mt-4">
-        <input type="checkbox" />
-        <div class="collapse-title text-sm font-medium">View SVG source</div>
-        <div class="collapse-content">
-          <pre class="text-xs overflow-x-auto"><code id="meta-svg"></code></pre>
+        <!-- SVG source -->
+        <button id="svg-source-toggle" class="svg-source-toggle">▶ View SVG source</button>
+        <div id="svg-source-content" class="svg-source-content">
+          <pre><code id="meta-svg"></code></pre>
         </div>
       </div>
     </div>
-    <form method="dialog" class="modal-backdrop">
-      <button>close</button>
-    </form>
   </dialog>
 
-  <!-- Toast -->
-  <div id="toast" class="toast toast-end hidden">
-    <div class="alert alert-success">
-      <span id="toast-msg">Copied!</span>
-    </div>
+  <!-- ==========================================================
+       TOAST
+       ========================================================== -->
+  <div id="toast" class="cosmic-toast hidden">
+    <span class="toast-icon">✓</span>
+    <span id="toast-msg">Copied!</span>
   </div>
 
   <script src="/static/app.js"></script>
